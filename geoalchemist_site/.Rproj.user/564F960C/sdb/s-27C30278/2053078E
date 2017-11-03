@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(blogdown)\n\nblogdown::new_site(theme = \"kakawait/hugo-tranquilpeak-theme\")\n\nblogdown::serve_site()\n\nservr::daemon_stop(\"130818768\")\n\noptions(blogdown.generator.server = TRUE)\n",
+    "created" : 1509724590610.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "1177277307",
+    "id" : "2053078E",
+    "lastKnownWriteTime" : 3833180308419998817,
+    "last_content_update" : 1509725955694,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
