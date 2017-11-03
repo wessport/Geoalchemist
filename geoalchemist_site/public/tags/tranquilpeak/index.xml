@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Geoalchemist</title>
-    <link>https://example.org/</link>
-    <description>Recent content on Geoalchemist</description>
+    <title>Tranquilpeak on Geoalchemist</title>
+    <link>https://example.org/tags/tranquilpeak/</link>
+    <description>Recent content in Tranquilpeak on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.org/tags/tranquilpeak/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://example.org/2017/11/nothing-too-fancy/</guid>
       <description>&lt;p&gt;After much toil, I&amp;rsquo;m finally launching a website to share my misadventures in GIS and programming.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Map Gallery</title>
-      <link>https://example.org/2017/10/map-gallery/</link>
-      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.org/2017/10/map-gallery/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
