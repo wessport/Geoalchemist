@@ -40,7 +40,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   #gravatarEmail = "thibaud.lepretre@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  #picture = "http://res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg"
+  picture = "http://res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg"
 
   # Your Twitter username without the @. E.g : thibaudlepretre
   twitter = "Wes_Port"
