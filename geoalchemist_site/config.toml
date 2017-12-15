@@ -2,10 +2,6 @@
 # Version : 0.4.2-BETA
 # Author : Thibaud Leprêtre
 
-# I STRONGLY recommend you to use a CDN to speed up loading of pages.
-# There is many free CDN like Cloudinary or you can also use indirectly
-# by using services like Google Photos.
-
 # If you want to store images yourself, please read this guidelines:
 # For users, if you only use this theme, put your images directly in `source/assets/images` folder
 # But if you want to add local images, you can put your images directly in `source/assets/images` folder
@@ -36,10 +32,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   bio = "Exploring geopsatial data through code."
   job = "Graduate Research Assistant"
   location = "Nashville"
-  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  #gravatarEmail = "thibaud.lepretre@gmail.com"
+
   # Your profile picture
-  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "http://res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg"
 
   # Your Twitter username without the @. E.g : thibaudlepretre
