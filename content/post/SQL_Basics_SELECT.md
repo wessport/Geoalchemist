@@ -8,6 +8,14 @@ thumbnailImage: http://res.cloudinary.com/wessport/image/upload/v1513372413/moun
 coverImage: http://res.cloudinary.com/wessport/image/upload/v1513372413/mountain_sunset_iu7zey.jpg
 metaAlignment: center
 coverMeta: out
+comments: true
+
+keywords:
+- SQL
+- SQL basics
+- SQL beginner
+- SELECT statement
+- Database
 
 categories:
 - Database
