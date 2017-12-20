@@ -17,7 +17,7 @@ tags:
 - SQL Basics
 ---
 
-## Find your data! Don't let SQL queries intimidate you. ##
+#### Find your data! Don't let SQL queries intimidate you. ####
 
 <!--more-->
 This past semester I was fortunate enough to find my way into a Database Design and Development course. Having struggled with ArcMap SQL queries in the past, I decided to sharpen my data wrangling abilities by honing a few fundamental SQL skills.
