@@ -96,7 +96,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "maps"
   name = "Map Gallery"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-map\"></i>"
-  url = "/2017/10/map-gallery/index.xml"
+  url = "/2017/10/map-gallery/"
 
 [[menu.misc]]
   weight = 1
