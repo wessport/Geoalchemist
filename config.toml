@@ -17,11 +17,11 @@ languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "Geoalchemist"
 theme = "tranquilpeak"
-disqusShortname = "hugo-tranquilpeak-theme"
+disqusShortname = "wessport_disqus"
 # googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", "\\.Rhistory"]
 
 [permalinks]
   post = "/:year/:month/:slug/"
@@ -33,7 +33,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [author]
   name = "Wes Porter"
-  bio = "Exploring geopsatial data through code."
+  bio = "Exploring geospatial data through code."
   job = "Graduate Research Assistant"
   location = "Nashville"
 

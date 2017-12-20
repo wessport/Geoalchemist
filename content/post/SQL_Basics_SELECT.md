@@ -21,8 +21,6 @@ tags:
 Over the next few weeks I'm going to share some of the **SQL Basics** I've picked up. Hopefully, these posts will make **SQL** a little less intimidating for other beginners.
 
 <!--more-->
-------
-
 ## Structured Query Language ##
 
 This past semester I was fortunate enough to find my way into a **Database Design and Development** course. Having struggled with **ArcMap SQL**  queries in the past, I decided to sharpen my data wrangling abilities by honing a few fundamental **SQL** skills.

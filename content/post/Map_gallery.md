@@ -16,6 +16,7 @@ categories:
 
 tags:
 - map gallery
+- GIS
 ---
 
 Nothing too fancy. Just a few maps I've made.
