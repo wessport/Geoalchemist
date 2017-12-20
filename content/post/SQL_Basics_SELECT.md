@@ -17,7 +17,7 @@ tags:
 - SQL Basics
 ---
 
-##Find your data! Don't let SQL queries intimidate you.
+##Find your data! Don't let SQL queries intimidate you.##
 
 <!--more-->
 This past semester I was fortunate enough to find my way into a Database Design and Development course. Having struggled with ArcMap SQL queries in the past, I decided to sharpen my data wrangling abilities by honing a few fundamental SQL skills.
@@ -26,13 +26,13 @@ Over the next few weeks I'm going to share some of the SQL Basics I've picked up
 
 * **Disclaimer:** I was taught SQL in an ORACLE Client environment. The syntax of my examples will follow ORACLE conventions. The core logic behind the code should translate regardless of the database environment.
 
-###Structured Query Language
+###Structured Query Language###
 
 SQL or Structured Query Language is the language we use to explore databases. It's a bit like a roadmap comprised of sequential directions. These directions outline exactly where we're going and what treasure (data) we're going to find. The directions can be simple or they can be very complex (looking at you subqueries in the FROM clause). After a little practice though, even complex statements can be mastered relatively quickly. With even a basic knowledge of SQL, you can do more than you might think. The hard part is defining what you actually want to retrieve from your database.
 
 ![A witty gif](https://media.giphy.com/media/3oKIPnuhcwE9tywW5y/giphy.gif)
 
-###SELECT Statement
+###SELECT Statement###
 
 The SELECT statement is used to retrieve data from tables stored inside your database. Maybe you want to survey the contents of a customer table or perhaps you would like to pull customer data into another tool like R or python for analysis. Either way, you're going to need a SELECT query.
 
@@ -100,10 +100,10 @@ Be conservative when using wildcards. Ask yourself do I really need to use a wil
 
 As you might have guessed from our breweries example, SQL is not a cryptic language. It does its best to resemble regular English. This makes the syntax often times intuitive to the point where you can guess ahead of time the keyword you need based on the logic of your query. As a beginner, I enjoyed this aspect of the language the most. It helps tremendously when translating the logical behind your query into actual SQL code.
 
-##To Sum It Up
+##To Sum It Up##
 
 When you need to interact with the database, you write a SELECT statement. Vary rarely do we want to look at entire columns of data as we did in the examples above. Typically we are interested in constraining our data. In the next post I'll get into how we can use the WHERE clause and special operators to make our SELECT queries even more useful.
 
-##TLDR
+##TLDR##
 
 SQL is the language we use to retrieve data from a database. The SELECT statement is a structured query comprised of separate keyword clauses. The SELECT clause is used to request specified columns. The FROM clause designates from which table the columns originate.
