@@ -36,10 +36,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   bio = "Exploring geopsatial data through code."
   job = "Graduate Research Assistant"
   location = "Nashville"
-  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  #gravatarEmail = "thibaud.lepretre@gmail.com"
-  # Your profile picture
-  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
+
+  # Profile picture
   picture = "http://res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg"
 
   # Your Twitter username without the @. E.g : thibaudlepretre
@@ -92,6 +90,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
   url = "https://github.com/wessport"
+
+[[menu.links]]
+  weight = 3
+  identifier = "maps"
+  name = "Map Gallery"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-map\"></i>"
+  url = "/content/post/Map_galler.md"
 
 [[menu.misc]]
   weight = 1
