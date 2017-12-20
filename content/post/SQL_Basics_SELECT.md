@@ -97,6 +97,8 @@ Be conservative when using wildcards. Ask yourself do I really need to use a wil
 
 As you might have guessed from our breweries example, **SQL** is not a cryptic language. It does its best to resemble regular English. This makes the syntax often times intuitive to the point where you can guess ahead of time the keyword you need based on the logic of your query. As a beginner, I enjoyed this aspect of the language the most. It helps tremendously when translating the logic behind your query into actual **SQL** code.
 
+------
+
 * **Disclaimer:** I learned SQL in an ORACLE Client environment. The syntax of my examples will follow ORACLE conventions. The core logic behind the code however should translate regardless of the database environment you're working in.
 
 ## To Sum It Up ##
