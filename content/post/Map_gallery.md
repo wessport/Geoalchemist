@@ -18,6 +18,6 @@ tags:
 - map gallery
 ---
 
+Nothing too fancy. Just a few maps I've made.
 
 <!--more-->
-Nothing too fancy. Just a few maps I've made. 
