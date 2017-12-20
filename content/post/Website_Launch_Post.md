@@ -1,5 +1,5 @@
 ---
-title: "Nothing Too Fancy"
+title: "Blog Launch"
 author: "Wes"
 date: 2017-11-03
 
@@ -22,4 +22,4 @@ tags:
 After much toil, I'm finally launching a website to share my misadventures in GIS and programming.
 
 <!--more-->
- Here you'll find semi-frequent posts (ramblings) on GIS, programming, and life as a graduate student. Oh and the occasional cat picture too.
+ Here you'll find semi-frequent posts (ramblings) on GIS, programming, and life as a graduate student. Oh and maybe the occasional cat picture too.
