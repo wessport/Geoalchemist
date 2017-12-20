@@ -26,7 +26,7 @@ Over the next few weeks I'm going to share some of the SQL Basics I've picked up
 
 * **Disclaimer:** I was taught SQL in an ORACLE Client environment. The syntax of my examples will follow ORACLE conventions. The core logic behind the code should translate regardless of the database environment.
 
-###Structured Query Language###
+### Structured Query Language ###
 
 SQL or Structured Query Language is the language we use to explore databases. It's a bit like a roadmap comprised of sequential directions. These directions outline exactly where we're going and what treasure (data) we're going to find. The directions can be simple or they can be very complex (looking at you subqueries in the FROM clause). After a little practice though, even complex statements can be mastered relatively quickly. With even a basic knowledge of SQL, you can do more than you might think. The hard part is defining what you actually want to retrieve from your database.
 
@@ -39,7 +39,7 @@ The SELECT statement is used to retrieve data from tables stored inside your dat
 The most basic SELECT statement requires two clauses.
 
 ```
-SELECT NAME
+SELECT  NAME
 FROM BREWERY;
 ```
 | NAME                            |
@@ -60,7 +60,7 @@ The semicolon ';' placed at the end of the line is used to designate the end of 
 Formatting rules are not as strict as they are in other languages like Python. I could also structure my SELECT statement like this:
 
 ```
-SELECT NAME FROM BREWERY;
+SELECT  NAME FROM BREWERY;
 ```
 | NAME                            |
 | ------------------------------- |
@@ -73,7 +73,7 @@ Notice how the results are the same. More than one clause can be placed on the s
 If we want to look at multiple columns, it's as easy as adding a comma and the column name in our SELECT clause.
 
 ```
-SELECT NAME, STATE
+SELECT  NAME, STATE
 FROM BREWERY;
 ```
 | NAME                            | STATE |
