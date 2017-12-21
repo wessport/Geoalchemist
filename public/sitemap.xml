@@ -3,81 +3,116 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.org/2017/11/nothing-too-fancy/</loc>
+    <loc>https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/2017/11/blog-launch/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/2017/10/map-gallery/</loc>
+    <loc>https://www.geoalchemist.com/2017/10/map-gallery/</loc>
     <lastmod>2017-10-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/archives/</loc>
+    <loc>https://www.geoalchemist.com/archives/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/tags/blogdown/</loc>
+    <loc>https://www.geoalchemist.com/tags/blogdown/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://www.geoalchemist.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <loc>https://www.geoalchemist.com/tags/database/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/categories/gis/</loc>
+    <loc>https://www.geoalchemist.com/categories/database/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/gis/</loc>
     <lastmod>2017-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/tags/hugo/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://example.org/tags/map-gallery/</loc>
+    <loc>https://www.geoalchemist.com/categories/gis/</loc>
     <lastmod>2017-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/post/</loc>
+    <loc>https://www.geoalchemist.com/tags/hugo/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/categories/r/</loc>
+    <loc>https://www.geoalchemist.com/tags/map-gallery/</loc>
+    <lastmod>2017-10-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/post/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/r/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://www.geoalchemist.com/tags/sql/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/sql-basics/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/tags/tranquilpeak/</loc>
+    <loc>https://www.geoalchemist.com/tags/tranquilpeak/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/categories/web-development/</loc>
+    <loc>https://www.geoalchemist.com/categories/web-development/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

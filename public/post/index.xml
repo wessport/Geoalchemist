@@ -2,31 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Geoalchemist</title>
-    <link>https://example.org/post/</link>
+    <link>https://www.geoalchemist.com/post/</link>
     <description>Recent content in Posts on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.geoalchemist.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Nothing Too Fancy</title>
-      <link>https://example.org/2017/11/nothing-too-fancy/</link>
+      <title>SQL Basics: The SELECT Statement</title>
+      <link>https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/</guid>
+      <description>&lt;p&gt;Over the next few weeks I&amp;rsquo;m going to share some of the &lt;strong&gt;SQL Basics&lt;/strong&gt; I&amp;rsquo;ve picked up. Hopefully, these posts will make &lt;strong&gt;SQL&lt;/strong&gt; a little less intimidating for other beginners.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Blog Launch</title>
+      <link>https://www.geoalchemist.com/2017/11/blog-launch/</link>
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/2017/11/nothing-too-fancy/</guid>
+      <guid>https://www.geoalchemist.com/2017/11/blog-launch/</guid>
       <description>&lt;p&gt;After much toil, I&amp;rsquo;m finally launching a website to share my misadventures in GIS and programming.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Map Gallery</title>
-      <link>https://example.org/2017/10/map-gallery/</link>
+      <link>https://www.geoalchemist.com/2017/10/map-gallery/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/2017/10/map-gallery/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://www.geoalchemist.com/2017/10/map-gallery/</guid>
+      <description>&lt;p&gt;Nothing too fancy. Just a few maps I&amp;rsquo;ve made.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

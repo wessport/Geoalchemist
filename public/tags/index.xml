@@ -2,48 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Geoalchemist</title>
-    <link>https://example.org/tags/</link>
+    <link>https://www.geoalchemist.com/tags/</link>
     <description>Recent content in Tags on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.geoalchemist.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blogdown</title>
-      <link>https://example.org/tags/blogdown/</link>
+      <link>https://www.geoalchemist.com/tags/blogdown/</link>
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/tags/blogdown/</guid>
+      <guid>https://www.geoalchemist.com/tags/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>https://www.geoalchemist.com/tags/database/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gis</title>
+      <link>https://www.geoalchemist.com/tags/gis/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/gis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://example.org/tags/hugo/</link>
+      <link>https://www.geoalchemist.com/tags/hugo/</link>
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/tags/hugo/</guid>
+      <guid>https://www.geoalchemist.com/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Map Gallery</title>
-      <link>https://example.org/tags/map-gallery/</link>
+      <link>https://www.geoalchemist.com/tags/map-gallery/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/tags/map-gallery/</guid>
+      <guid>https://www.geoalchemist.com/tags/map-gallery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sql</title>
+      <link>https://www.geoalchemist.com/tags/sql/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sql Basics</title>
+      <link>https://www.geoalchemist.com/tags/sql-basics/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/sql-basics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tranquilpeak</title>
-      <link>https://example.org/tags/tranquilpeak/</link>
+      <link>https://www.geoalchemist.com/tags/tranquilpeak/</link>
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/tags/tranquilpeak/</guid>
+      <guid>https://www.geoalchemist.com/tags/tranquilpeak/</guid>
       <description></description>
     </item>
     
