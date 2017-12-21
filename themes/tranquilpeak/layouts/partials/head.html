@@ -37,8 +37,6 @@
       <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ . }}">
     {{ end }}
 
-    {{ partial "twitter-card" . }}
-
     <!-- open graph data -->
     <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
@@ -47,11 +45,11 @@
     <meta property="og:url" content="{{ .URL }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{ .Site.Title }}">
+    <meta name="twitter:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    {{ with .Site.Author.twitter }}
-      <meta name="twitter:creator" content="@{{ . }}">
-    {{ end }}
+    <meta name="twitter:creator" content="@Wes_Port">
+    <meta name="twitter:image" content="{{ .Params.thumbnailImage }}">
+
     {{ with .Site.Params.fbAppId }}
       <meta property="fb:app_id" content="{{ . }}">
     {{ end }}

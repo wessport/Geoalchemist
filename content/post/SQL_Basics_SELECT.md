@@ -1,6 +1,5 @@
 ---
 title: "SQL Basics: The SELECT Statement"
-subtitle: "Find your data! Don't let SQL queries intimidate you."
 date: 2017-12-15
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
