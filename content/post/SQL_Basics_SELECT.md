@@ -116,6 +116,6 @@ When you need to interact with the database, you write a **SELECT** statement. V
 
 ------
 
-## TLDR ##
+## TL;DR ##
 
 **SQL** is the language we use to retrieve data from a database. The **SELECT** statement is a structured query comprised of separate keyword clauses. The **SELECT** clause is used to request specified columns. The **FROM** clause designates from which table the columns originate.

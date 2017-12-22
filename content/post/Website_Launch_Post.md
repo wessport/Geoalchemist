@@ -5,8 +5,8 @@ date: 2017-11-03
 
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
-thumbnailImage: http://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg
-coverImage: http://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg
+coverImage: https://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg
 metaAlignment: center
 coverMeta: out
 
