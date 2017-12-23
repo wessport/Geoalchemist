@@ -5,7 +5,7 @@ date: 2017-11-03
 
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1514071443/rocket_bw_140_gajzrl.png
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1514071790/rocket_bw_400_jcpbv8.png
 coverImage: https://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg
 metaAlignment: center
 coverMeta: in
