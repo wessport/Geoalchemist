@@ -4,9 +4,9 @@ date: 2017-12-15
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
 thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1514069924/SQL_plain140_q0jiy9.svg
-coverImage: https://res.cloudinary.com/wessport/image/upload/v1513372413/mountain_sunset_iu7zey.jpg
+coverImage: https://res.cloudinary.com/wessport/image/upload/c_scale,h_1080,w_1920/v1513372413/mountain_sunset_iu7zey.jpg
 metaAlignment: center
-coverMeta: out
+coverMeta: in
 comments: true
 
 keywords:
