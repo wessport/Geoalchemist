@@ -4,7 +4,7 @@ author: "Wes"
 date: 2017-11-03
 
 thumbnailImagePosition: left
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1514072150/rocket_bw_2250_xamgry.png
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1514072736/rocket_bw_400_isw0ws.png
 coverImage: https://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg
 metaAlignment: center
 coverMeta: in
