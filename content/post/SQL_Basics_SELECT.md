@@ -2,8 +2,8 @@
 title: "SQL Basics: The SELECT Statement"
 date: 2017-12-15
 autoThumbnailImage: true
-thumbnailImagePosition: "left"
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1514069924/SQL_plain140_q0jiy9.svg
+thumbnailImagePosition: left
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1514073271/SQL_bw_400_dz3urm.png
 coverImage: https://res.cloudinary.com/wessport/image/upload/c_scale,h_1080,w_1920/v1513372413/mountain_sunset_iu7zey.jpg
 metaAlignment: center
 coverMeta: in
