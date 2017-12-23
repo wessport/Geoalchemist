@@ -3,7 +3,7 @@ title: "SQL Basics: The SELECT Statement"
 date: 2017-12-15
 autoThumbnailImage: true
 thumbnailImagePosition: "left"
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1513977424/SQL_basics_flzs2t.png
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1514069924/SQL_plain140_q0jiy9.svg
 coverImage: https://res.cloudinary.com/wessport/image/upload/v1513372413/mountain_sunset_iu7zey.jpg
 metaAlignment: center
 coverMeta: out
