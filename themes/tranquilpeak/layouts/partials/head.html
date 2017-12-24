@@ -64,12 +64,6 @@
       {{ end }}
     {{ end }}
 
-    {{ if .Scratch.Get "gravatarEmail" }}
-      <meta property="og:image" content="//www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
-    {{ else if .Site.Author.picture }}
-      <meta property="og:image" content="{{ .Site.Author.picture | absURL }}">
-    {{ end }}
-
     {{ with .Params.thumbnailImage }}
       <meta property="og:image" content="{{ . | absURL }}">
     {{ end }}
@@ -80,6 +74,12 @@
       {{ range . }}
         <meta property="og:image" content="{{ range first 1 (split . " ") }}{{ . | absURL }}{{ end }}">
       {{ end }}
+    {{ end }}
+
+    {{ if .Scratch.Get "gravatarEmail" }}
+      <meta property="og:image" content="//www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
+    {{ else if .Site.Author.picture }}
+      <meta property="og:image" content="{{ .Site.Author.picture | absURL }}">
     {{ end }}
 
     {{ with .Site.Author.googlePlus }}
