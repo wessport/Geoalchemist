@@ -92,8 +92,15 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
   url = "https://github.com/wessport"
 
+  [[menu.links]]
+    weight = 3
+    identifier = "linkedin"
+    name = "LinkedIn"
+    pre = "<i class=\"sidebar-button-icon fa fa-linkedin-square\"></i>"
+    url = "https://www.linkedin.com/in/wes-porter-10250488/"
+
 [[menu.links]]
-  weight = 3
+  weight = 4
   identifier = "maps"
   name = "Map Gallery"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-map\"></i>"
