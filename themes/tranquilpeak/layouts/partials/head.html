@@ -53,34 +53,35 @@
     <meta name="twitter:image:src" content="{{ .Params.thumbnailImage }}"/>
 
 
-    {{ with .Site.Params.fbAppId }}
+    <!-- {{ with .Site.Params.fbAppId }}
       <meta property="fb:app_id" content="{{ . }}">
-    {{ end }}
+    {{ end }} -->
 
     <!-- Facebook admins -->
-    {{ with .Site.Params.fbAdminIds }}
+    <!-- {{ with .Site.Params.fbAdminIds }}
       {{ range . }}
           <meta property="fb:admins" content="{{ . }}">
       {{ end }}
-    {{ end }}
-
-    {{ with .Params.thumbnailImage }}
-      <meta property="og:image" content="{{ . | absURL }}">
-    {{ end }}
-    {{ with .Params.coverImage }}
-      <meta property="og:image" content="{{ . | absURL }}">
-    {{ end }}
-    {{ with .Params.gallery }}
-      {{ range . }}
-        <meta property="og:image" content="{{ range first 1 (split . " ") }}{{ . | absURL }}{{ end }}">
-      {{ end }}
-    {{ end }}
+    {{ end }} -->
 
     <!-- {{ if .Scratch.Get "gravatarEmail" }}
       <meta property="og:image" content="//www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
     {{ else if .Site.Author.picture }}
       <meta property="og:image" content="{{ .Site.Author.picture | absURL }}">
     {{ end }} -->
+
+    {{ with .Params.thumbnailImage }}
+      <meta property="og:image" content="{{ . | absURL }}">
+    {{ end }}
+    <!-- {{ with .Params.coverImage }}
+      <meta property="og:image" content="{{ . | absURL }}">
+    {{ end }}
+    {{ with .Params.gallery }}
+      {{ range . }}
+        <meta property="og:image" content="{{ range first 1 (split . " ") }}{{ . | absURL }}{{ end }}">
+      {{ end }}
+    {{ end }} -->
+
 
     {{ with .Site.Author.googlePlus }}
       <link rel="publisher" href="https://plus.google.com/{{ . | urlize }}">
