@@ -73,14 +73,14 @@
     {{ with .Params.thumbnailImage }}
       <meta property="og:image" content="{{ . | absURL }}"/>
     {{ end }}
-    <!-- {{ with .Params.coverImage }}
+    {{ with .Params.coverImage }}
       <meta property="og:image" content="{{ . | absURL }}">
     {{ end }}
     {{ with .Params.gallery }}
       {{ range . }}
         <meta property="og:image" content="{{ range first 1 (split . " ") }}{{ . | absURL }}{{ end }}">
       {{ end }}
-    {{ end }} -->
+    {{ end }}
 
 
     {{ with .Site.Author.googlePlus }}
