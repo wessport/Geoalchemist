@@ -71,7 +71,7 @@
     {{ end }} -->
 
     {{ with .Params.thumbnailImage }}
-      <meta property="og:image" content="{{ . | absURL }}">
+      <meta property="og:image" content="{{ . | absURL }}"/>
     {{ end }}
     <!-- {{ with .Params.coverImage }}
       <meta property="og:image" content="{{ . | absURL }}">
