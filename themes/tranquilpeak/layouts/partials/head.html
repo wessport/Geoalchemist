@@ -76,11 +76,11 @@
       {{ end }}
     {{ end }}
 
-    {{ if .Scratch.Get "gravatarEmail" }}
+    <!-- {{ if .Scratch.Get "gravatarEmail" }}
       <meta property="og:image" content="//www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
     {{ else if .Site.Author.picture }}
       <meta property="og:image" content="{{ .Site.Author.picture | absURL }}">
-    {{ end }}
+    {{ end }} -->
 
     {{ with .Site.Author.googlePlus }}
       <link rel="publisher" href="https://plus.google.com/{{ . | urlize }}">
