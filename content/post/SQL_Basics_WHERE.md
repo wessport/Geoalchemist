@@ -219,4 +219,4 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID > 1005;
 
 The `WHERE` clause should be used whenever you need to constrain your data. Conditional operators can help you further refine your queries beyond exact matches, and if you find you need multiple conditions, include logic operators such as `AND` and `OR`.
 
-In the next post of the **SQL BASICS** series, we'll continue expanding our SQL toolkit. I'll go into how grouping rows in or data tables using the `GROUP BY` clause can be handy and how to sort our returned rows using the `ORDER BY` clause.
+In the next post of the **SQL BASICS** series, we'll continue expanding our SQL toolkit. I'll go into how grouping rows using the `GROUP BY` clause can be handy and how to sort our returned rows using the `ORDER BY` clause.
