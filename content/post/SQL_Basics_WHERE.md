@@ -3,7 +3,7 @@ title: "SQL Basics: The WHERE clause"
 date: 2017-12-28
 autoThumbnailImage: true
 thumbnailImagePosition: left
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1514073271/SQL_bw_400_dz3urm.png
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1514506561/magnifying_bw_vklcfj.png
 coverImage: https://res.cloudinary.com/wessport/image/upload/v1514486830/macbook_qwzedr.jpg
 metaAlignment: center
 coverMeta: in
@@ -26,11 +26,11 @@ tags:
 - SQL Basics
 ---
 
-Working with the **WHERE** clause and **SQL operators** to refine data requests.
+Working with the WHERE clause and SQL operators to refine data requests.
 
 <!--more-->
 
-In my last post I covered the basics of the `SELECT` statement and what exactly Structured Query Language (**SQL**) is. In today's post, we're adding a new clause to the `SELECT` statement that will allow us to refine our data requests. If this is your first introduction to **SQL**, I recommend you check out my previous post which you can find [here](/2017/12/sql-basics-the-select-statement/).
+In my last post I covered the basics of the `SELECT` statement and what exactly Structured Query Language (**SQL**) is. In today's post, we're adding a new clause to the `SELECT` statement that will allow us to constrain our data requests. If this is your first introduction to **SQL**, I recommend you check out my previous post which you can find [here](/2017/12/sql-basics-the-select-statement/).
 
 
 ## The WHERE Clause ##
