@@ -1,5 +1,5 @@
 ---
-title: "SQL Basics: The WHERE clause"
+title: "SQL Basics: The WHERE Clause"
 date: 2017-12-28
 autoThumbnailImage: true
 thumbnailImagePosition: left
