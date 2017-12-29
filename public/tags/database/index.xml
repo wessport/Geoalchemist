@@ -6,10 +6,21 @@
     <description>Recent content in Database on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.geoalchemist.com/tags/database/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SQL Basics: The WHERE clause</title>
+      <link>https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/</link>
+      <pubDate>Thu, 28 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/</guid>
+      <description>&lt;p&gt;Working with the &lt;strong&gt;WHERE&lt;/strong&gt; clause and &lt;strong&gt;SQL operators&lt;/strong&gt; to refine data requests.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>SQL Basics: The SELECT Statement</title>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/</loc>
+    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/</loc>
     <lastmod>2017-12-15T00:00:00+00:00</lastmod>
   </url>
@@ -34,31 +39,31 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/database/</loc>
-    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <loc>https://www.geoalchemist.com/categories/database/</loc>
+    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/database/</loc>
-    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <loc>https://www.geoalchemist.com/tags/database/</loc>
+    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.geoalchemist.com/</loc>
-    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/gis/</loc>
-    <lastmod>2017-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.geoalchemist.com/categories/gis/</loc>
+    <lastmod>2017-10-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/gis/</loc>
     <lastmod>2017-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -77,7 +82,7 @@
   
   <url>
     <loc>https://www.geoalchemist.com/post/</loc>
-    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,13 +94,13 @@
   
   <url>
     <loc>https://www.geoalchemist.com/tags/sql/</loc>
-    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.geoalchemist.com/tags/sql-basics/</loc>
-    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

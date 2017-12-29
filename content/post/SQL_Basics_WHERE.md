@@ -96,7 +96,7 @@ WHERE BREWERY_NAME = 'GREEN MAN BREWERY';
 
 Be sure to pay special attention to the case of your string conditions inside your `WHERE` clause. Had we tried to use `WHERE BREWERY_NAME = 'Green Man Brewery';`  our return would have been empty because in the `BREWERY` table, "GREEN MAN BREWERY" is in all caps. If we are unsure of the case of the string value we are searching for inside a particular table, most DBMS have text manipulation functions such as `UPPER` and `LOWER` that we can use to temporarily convert text to one case or another.
 
-{{< alert [classes] >}}
+{{< alert success no-icon >}}
 Database Management System (DBMS) is the software used to manage a database and the engine for executing your SQL queries. For example Oracle, PostgreSQL, MySQL, etc.
 {{< /alert >}}
 
