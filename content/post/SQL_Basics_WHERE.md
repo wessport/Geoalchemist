@@ -81,7 +81,7 @@ WHERE BREWERY_STATE = 'TN';
 Maybe instead of looking at a list of all of the breweries in NC, we want to look up a specific brewery we heard about to check and see if it's located in NC.
 
 {{< alert warning >}}
-Note that the state abbreviation is in single quotation marks signifying that 'TN' is of the `string` data type.
+Note that the state abbreviation is in single quotation marks signifying that 'TN' is a string data type.
 {{< /alert >}}
 
 ```
@@ -94,11 +94,7 @@ WHERE BREWERY_NAME = 'GREEN MAN BREWERY';
 | 1001       | GREEN MAN BREWERY               | NC            | 3000-TBTL       |
 
 
-Be sure to pay special attention to the case of your string conditions inside your `WHERE` clause. Had we tried to use `WHERE BREWERY_NAME = 'Green Man Brewery';`  our return would have been empty because in the `BREWERY` table, "GREEN MAN BREWERY" is in all caps. If we are unsure of the case of the string value we are searching for inside a particular table, most DBMS have text manipulation functions such as `UPPER` and `LOWER` that we can use to temporarily convert text to one case or another.
-
-{{< alert success no-icon >}}
-Database Management System (DBMS) is the software used to manage a database and the engine for executing your SQL queries. For example Oracle, PostgreSQL, MySQL, etc.
-{{< /alert >}}
+Be sure to pay special attention to the case of your string conditions inside your `WHERE` clause. Had we tried to use `WHERE BREWERY_NAME = 'Green Man Brewery';`  our return would have been empty because in the `BREWERY` table, "GREEN MAN BREWERY" is in all caps.
 
 ```
 SELECT BREWERY_ID, BREWERY_NAME, BREWERY_STATE, BREWERY_LICENSE
@@ -111,17 +107,21 @@ WHERE LOWER(BREWERY_NAME) = 'green man brewery';
 
 Because we only included the text manipulation function `LOWER` in the where clause and not in the `SELECT ` clause, the "GREEN MAN BREWERY" was returned in its default case instead of lower case.
 
-Sometimes we don't have an exact value we're looking for. In those search cases we need to use conditional operators.
+If we have any uncertainty surrounding case when searching inside a particular table, most DBMS have text manipulation functions such as `UPPER` and `LOWER` that we can use to temporarily convert text to one case or another.
+
+{{< alert success no-icon >}}
+**Database Management System** (**DBMS**) is the software used to manage a database and the engine for executing your SQL queries. For example Oracle, PostgreSQL, MySQL, etc.
+{{< /alert >}}
 
 {{< alert info >}}
-The `WHERE` clause can also be used with `UPDATE`, `INSERT`, and `DELETE` commands, but more on this later.
+The **WHERE** clause can also be used with **UPDATE**, **INSERT**, and **DELETE** commands, but more on this later.
 {{< /alert >}}
 
 ------
 
 ## Conditional Operators ##
 
-Conditional operators allow us to expand our search criteria beyond exact values.
+Sometimes we don't have an exact value we're looking for. In those search cases we need to use conditional operators. They allow us to expand our search criteria beyond exact values.
 
 Here are some of the most common conditional operators you'll encounter.
 
@@ -138,7 +138,7 @@ Here are some of the most common conditional operators you'll encounter.
 | IS NULL  | Contains a NULL value    |
 
 {{< alert info >}}
-`NULL` stands for *no value*. They are **empty** fields. Empty here means no spaces, no placeholder values like -9999 - nothing. `NULL` values typically occur in our data when we don't know the actual value of a field (cell) within our data table so we leave it blank.
+**NULL** stands for *no value*. They are **empty** fields. Empty here means no spaces, no placeholder values like -9999 - nothing. **NULL** values typically occur in our data when we don't know the actual value of a field (cell) within our data table so we leave it blank.
 {{< /alert >}}
 
 If we wanted to find brewery IDs where the BREWERY_ID is between 1002 and 1005, we would write our query like this:
@@ -167,7 +167,7 @@ The `WHERE` clause in this example actually uses two operators. The `AND` in thi
 | OR             | Return rows that meet either condition                    |
 | NOT            | Return only rows that do not meet the specified condition |
 
-Logic operators allow you to combine more than one search condition at a time. For instance if we want to limit our results for breweries where the BREWERY_ID is 1005 and the state is NC our query would use the `AND` logic operator. If we wanted to return a list of breweries located in NC or TN we would use the `OR` operator. The nice thing about logic operators in **SQL** is that they're pretty intuitive.
+Logic operators allow you to combine more than one search condition at a time. For instance if we want to limit our results for breweries where the `BREWERY_ID` is 1005 and the state is NC, our query would use the `AND` logic operator. If we wanted to return a list of breweries located in NC or TN we would use the `OR` operator. The nice thing about logic operators in **SQL** is that they're pretty intuitive.
 
 For practice let's write a query with multiple conditions. Let's say we want to look at breweries in either `NC` or `TN` where the `BREWERY_ID` is greater than `1005`.
 
@@ -187,9 +187,15 @@ WHERE BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN' AND BREWERY_ID > 1005;
 | 1009       | CRAFTY BASTARD BREWING          | TN            | 865-37917       |
 | 1010       | Highland Brewing Company        | NC            | 28803- HBC      |
 
-Hmm. Was this the table you were expecting? Looks like we've got NC breweries where the IDs is below 1005 even though we requested only IDs above 1005. Let's look closely at what's actually going on here.
+Hmm...
 
-The order in which the operators are evaluated is causing us trouble. In most DBMS environments, the `AND` operator is executed first. This means that in our example above, *any breweries located in TN and with a BREWERY_ID > 1005 are returned, and any breweries located in NC regardless of their ID*. To fix this problem we just need to be more specific. By adding parentheses around our conditions, we can control the order in which they're evaluated. Think of your old TI-83 calculator days.
+Was this the table you were expecting?
+
+Looks like we've got NC breweries where the IDs is below 1005 even though we requested only IDs above 1005. Let's look closely at what's actually going on here.
+
+The order in which the operators are evaluated is causing us trouble. In most DBMS environments, the `AND` operator is executed first. This means that in our example above, *any breweries located in TN and with a BREWERY_ID > 1005 are returned, and any breweries located in NC regardless of their ID*.
+
+To fix this problem we just need to be more specific. By adding parentheses around our conditions, we can control the order in which they're evaluated. Think of your old TI-83 calculator days.
 
 ```
 SELECT *
@@ -211,4 +217,6 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID > 1005;
 
 ## To Sum It Up ##
 
-The `WHERE` clause should be used whenever you need to constrain your data. Conditional operators can help you further refine your queries beyond exact matches, and if you find you need multiple conditions, include logic operators such as `AND` and `OR`. In the next post of the **SQL BASICS** series, we'll continue expanding our SQL toolkit. I'll go into how grouping rows in or data tables using the `GROUP BY` clause can be handy and how to sort our returned rows using the `ORDER BY` clause.
+The `WHERE` clause should be used whenever you need to constrain your data. Conditional operators can help you further refine your queries beyond exact matches, and if you find you need multiple conditions, include logic operators such as `AND` and `OR`.
+
+In the next post of the **SQL BASICS** series, we'll continue expanding our SQL toolkit. I'll go into how grouping rows in or data tables using the `GROUP BY` clause can be handy and how to sort our returned rows using the `ORDER BY` clause.

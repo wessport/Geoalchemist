@@ -450,7 +450,7 @@ WHERE BREWERY_STATE = 'TN';
 <p>Maybe instead of looking at a list of all of the breweries in NC, we want to look up a specific brewery we heard about to check and see if it&rsquo;s located in NC.</p>
 
 <div class="alert warning ">
-  <p>Note that the state abbreviation is in single quotation marks signifying that &lsquo;TN&rsquo; is of the <code>string</code> data type.</p>
+  <p>Note that the state abbreviation is in single quotation marks signifying that &lsquo;TN&rsquo; is a string data type.</p>
 </div>
 
 <pre><code>SELECT *
@@ -478,11 +478,7 @@ WHERE BREWERY_NAME = 'GREEN MAN BREWERY';
 </tbody>
 </table>
 
-<p>Be sure to pay special attention to the case of your string conditions inside your <code>WHERE</code> clause. Had we tried to use <code>WHERE BREWERY_NAME = 'Green Man Brewery';</code>  our return would have been empty because in the <code>BREWERY</code> table, &ldquo;GREEN MAN BREWERY&rdquo; is in all caps. If we are unsure of the case of the string value we are searching for inside a particular table, most DBMS have text manipulation functions such as <code>UPPER</code> and <code>LOWER</code> that we can use to temporarily convert text to one case or another.</p>
-
-<div class="alert success no-icon ">
-  <p>Database Management System (DBMS) is the software used to manage a database and the engine for executing your SQL queries. For example Oracle, PostgreSQL, MySQL, etc.</p>
-</div>
+<p>Be sure to pay special attention to the case of your string conditions inside your <code>WHERE</code> clause. Had we tried to use <code>WHERE BREWERY_NAME = 'Green Man Brewery';</code>  our return would have been empty because in the <code>BREWERY</code> table, &ldquo;GREEN MAN BREWERY&rdquo; is in all caps.</p>
 
 <pre><code>SELECT BREWERY_ID, BREWERY_NAME, BREWERY_STATE, BREWERY_LICENSE
 FROM BREWERY
@@ -511,17 +507,21 @@ WHERE LOWER(BREWERY_NAME) = 'green man brewery';
 
 <p>Because we only included the text manipulation function <code>LOWER</code> in the where clause and not in the <code>SELECT</code> clause, the &ldquo;GREEN MAN BREWERY&rdquo; was returned in its default case instead of lower case.</p>
 
-<p>Sometimes we don&rsquo;t have an exact value we&rsquo;re looking for. In those search cases we need to use conditional operators.</p>
+<p>If we have any uncertainty surrounding case when searching inside a particular table, most DBMS have text manipulation functions such as <code>UPPER</code> and <code>LOWER</code> that we can use to temporarily convert text to one case or another.</p>
+
+<div class="alert success no-icon ">
+  <p><strong>Database Management System</strong> (<strong>DBMS</strong>) is the software used to manage a database and the engine for executing your SQL queries. For example Oracle, PostgreSQL, MySQL, etc.</p>
+</div>
 
 <div class="alert info ">
-  <p>The <code>WHERE</code> clause can also be used with <code>UPDATE</code>, <code>INSERT</code>, and <code>DELETE</code> commands, but more on this later.</p>
+  <p>The <strong>WHERE</strong> clause can also be used with <strong>UPDATE</strong>, <strong>INSERT</strong>, and <strong>DELETE</strong> commands, but more on this later.</p>
 </div>
 
 <hr />
 
 <h2 id="conditional-operators">Conditional Operators</h2>
 
-<p>Conditional operators allow us to expand our search criteria beyond exact values.</p>
+<p>Sometimes we don&rsquo;t have an exact value we&rsquo;re looking for. In those search cases we need to use conditional operators. They allow us to expand our search criteria beyond exact values.</p>
 
 <p>Here are some of the most common conditional operators you&rsquo;ll encounter.</p>
 
@@ -582,7 +582,7 @@ WHERE LOWER(BREWERY_NAME) = 'green man brewery';
 </table>
 
 <div class="alert info ">
-  <p><code>NULL</code> stands for <em>no value</em>. They are <strong>empty</strong> fields. Empty here means no spaces, no placeholder values like -9999 - nothing. <code>NULL</code> values typically occur in our data when we don&rsquo;t know the actual value of a field (cell) within our data table so we leave it blank.</p>
+  <p><strong>NULL</strong> stands for <em>no value</em>. They are <strong>empty</strong> fields. Empty here means no spaces, no placeholder values like -9999 - nothing. <strong>NULL</strong> values typically occur in our data when we don&rsquo;t know the actual value of a field (cell) within our data table so we leave it blank.</p>
 </div>
 
 <p>If we wanted to find brewery IDs where the BREWERY_ID is between 1002 and 1005, we would write our query like this:</p>
@@ -658,7 +658,7 @@ WHERE BREWERY_ID BETWEEN 1002 AND 1005;
 </tbody>
 </table>
 
-<p>Logic operators allow you to combine more than one search condition at a time. For instance if we want to limit our results for breweries where the BREWERY_ID is 1005 and the state is NC our query would use the <code>AND</code> logic operator. If we wanted to return a list of breweries located in NC or TN we would use the <code>OR</code> operator. The nice thing about logic operators in <strong>SQL</strong> is that they&rsquo;re pretty intuitive.</p>
+<p>Logic operators allow you to combine more than one search condition at a time. For instance if we want to limit our results for breweries where the <code>BREWERY_ID</code> is 1005 and the state is NC, our query would use the <code>AND</code> logic operator. If we wanted to return a list of breweries located in NC or TN we would use the <code>OR</code> operator. The nice thing about logic operators in <strong>SQL</strong> is that they&rsquo;re pretty intuitive.</p>
 
 <p>For practice let&rsquo;s write a query with multiple conditions. Let&rsquo;s say we want to look at breweries in either <code>NC</code> or <code>TN</code> where the <code>BREWERY_ID</code> is greater than <code>1005</code>.</p>
 
@@ -736,9 +736,15 @@ WHERE BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN' AND BREWERY_ID &gt; 1005;
 </tbody>
 </table>
 
-<p>Hmm. Was this the table you were expecting? Looks like we&rsquo;ve got NC breweries where the IDs is below 1005 even though we requested only IDs above 1005. Let&rsquo;s look closely at what&rsquo;s actually going on here.</p>
+<p>Hmm&hellip;</p>
 
-<p>The order in which the operators are evaluated is causing us trouble. In most DBMS environments, the <code>AND</code> operator is executed first. This means that in our example above, <em>any breweries located in TN and with a BREWERY_ID &gt; 1005 are returned, and any breweries located in NC regardless of their ID</em>. To fix this problem we just need to be more specific. By adding parentheses around our conditions, we can control the order in which they&rsquo;re evaluated. Think of your old TI-83 calculator days.</p>
+<p>Was this the table you were expecting?</p>
+
+<p>Looks like we&rsquo;ve got NC breweries where the IDs is below 1005 even though we requested only IDs above 1005. Let&rsquo;s look closely at what&rsquo;s actually going on here.</p>
+
+<p>The order in which the operators are evaluated is causing us trouble. In most DBMS environments, the <code>AND</code> operator is executed first. This means that in our example above, <em>any breweries located in TN and with a BREWERY_ID &gt; 1005 are returned, and any breweries located in NC regardless of their ID</em>.</p>
+
+<p>To fix this problem we just need to be more specific. By adding parentheses around our conditions, we can control the order in which they&rsquo;re evaluated. Think of your old TI-83 calculator days.</p>
 
 <pre><code>SELECT *
 FROM BREWERY
@@ -804,7 +810,9 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
 
 <h2 id="to-sum-it-up">To Sum It Up</h2>
 
-<p>The <code>WHERE</code> clause should be used whenever you need to constrain your data. Conditional operators can help you further refine your queries beyond exact matches, and if you find you need multiple conditions, include logic operators such as <code>AND</code> and <code>OR</code>. In the next post of the <strong>SQL BASICS</strong> series, we&rsquo;ll continue expanding our SQL toolkit. I&rsquo;ll go into how grouping rows in or data tables using the <code>GROUP BY</code> clause can be handy and how to sort our returned rows using the <code>ORDER BY</code> clause.</p>
+<p>The <code>WHERE</code> clause should be used whenever you need to constrain your data. Conditional operators can help you further refine your queries beyond exact matches, and if you find you need multiple conditions, include logic operators such as <code>AND</code> and <code>OR</code>.</p>
+
+<p>In the next post of the <strong>SQL BASICS</strong> series, we&rsquo;ll continue expanding our SQL toolkit. I&rsquo;ll go into how grouping rows in or data tables using the <code>GROUP BY</code> clause can be handy and how to sort our returned rows using the <code>ORDER BY</code> clause.</p>
               
             </div>
           </div>
