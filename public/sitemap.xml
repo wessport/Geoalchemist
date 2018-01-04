@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.geoalchemist.com/2017/12/music-for-coding/</loc>
-    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
+    <loc>https://www.geoalchemist.com/2018/01/music-for-coding/</loc>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -44,37 +44,37 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/database/</loc>
-    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.geoalchemist.com/categories/database/</loc>
     <lastmod>2017-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/folk/</loc>
+    <loc>https://www.geoalchemist.com/tags/database/</loc>
     <lastmod>2017-12-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/folk/</loc>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.geoalchemist.com/</loc>
-    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/gis/</loc>
-    <lastmod>2017-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.geoalchemist.com/categories/gis/</loc>
+    <lastmod>2017-10-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/gis/</loc>
     <lastmod>2017-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -87,13 +87,13 @@
   
   <url>
     <loc>https://www.geoalchemist.com/tags/indie/</loc>
-    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.geoalchemist.com/tags/jazz/</loc>
-    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -104,20 +104,20 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/playlist/</loc>
-    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
+    <loc>https://www.geoalchemist.com/categories/playlist/</loc>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/playlist/</loc>
-    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
+    <loc>https://www.geoalchemist.com/tags/playlist/</loc>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.geoalchemist.com/post/</loc>
-    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
