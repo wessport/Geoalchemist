@@ -3,8 +3,8 @@ title: "What Makes a Graduate Program Valuable?"
 date: 2018-01-16
 autoThumbnailImage: true
 thumbnailImagePosition: left
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1514506561/magnifying_bw_vklcfj.png
-coverImage: https://res.cloudinary.com/wessport/image/upload/v1514486830/macbook_qwzedr.jpg
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1516212954/grad_400_xwereg.png
+coverImage: https://res.cloudinary.com/wessport/image/upload/v1516211751/pexels-photo-373488_gw4wqr.jpg
 metaAlignment: center
 coverMeta: out
 comments: true
@@ -26,6 +26,7 @@ tags:
 You're investing a substantial amount of time, energy, and most importantly **money** into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.
 
 <!--more-->
+---
 
 I've been planning to write on my graduate school experience for sometime. Lots of ideas, not much writing. This spring will be my final semester, so before I start whatever comes next, I'm going to do some writing.
 
@@ -33,7 +34,7 @@ An insider's perspective was what I valued most when I was evaluating possible g
 
 ---
 
-1. Relevant and Current Training
+## 1. Relevant and Current Training ##
 
 It has been my experience that rarely will your courses actually reflect current practices, use the latest technology, or generally be vaguely cognizant of what skills will be useful to you outside of academia. This can be one of the most frustrating aspects of graduate school and college in general. It's easy to become disenchanted when you discover the hard work you've put into your studies has made you a successful scholar but not a marketable hire.
 
@@ -54,8 +55,9 @@ Become a weekend warrior.
 
 Rarely do I have time during the school week to learn new skills, but during the weekend I try to take a few hours to learn something new to supplement my course work. Starting a blog is an efficient way to chronicle and reinforce what you learn by sharing it with others.
 
+---
 
-2. A Rigorous Journey
+## 2. A Rigorous Journey ##
 
 Writing the word "rigorous" makes my stomach churn. New challenges are scary. Do I have the skills to survive this course or program? Am I good enough?
 
@@ -67,15 +69,17 @@ Perhaps more important than difficulty alone, will this program provide the supp
 
 Asking someone to climb El Capitan without any climbing gear isn't exactly setting them up for success.
 
-{{< image classes="fancybox center clear" src="http://res.cloudinary.com/wessport/image/upload/c_scale,r_30,w_600/v1516142170/climbing_u8c9z6.jpg" thumbnail="http://google.fr/images/image125.png" title="El Capitan" >}}
+<!-- Climbing the Capitan -->
+{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" >}}
 
 
 Finding out if the course work is worth your while can be tricky. Alumni or current students willing to exchange a few emails with you are the best way to find out what course loads will be like and what  resources will be available to you.
 
 Don't be afraid to reach out. Current grad students are usually happy to share their own experience.
 
+---
 
-3. Monetary Support
+## 3. Monetary Support ##
 
 According to College Board's [2017 Trends in College Pricing](https://trends.collegeboard.org/sites/default/files/2017-trends-in-college-pricing_1.pdf), the average annual tuition for graduate students is around $10,000 at public universities and at private colleges you can expect to pay 3 times as much ~ $30,000.
 
@@ -93,8 +97,9 @@ Reach out to professors to see if they might have funding opportunities for assi
 
 Don't cripple your future with a mountain of debt if you can avoid it.
 
+---
 
-4. Mentors Who Invest in You
+## 4. Mentors Who Invest in You ##
 
 Who you chose as your mentor will define your graduate school experience.
 
@@ -112,7 +117,7 @@ Remember, it's a two way street! Of all the takeaways above, this is the most im
 
 ---
 <!-- Conclusion -->
-## Conclusion ##
+## Closing Thoughts ##
 If you can find a program that demonstrates the characteristics above, I think graduate school can be a smart investment.
 
 Choosing the right graduate program can be daunting. Don't rush it. It's a very personal and significant decision.

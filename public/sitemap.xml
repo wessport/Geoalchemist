@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.geoalchemist.com/2018/01/what-makes-a-graduate-program-valuable/</loc>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.geoalchemist.com/2018/01/music-for-coding/</loc>
     <lastmod>2018-01-04T00:00:00+00:00</lastmod>
   </url>
@@ -63,7 +68,7 @@
   
   <url>
     <loc>https://www.geoalchemist.com/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -76,6 +81,18 @@
   <url>
     <loc>https://www.geoalchemist.com/categories/gis/</loc>
     <lastmod>2017-10-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/graduate-school/</loc>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/graduate-school/</loc>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -117,7 +134,7 @@
   
   <url>
     <loc>https://www.geoalchemist.com/post/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -142,6 +159,12 @@
   <url>
     <loc>https://www.geoalchemist.com/tags/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/tips/</loc>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

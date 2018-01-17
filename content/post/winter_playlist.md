@@ -3,7 +3,7 @@ title: "Music For Coding"
 date: 2018-01-04
 autoThumbnailImage: true
 thumbnailImagePosition: left
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1515096596/cassette_zn3dtx.png
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1516213064/cassette_bw_t4qz5w.png
 metaAlignment: center
 comments: true
 
