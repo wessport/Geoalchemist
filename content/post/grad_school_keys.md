@@ -12,9 +12,12 @@ comments: true
 keywords:
 - Graduate School
 - Grad School
+- Grad School Search
 - Higher Education
-- value
-- tips
+- Cost
+- Training
+- Value
+- Tips
 
 categories:
 - Graduate School
@@ -22,6 +25,8 @@ categories:
 tags:
 - Graduate School
 - Tips
+- Grad School Search
+- Cost
 ---
 You're investing a substantial amount of time, energy, and most importantly **money** into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.
 
@@ -36,8 +41,7 @@ An insider's perspective was what I valued most when I was evaluating possible g
 ---
 
 ## 1. Relevant and Current Training ##
-{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1516214414/pexels-photo-340152_whozlt.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1516214414/pexels-photo-340152_whozlt.jpg" title="Training">}}
-
+{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1516214414/pexels-photo-340152_whozlt.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1516214414/pexels-photo-340152_whozlt.jpg" title="Develop skills that will benefit you and your employer on day one.">}}
 
 It has been my experience that rarely will your courses actually reflect current practices, use the latest technology, or generally be vaguely cognizant of what skills will be useful to you outside of academia. This can be one of the most frustrating aspects of graduate school and college in general. It's easy to become disenchanted when you discover the hard work you've put into your studies has made you a successful scholar but not a marketable hire.
 
@@ -63,19 +67,21 @@ Rarely do I have time during the school week to learn new skills, but during the
 ## 2. A Rigorous Journey ##
 
 <!-- Climbing the Capitan -->
-{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" title="Climbing the Capitan">}}
+{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" title="Grad school should challenge you. Embrace it.">}}
 
-Writing the word "rigorous" makes my stomach churn. New challenges are scary. Do I have the skills to survive this course or program? Am I good enough?
+Writing the word "rigorous" makes my stomach churn. New challenges are scary. Do I have the skills to survive this course or program?
+
+Am I good enough?
+
+While I can't answer any existential questions, I would say look for graduate programs that will challenge you. If you're not struggling, you're not learning and you've invested too much time and money to not get any value out of your degree.
 
 It may sound cliche to suggest, but as I searched for possible graduate programs I found myself second guessing programs that intimidated me because of the prestige of the department or testaments to the difficulty by alumni. I did myself a disservice by shying away from some of those challenges.
 
-At the risk of having an existential crisis, look for graduate programs that will challenge you. If you're not struggling, you're not learning and you've invested too much time and money to not get any value out of your degree.
-
-Perhaps more important than difficulty alone, will this program provide the support and tools you need to overcome the challenges that grad school throws at you?
+Perhaps more important than difficulty alone - will this program provide the support and tools you need to overcome the challenges that grad school throws at you?
 
 Asking someone to climb El Capitan without any climbing gear isn't exactly setting them up for success.
 
-Finding out if the course work is worth your while can be tricky. Alumni or current students willing to exchange a few emails with you are the best way to find out what course loads will be like and what  resources will be available to you.
+Finding out if the course work is worth your while can be tricky. Alumni or current students willing to exchange a few emails with you are the best way to find out what course loads will be like and what resources will be available to you.
 
 Don't be afraid to reach out. Current grad students are usually happy to share their own experience.
 
@@ -83,7 +89,7 @@ Don't be afraid to reach out. Current grad students are usually happy to share t
 
 ## 3. Monetary Support ##
 
-{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1516214622/pexels-photo-259165_u1hyx0.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1516214622/pexels-photo-259165_u1hyx0.jpg" title="Money">}}
+{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1516214622/pexels-photo-259165_u1hyx0.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1516214622/pexels-photo-259165_u1hyx0.jpg" title="Higher education is only getting more expensive.">}}
 
 According to College Board's [2017 Trends in College Pricing](https://trends.collegeboard.org/sites/default/files/2017-trends-in-college-pricing_1.pdf), the average annual tuition for graduate students is around $10,000 at public universities and at private colleges you can expect to pay 3 times as much ~ $30,000.
 
@@ -105,9 +111,7 @@ Don't cripple your future with a mountain of debt if you can avoid it.
 
 ## 4. Mentors Who Invest in You ##
 
-{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1516214807/pexels-photo-66100_xc1ejo.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1516214807/pexels-photo-66100_xc1ejo.jpg" title="Mentors Guide">}}
-
-Who you chose as your mentor will define your graduate school experience.
+{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1516214807/pexels-photo-66100_xc1ejo.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1516214807/pexels-photo-66100_xc1ejo.jpg" title="Who you chose as your mentor will define your graduate school experience.">}}
 
 Luckily, I was fortunate enough to find an incredibly supportive mentor who has made my time in graduate school both invaluable and enjoyable.
 
