@@ -14,19 +14,23 @@ keywords:
 - Grad School
 - Grad School Search
 - Higher Education
-- Cost
-- Training
-- Value
-- Tips
+- Grad School Cost
+- Grad School Training
+- Grad School Value
+- Grad School Tips
+- Graduate School Cost
+- Graduate School Training
+- Graduate School Value
+- Graduate School Tips
 
 categories:
 - Graduate School
 
 tags:
 - Graduate School
-- Tips
+- Grad School Tips
 - Grad School Search
-- Cost
+- Grad School Cost
 ---
 You're investing a substantial amount of time, energy, and most importantly **money** into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.
 
@@ -67,7 +71,7 @@ Rarely do I have time during the school week to learn new skills, but during the
 ## 2. A Rigorous Journey ##
 
 <!-- Climbing the Capitan -->
-{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" title="Grad school should challenge you. Embrace it.">}}
+{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" title="Graduate school should challenge you. Embrace it.">}}
 
 Writing the word "rigorous" makes my stomach churn. New challenges are scary. Do I have the skills to survive this course or program?
 
@@ -117,13 +121,15 @@ Luckily, I was fortunate enough to find an incredibly supportive mentor who has 
 
 Unfortunately however, I've seen first hand how long and miserable two years can be for students and professors alike who were a bad match for each other.
 
-A good mentor will help you foster the kind of skills that not only help you grow in your subject expertise, but also improve the soft skills that will make you a better mentor yourself someday. They provide you with opportunities to learn new things based on *your* interests. They encourage you to have confidence in your abilities, credit you for your work, and share wisdom they've learned the hard way so you don't have to.
+A good mentor will help you foster the kind of skills that not only help you grow in your subject expertise, but also improve the soft skills that will make you a better mentor yourself. They provide you with opportunities to learn new things based on *your* interests. They encourage you to have confidence in your abilities, credit you for your work, and share wisdom they've learned the hard way so you don't have to.
 
 It's hard to know through email if the chemistry is there. Meet with prospective mentors on your campus visits. If you can, visit them more than once.
 
 Encourage an open dialogue on your mutual interests and expectations. Talk to students currently working with them, and students who are *not*. Alumni are even better. They will give you a good idea of what it's like to work with that potential mentor.
 
-Remember, it's a two way street! Of all the takeaways above, this is the most important. If nothing else - find yourself a valuable mentor.
+Remember, it's a two way street! Of all the takeaways from this post, this is the most important:
+
+If nothing else - find yourself a valuable mentor.
 
 ---
 <!-- Conclusion -->
