@@ -3,7 +3,7 @@ title: "What Makes a Graduate Program Valuable?"
 date: 2018-01-16
 autoThumbnailImage: true
 thumbnailImagePosition: left
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1516213516/grad_400_ffs5au.png
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1516220273/grad_400_zviq8s.png
 coverImage: https://res.cloudinary.com/wessport/image/upload/v1516211751/pexels-photo-373488_gw4wqr.jpg
 metaAlignment: center
 coverMeta: out
