@@ -77,17 +77,17 @@ Writing the word "rigorous" makes my stomach churn. New challenges are scary. Do
 
 Am I good enough?
 
-While I can't answer any existential questions, I would say look for graduate programs that will challenge you. If you're not struggling, you're not learning and you've invested too much time and money to not get any value out of your degree.
+While I can't provide any answers to existential questions, I would say look for graduate programs that will challenge you. If you're not struggling, you're not learning and you've invested too much time and money to not get any value out of your degree.
 
-It may sound cliche to suggest, but as I searched for possible graduate programs I found myself second guessing programs that intimidated me because of the prestige of the department or testaments to the difficulty by alumni. I did myself a disservice by shying away from some of those challenges.
-
-Perhaps more important than difficulty alone - will this program provide the support and tools you need to overcome the challenges that grad school throws at you?
-
-Asking someone to climb El Capitan without any climbing gear isn't exactly setting them up for success.
+It may sound cliche to suggest, but when I was looking for possible graduate programs I second guessed schools that intimidated me. Maybe the department  was very prestigious or I maybe felt my experiences were not relevant enough for the program. I did myself a disservice by shying away from some of those challenges.
 
 Finding out if the course work is worth your while can be tricky. Alumni or current students willing to exchange a few emails with you are the best way to find out what course loads will be like and what resources will be available to you.
 
 Don't be afraid to reach out. Current grad students are usually happy to share their own experience.
+
+Perhaps more important than difficulty alone - will this program provide the support and tools you need to overcome the challenges that grad school throws at you?
+
+Asking someone to climb El Capitan without any climbing gear isn't exactly setting them up for success.
 
 ---
 
@@ -134,9 +134,9 @@ If nothing else - find yourself a valuable mentor.
 ---
 <!-- Conclusion -->
 ## Closing Thoughts ##
-If you can find a program that demonstrates the characteristics above, I think graduate school can be a smart investment.
-
 Choosing the right graduate program can be daunting. Don't rush it. It's a very personal and significant decision.
+
+If you can find a program that demonstrates the characteristics above, I think graduate school can be a smart investment.
 
 If you made it this far, hopefully some of the advice above makes that process a little easier.
 
