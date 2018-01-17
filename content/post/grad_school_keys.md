@@ -3,7 +3,7 @@ title: "What Makes a Graduate Program Valuable?"
 date: 2018-01-16
 autoThumbnailImage: true
 thumbnailImagePosition: left
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1516212954/grad_400_xwereg.png
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1516213516/grad_400_ffs5au.png
 coverImage: https://res.cloudinary.com/wessport/image/upload/v1516211751/pexels-photo-373488_gw4wqr.jpg
 metaAlignment: center
 coverMeta: out
@@ -26,6 +26,7 @@ tags:
 You're investing a substantial amount of time, energy, and most importantly **money** into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.
 
 <!--more-->
+
 ---
 
 I've been planning to write on my graduate school experience for sometime. Lots of ideas, not much writing. This spring will be my final semester, so before I start whatever comes next, I'm going to do some writing.
@@ -35,6 +36,8 @@ An insider's perspective was what I valued most when I was evaluating possible g
 ---
 
 ## 1. Relevant and Current Training ##
+{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1516214414/pexels-photo-340152_whozlt.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1516214414/pexels-photo-340152_whozlt.jpg" title="Training">}}
+
 
 It has been my experience that rarely will your courses actually reflect current practices, use the latest technology, or generally be vaguely cognizant of what skills will be useful to you outside of academia. This can be one of the most frustrating aspects of graduate school and college in general. It's easy to become disenchanted when you discover the hard work you've put into your studies has made you a successful scholar but not a marketable hire.
 
@@ -59,6 +62,9 @@ Rarely do I have time during the school week to learn new skills, but during the
 
 ## 2. A Rigorous Journey ##
 
+<!-- Climbing the Capitan -->
+{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" title="Climbing the Capitan">}}
+
 Writing the word "rigorous" makes my stomach churn. New challenges are scary. Do I have the skills to survive this course or program? Am I good enough?
 
 It may sound cliche to suggest, but as I searched for possible graduate programs I found myself second guessing programs that intimidated me because of the prestige of the department or testaments to the difficulty by alumni. I did myself a disservice by shying away from some of those challenges.
@@ -69,10 +75,6 @@ Perhaps more important than difficulty alone, will this program provide the supp
 
 Asking someone to climb El Capitan without any climbing gear isn't exactly setting them up for success.
 
-<!-- Climbing the Capitan -->
-{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/c_scale,w_750/v1516142170/climbing_u8c9z6.jpg" >}}
-
-
 Finding out if the course work is worth your while can be tricky. Alumni or current students willing to exchange a few emails with you are the best way to find out what course loads will be like and what  resources will be available to you.
 
 Don't be afraid to reach out. Current grad students are usually happy to share their own experience.
@@ -80,6 +82,8 @@ Don't be afraid to reach out. Current grad students are usually happy to share t
 ---
 
 ## 3. Monetary Support ##
+
+{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1516214622/pexels-photo-259165_u1hyx0.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1516214622/pexels-photo-259165_u1hyx0.jpg" title="Money">}}
 
 According to College Board's [2017 Trends in College Pricing](https://trends.collegeboard.org/sites/default/files/2017-trends-in-college-pricing_1.pdf), the average annual tuition for graduate students is around $10,000 at public universities and at private colleges you can expect to pay 3 times as much ~ $30,000.
 
@@ -100,6 +104,8 @@ Don't cripple your future with a mountain of debt if you can avoid it.
 ---
 
 ## 4. Mentors Who Invest in You ##
+
+{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1516214807/pexels-photo-66100_xc1ejo.jpg" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1516214807/pexels-photo-66100_xc1ejo.jpg" title="Mentors Guide">}}
 
 Who you chose as your mentor will define your graduate school experience.
 
@@ -124,4 +130,4 @@ Choosing the right graduate program can be daunting. Don't rush it. It's a very 
 
 If you made it this far, hopefully some of the advice above makes that process a little easier.
 
-Best of luck to you!
+Best of luck to you and happy hunting.
