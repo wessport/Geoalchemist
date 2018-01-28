@@ -28,7 +28,7 @@ tags:
 - Normal forms
 - Design
 ---
-Simple rules for improving the integrity of your data tables through Normalization.
+*Simple rules for improving the integrity of your data tables through Normalization.*
 
 <!--more-->
 
@@ -36,13 +36,13 @@ Simple rules for improving the integrity of your data tables through Normalizati
 
 If you're like me when you get a new dataset on your hands, the first thing you want to do is throw it into one giant table and start analyzing it. Historically table design (table structure) hasn't always been at the top of my priority list. As long as I could find what I needed I was happy.
 
-Inevitably at some point in a project however I would need to perform updates. This is where my lack of solid table design always came back to haunt me (thinking of you GHCND climate data). Even simple updates would require all kinds of complex filtering and sorting to ensure I accurately updated each field appropriately.
+Inevitably at some point in a project however I would need to perform updates. This is where my lack of solid table design always came back to haunt me (thinking of you GHCND climate data). Even simple updates would require all kinds of complex filtering and sorting to ensure I accurately updated each field.
 
 Do to the nature of putting all of my data into one table, I had unintentionally introduced rampant redundancy. Even simple updates or deletes became annoying timesinks and always left me questioning - did I really update everything I was supposed to?
 
 Luckily since the inception of databases, giants like [Codd](https://en.wikipedia.org/wiki/Edgar_F._Codd), [Date/Fagin](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4170&rep=rep1&type=pdf), and [William Kent](http://www.bkent.net/Doc/simple5.htm)  discovered that by following a few simple rules it's possible to avoid the types of headaches we often encounter.
 
-This process of reducing redundancy in data tables is formally referred to as Normalization.
+This process of reducing redundancy in data tables is formally referred to as **Normalization**.
 
 ## 1st Normal Form ##
 
@@ -167,7 +167,7 @@ This is what makes 5NF challenging to put into practice.
 Interestingly removing even a single row in your original table could change whether your smaller tables successfully reconstruct.
 
 ---
-{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1517156729/5NormalForms_color_sb5c2i.png" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1517156729/5NormalForms_color_sb5c2i.png">}}
+{{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_350/v1517156729/5NormalForms_color_sb5c2i.png" thumbnail="https://res.cloudinary.com/wessport/image/upload/c_scale,w_350/v1517156729/5NormalForms_color_sb5c2i.png">}}
 
 
 If you've made it to this point, you might have noticed that the solution to every problem thus far has been to create a new table. That's the nature of Normalization. Reduce redundancy but increase the number of tables you have to keep up with.
@@ -178,8 +178,6 @@ Normalizing all of your tables may be the *perfect* solution but is it the right
 
 If the data your working with is mission critical - lives are on the line - then normalizing all your tables to 5th NF is probably the way you want to go. Maybe your requirements are not as dire however and you're comfortable sitting at 3rd NF.
 
-Normalizing to 3rd NF is what I typically shoot for. After 3rd NF, the effort invested is a lot greater than the return on investment.
+Normalizing to 3rd NF is what I typically shoot for. After 3rd NF, the effort invested is a lot greater than the return.
 
-Furthermore your data doesn't have to be stored in a RDBMS to be normalized. Think shapefile attribute tables or even Excel spreadsheets. Both can benefit from normalization.
-
-Ultimately your reputation relies on the integrity of your data. Invest a little time on the frontend to normalize your data tables.
+The power of Normalization is that it applies regardless if your data is stored in a RDBMS or not. Think about how the normal forms could be used to the benefit of your shapefile attribute tables or even Excel spreadsheets. Both can benefit from normalization. 
