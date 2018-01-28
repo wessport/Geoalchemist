@@ -33,7 +33,7 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/2017/11/gis-curriculum/</loc>
+    <loc>https://www.geoalchemist.com/drafts/gis_courses/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -59,13 +59,13 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/database/</loc>
+    <loc>https://www.geoalchemist.com/tags/database/</loc>
     <lastmod>2018-01-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/database/</loc>
+    <loc>https://www.geoalchemist.com/categories/database/</loc>
     <lastmod>2018-01-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -73,6 +73,12 @@
   <url>
     <loc>https://www.geoalchemist.com/tags/design/</loc>
     <lastmod>2018-01-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/drafts/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,13 +95,13 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/gis/</loc>
+    <loc>https://www.geoalchemist.com/tags/gis/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/gis/</loc>
+    <loc>https://www.geoalchemist.com/categories/gis/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -119,13 +125,13 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/graduate-school/</loc>
+    <loc>https://www.geoalchemist.com/tags/graduate-school/</loc>
     <lastmod>2018-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/graduate-school/</loc>
+    <loc>https://www.geoalchemist.com/categories/graduate-school/</loc>
     <lastmod>2018-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -167,13 +173,13 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/playlist/</loc>
+    <loc>https://www.geoalchemist.com/tags/playlist/</loc>
     <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/playlist/</loc>
+    <loc>https://www.geoalchemist.com/categories/playlist/</loc>
     <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
