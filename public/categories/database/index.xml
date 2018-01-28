@@ -6,10 +6,21 @@
     <description>Recent content in Database on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.geoalchemist.com/categories/database/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Five Normal Forms</title>
+      <link>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</guid>
+      <description>&lt;p&gt;Simple rules for improving the integrity of your data tables through Normalization.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>SQL Basics: The WHERE Clause</title>

@@ -6,10 +6,21 @@
     <description>Recent content on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.geoalchemist.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Five Normal Forms</title>
+      <link>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</guid>
+      <description>&lt;p&gt;Simple rules for improving the integrity of your data tables through Normalization.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>What Makes a Graduate Program Valuable?</title>
@@ -62,6 +73,17 @@
       
       <guid>https://www.geoalchemist.com/2017/11/blog-launch/</guid>
       <description>&lt;p&gt;After much toil, I&amp;rsquo;m finally launching a website to share my misadventures in GIS and programming.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GIS Curriculum</title>
+      <link>https://www.geoalchemist.com/2017/11/gis-curriculum/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/2017/11/gis-curriculum/</guid>
+      <description>&lt;p&gt;Courses I would like to see in a competitive GIS program:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

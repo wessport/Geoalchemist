@@ -23,9 +23,18 @@
     <item>
       <title>Database</title>
       <link>https://www.geoalchemist.com/tags/database/</link>
-      <pubDate>Thu, 28 Dec 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>https://www.geoalchemist.com/tags/design/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/design/</guid>
       <description></description>
     </item>
     
@@ -41,7 +50,7 @@
     <item>
       <title>Gis</title>
       <link>https://www.geoalchemist.com/tags/gis/</link>
-      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/tags/gis/</guid>
       <description></description>
@@ -120,6 +129,24 @@
     </item>
     
     <item>
+      <title>Normal Forms</title>
+      <link>https://www.geoalchemist.com/tags/normal-forms/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/normal-forms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Normalization</title>
+      <link>https://www.geoalchemist.com/tags/normalization/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/normalization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Playlist</title>
       <link>https://www.geoalchemist.com/tags/playlist/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
@@ -143,6 +170,15 @@
       <pubDate>Thu, 28 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/tags/sql-basics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tips</title>
+      <link>https://www.geoalchemist.com/tags/tips/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/tips/</guid>
       <description></description>
     </item>
     
