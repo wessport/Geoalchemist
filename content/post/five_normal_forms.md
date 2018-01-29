@@ -170,14 +170,12 @@ Interestingly removing even a single row in your original table could change whe
 {{< image classes="fancybox fig-100" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_350/v1517156729/5NormalForms_color_sb5c2i.png" thumbnail="https://res.cloudinary.com/wessport/image/upload/c_scale,w_350/v1517156729/5NormalForms_color_sb5c2i.png">}}
 
 
-If you've made it to this point, you might have noticed that the solution to every problem thus far has been to create a new table. That's the nature of Normalization. Reduce redundancy but increase the number of tables you have to keep up with.
+If you've made it to this point, you might have noticed that the solution to every problem thus far has been to create a new table. That's the nature of Normalization. Reduce redundancy but increase the number of tables you have to keep up with. This can make your database feel cumbersome.
 
-This can make your database feel cumbersome.
-
-Normalizing all of your tables may be the *perfect* solution but is it the right solution for your operational requirements?
+Normalizing all of your tables may be the *perfect* solution but [is it the right solution for your operational requirements](http://sqlblog.com/blogs/louis_davidson/archive/2010/04/29/can-you-over-normalize.aspx)?
 
 If the data your working with is mission critical - lives are on the line - then normalizing all your tables to 5th NF is probably the way you want to go. Maybe your requirements are not as dire however and you're comfortable sitting at 3rd NF.
 
-Normalizing to 3rd NF is what I typically shoot for. After 3rd NF, the effort invested is a lot greater than the return.
+Normalizing to 3rd NF is what I typically shoot for. After 3rd NF, the effort invested is a lot greater than the return. The power of the Normal Forms is that they are applicable even if your data lives outside a database say in a Shapefile attribute table or Excel spreadsheet.
 
-The power of Normalization is that it applies regardless if your data is stored in a RDBMS or not. Think about how the normal forms could be used to the benefit of your shapefile attribute tables or even Excel spreadsheets. Both can benefit from normalization. 
+Eliminating redundancy may not always be possible, but controlling it is key to protecting the integrity of your data. 
