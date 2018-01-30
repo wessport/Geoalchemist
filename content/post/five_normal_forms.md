@@ -107,7 +107,12 @@ Partial dependencies can introduce integrity issues into your data tables.
 
 For instance every time we store data concerning the `Coffee_ID`, we also repeatedly include the `Coffee_Name`. If we decide to rebrand a particular coffee and introduce a new name later on, every old name of the rebranded coffee has to be replaced. Furthermore, if we currently don’t have a particular coffee on hand, when we lose that `Coffee_ID` value we also lose the name of the coffee.
 
-Partial dependencies can be addressed by creating a new table. Take the determinant in the troublesome partial dependency and copy it to a new table (think cmd-c). Then take the dependent attribute and cut it (cmd-x) to the new table you just created. It's important that you leave a copy of the determinant behind as a foreign key - otherwise you lose the relationship between the two tables.
+Partial dependencies can be addressed by creating a new table. Take the determinant in the troublesome partial dependency and copy it to a new table (think cmd-c). Then take the dependent attribute and cut it (cmd-x) to the new table you just created.
+
+{{< alert warning no-icon >}}
+It's important that you leave a copy of the determinant behind as a foreign key - otherwise you lose the relationship between the two tables.
+{{< /alert >}}
+
 
 <!--Table3-->
 {{< image classes="fancybox center fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table3_jkysab.png" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table3_jkysab.png" title="Table 3">}}
@@ -115,13 +120,15 @@ Partial dependencies can be addressed by creating a new table. Take the determin
 <!--Table4-->
 {{< image classes="fancybox center fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table4_sr10pg.png" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table4_sr10pg.png" title="Table 4">}}
 
-If your table doesn't have a composite key, then technically it's already in 2NF by default as long as it's already in 1NF. You can't have a partial dependency if the primary key doesn't have multiple parts.
 
 {{< pullquote left >}}
 If your table doesn't have a composite key, then technically it's already in 2NF by default as long as it's already in 1NF. You can't have a partial dependency if the primary key doesn't have multiple parts.
 {{< /pullquote >}}
 
+
+
 ---
+
 
 ## 3rd Normal Form ##
 
