@@ -99,7 +99,7 @@ Second normal form (2NF) is realized when there are no partial dependencies.
 {{< /alert >}}
 
 For instance in the example table below a partial dependency exists between `Coffee_ID` and `Coffee_Name`.
-
+<br>
 <!--Table2-->
 {{< image classes="fancybox center fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1517091921/Table2_ldxmwq.png" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1517091921/Table2_ldxmwq.png" title="Table 2">}}
 
@@ -126,11 +126,7 @@ It's important that you leave a copy of the determinant behind as a foreign key 
 If your table doesn't have a composite key, then technically it's already in 2NF by default as long as it's already in 1NF. You can't have a partial dependency if the primary key doesn't have multiple parts.
 {{< /blockquote >}}
 
-<p>
-</p>
-
 ---
-
 
 ## 3rd Normal Form ##
 
@@ -140,15 +136,16 @@ Transitive dependencies occur when a single non-key attribute determines another
 
 For example in the table below a transitive dependency exists between `Roaster_ID` and `Roaster_Name`.
 
+<br>
 <!--Table5-->
 {{< image classes="fancybox center fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table5_q5weug.png" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table5_q5weug.png" title="Table 5">}}
-
+<br>
 To fix any existing transitive dependencies, we can use the same strategy we employed to put our tables into 2NF. Copy the determinants into a new table. Then cut the dependents into the new table you just created.
 
 {{< image classes="fancybox center fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table6_v6hnxm.png" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table6_v6hnxm.png" title="Table 6">}}
 
 {{< image classes="fancybox center fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table7_qptxlg.png" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table7_qptxlg.png" title="Table 7">}}
-
+<br>
 ##### Boyce Codd Normal Form (3.5 NF) #####
 
 Boyce Codd Normal Form (BCNF) is at first glance a reverse of the Second Normal Form. You're essentially removing dependencies in the opposite direction now.
