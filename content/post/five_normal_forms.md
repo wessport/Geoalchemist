@@ -36,13 +36,13 @@ tags:
 
 If you're like me when you get a new dataset on your hands, the first thing you want to do is throw it into one giant table and start analyzing it. Historically table design (table structure) hasn't always been at the top of my priority list. As long as I could find what I needed I was happy.
 
-Inevitably at some point in a project however I would need to perform updates. This is where my lack of solid table design always came back to haunt me (thinking of you GHCND climate data). Even simple updates would require all kinds of complex filtering and sorting to ensure I accurately updated each field.
+Inevitably at some point in a project however I would need to perform updates. This is where poor design always came back to haunt me. Simple updates could require all kinds of complex filtering and sorting to ensure I accurately updated each field.
 
 Do to the nature of putting all of my data into one table, I had unintentionally introduced rampant redundancy. Even simple updates or deletes became annoying timesinks and always left me questioning - did I really update everything I was supposed to?
 
-Luckily since the inception of databases, giants like [Codd](https://en.wikipedia.org/wiki/Edgar_F._Codd), [Date/Fagin](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4170&rep=rep1&type=pdf), and [William Kent](http://www.bkent.net/Doc/simple5.htm)  discovered that by following a few simple rules it's possible to avoid the types of headaches we often encounter.
+![A witty gif](https://media.giphy.com/media/P9RRyBd6ABYJi/giphy.gif)
 
-This process is formally referred to as **Normalization**.
+By adhering to the Five Normal Forms it's possible to weed out most redundancy issues.
 
 {{< alert success no-icon >}}
 **Normalization -** a process of systematically reducing redundancy in data tables.
@@ -61,7 +61,7 @@ A data table is in first normal form (1NF) when:
 
 ##### The order doesn't matter #####
 
-   The position of the rows and also the columns shouldn't carry any significance. The position of the rows and also the columns shouldn't carry any significance. If they do, you have implicit information in the table order that should be made explicit by creating a new attribute. For instance if the priority of the data is indicated by the order it appears in the table, then a new attribute should be created to indicate priority. This makes future maintenance easier.
+   The position of the rows and also the columns shouldn't carry any significance. If they do, you have implicit information in the table order that should be made explicit by creating a new attribute. For instance if the priority of the data is indicated by the order it appears in the table, then a new attribute should be created to indicate priority. This makes future maintenance easier.
 
 
 ##### No two rows are exactly alike #####
@@ -70,7 +70,7 @@ A data table is in first normal form (1NF) when:
 
 ##### The column/attribute names are unique #####
 
-   Say for instance you need to update the name of a coffee in your coffee database. If there are two columns name ‘Coffee_Name’ which one should you update – both? This leads to data integrity issues and makes it more difficult to reference columns reliably.
+   Say for instance you need to update the name of a coffee in your coffee database. If there are two columns named ‘Coffee_Name’ which one should you update – both? This leads to data integrity issues and makes it more difficult to reference columns reliably.
 
 ##### The datatype of each column is consistent #####
 
@@ -94,7 +94,9 @@ There are two common types of dependencies which give rise to the second and thi
 
 Second normal form (2NF) is realized when there are no partial dependencies.
 
-Partial dependencies exist when a part of the primary key can be used to determine the value of a non-key attribute.
+{{< alert success no-icon >}}
+**Partial dependencies** exist when a part of the primary key can be used to determine the value of a non-key attribute.
+{{< /alert >}}
 
 For instance in the example table below a partial dependency exists between `Coffee_ID` and `Coffee_Name`.
 
@@ -114,6 +116,10 @@ Partial dependencies can be addressed by creating a new table. Take the determin
 {{< image classes="fancybox center fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table4_sr10pg.png" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table4_sr10pg.png" title="Table 4">}}
 
 If your table doesn't have a composite key, then technically it's already in 2NF by default as long as it's already in 1NF. You can't have a partial dependency if the primary key doesn't have multiple parts.
+
+{% pullquote [left] %}
+If your table doesn't have a composite key, then technically it's already in 2NF by default as long as it's already in 1NF. You can't have a partial dependency if the primary key doesn't have multiple parts.
+{% endpullquote %}
 
 ---
 

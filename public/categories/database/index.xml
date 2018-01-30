@@ -6,7 +6,7 @@
     <description>Recent content in Database on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.geoalchemist.com/categories/database/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>The Five Normal Forms</title>
       <link>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</link>
-      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</guid>
       <description>&lt;p&gt;&lt;em&gt;Simple rules for improving the integrity of your data tables through Normalization.&lt;/em&gt;&lt;/p&gt;

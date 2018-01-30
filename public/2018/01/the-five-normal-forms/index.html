@@ -259,9 +259,9 @@ ga('send', 'pageview');
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-01-22T00:00:00Z">
+      <time itemprop="datePublished" datetime="2018-01-28T00:00:00Z">
         
-  January 22, 2018
+  January 28, 2018
 
       </time>
     
@@ -298,21 +298,23 @@ ga('send', 'pageview');
 
 <p>If you&rsquo;re like me when you get a new dataset on your hands, the first thing you want to do is throw it into one giant table and start analyzing it. Historically table design (table structure) hasn&rsquo;t always been at the top of my priority list. As long as I could find what I needed I was happy.</p>
 
-<p>Inevitably at some point in a project however I would need to perform updates. This is where my lack of solid table design always came back to haunt me (thinking of you GHCND climate data). Even simple updates would require all kinds of complex filtering and sorting to ensure I accurately updated each field.</p>
+<p>Inevitably at some point in a project however I would need to perform updates. This is where poor design always came back to haunt me. Simple updates could require all kinds of complex filtering and sorting to ensure I accurately updated each field.</p>
 
 <p>Do to the nature of putting all of my data into one table, I had unintentionally introduced rampant redundancy. Even simple updates or deletes became annoying timesinks and always left me questioning - did I really update everything I was supposed to?</p>
 
-<p>Luckily since the inception of databases, giants like <a href="https://en.wikipedia.org/wiki/Edgar_F._Codd">Codd</a>, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4170&amp;rep=rep1&amp;type=pdf">Date/Fagin</a>, and <a href="http://www.bkent.net/Doc/simple5.htm">William Kent</a>  discovered that by following a few simple rules it&rsquo;s possible to avoid the types of headaches we often encounter.</p>
+<p><img src="https://media.giphy.com/media/P9RRyBd6ABYJi/giphy.gif" alt="A witty gif" /></p>
 
-<p>This process of reducing redundancy in data tables is formally referred to as <strong>Normalization</strong>.</p>
+<p>By adhering to the Five Normal Forms it&rsquo;s possible to weed out most redundancy issues.</p>
+
+<div class="alert success no-icon ">
+  <p><strong>Normalization -</strong> a process of systematically reducing redundancy in data tables.</p>
+</div>
 
 <h2 id="1st-normal-form">1st Normal Form</h2>
 
 <p>A data table is in first normal form (1NF) when:</p>
 
-<ul>
-<li>A table consists of cells where each cell contains 1 and only 1 value</li>
-</ul>
+<h5 id="a-table-consists-of-cells-where-each-cell-contains-1-and-only-1-value">A table consists of cells where each cell contains 1 and only 1 value</h5>
 
 <p>This means you cannot have multiple values stored in a single cell like in the example table below.</p>
 
@@ -331,8 +333,12 @@ ga('send', 'pageview');
       
     
   
+    
+      
+    
+  
 
-<div class="figure fig-100" >
+<div class="figure center fig-100" >
   
     <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517091714/Table1_blhf5c.png" title="Table 1" data-fancybox-group="">
   
@@ -346,29 +352,21 @@ ga('send', 'pageview');
 </div>
 
 
-<ul>
-<li>The order doesn&rsquo;t matter.</li>
-</ul>
+<h5 id="the-order-doesn-t-matter">The order doesn&rsquo;t matter</h5>
 
-<p>The position of the rows and also the columns shouldn&rsquo;t carry any significance. The position of the rows and also the columns shouldn&rsquo;t carry any significance. If they do, you have implicit information in the table order that should be made explicit by creating a new attribute. For instance if the priority of the data is indicated by the order it appears in the table, then a new attribute should be created to indicate priority. This makes future maintenance easier.</p>
+<p>The position of the rows and also the columns shouldn&rsquo;t carry any significance. If they do, you have implicit information in the table order that should be made explicit by creating a new attribute. For instance if the priority of the data is indicated by the order it appears in the table, then a new attribute should be created to indicate priority. This makes future maintenance easier.</p>
 
-<ul>
-<li>No two rows are exactly alike.</li>
-</ul>
+<h5 id="no-two-rows-are-exactly-alike">No two rows are exactly alike</h5>
 
 <p>This constraint makes sense given that we’re trying to reduce redundancy as much as possible.</p>
 
-<ul>
-<li>The column/attribute names are unique</li>
-</ul>
+<h5 id="the-column-attribute-names-are-unique">The column/attribute names are unique</h5>
 
-<p>Say for instance you need to update the name of a coffee in your coffee database. If there are two columns name ‘Coffee_Name’ which one should you update – both? This leads to data integrity issues and makes it more difficult to reference columns reliably.</p>
+<p>Say for instance you need to update the name of a coffee in your coffee database. If there are two columns named ‘Coffee_Name’ which one should you update – both? This leads to data integrity issues and makes it more difficult to reference columns reliably.</p>
 
-<ul>
-<li>The datatype of each column is consistent i.e. a column shouldn&rsquo;t contain cells with text and numerical values</li>
-</ul>
+<h5 id="the-datatype-of-each-column-is-consistent">The datatype of each column is consistent</h5>
 
-<p>Columns with multiple datatypes can produce unexpected results when attempting to calculate numerical values or search text leading to integrity issues and future headaches.</p>
+<p>A column shouldn&rsquo;t contain cells with text <strong>and</strong> numerical values. Columns with multiple datatypes can produce unexpected results when attempting to calculate numerical values or search text leading to integrity issues and future headaches.</p>
 
 <hr />
 
@@ -388,9 +386,11 @@ ga('send', 'pageview');
 
 <p>Second normal form (2NF) is realized when there are no partial dependencies.</p>
 
-<p>Partial dependencies exist when a part of the primary key can be used to determine the value of a non-key attribute.</p>
+<div class="alert success no-icon ">
+  <p><strong>Partial dependencies</strong> exist when a part of the primary key can be used to determine the value of a non-key attribute.</p>
+</div>
 
-<p>For instance in the example table below a partial dependency exists between Coffee_ID and Coffee_Name.</p>
+<p>For instance in the example table below a partial dependency exists between <code>Coffee_ID</code> and <code>Coffee_Name</code>.</p>
 
 <!--Table2-->
 
@@ -407,8 +407,12 @@ ga('send', 'pageview');
       
     
   
+    
+      
+    
+  
 
-<div class="figure fig-100" >
+<div class="figure center fig-100" >
   
     <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517091921/Table2_ldxmwq.png" title="Table 2" data-fancybox-group="">
   
@@ -424,7 +428,7 @@ ga('send', 'pageview');
 
 <p>Partial dependencies can introduce integrity issues into your data tables.</p>
 
-<p>For instance every time we store data concerning the Coffee_ID, we also repeatedly include the Coffee_Name. If we decide to rebrand a particular coffee and introduce a new name later on, every old name of the rebranded coffee has to be replaced. Furthermore, if we currently don’t have a particular coffee on hand, when we lose that Coffee_ID value we also lose the name of the coffee.</p>
+<p>For instance every time we store data concerning the <code>Coffee_ID</code>, we also repeatedly include the <code>Coffee_Name</code>. If we decide to rebrand a particular coffee and introduce a new name later on, every old name of the rebranded coffee has to be replaced. Furthermore, if we currently don’t have a particular coffee on hand, when we lose that <code>Coffee_ID</code> value we also lose the name of the coffee.</p>
 
 <p>Partial dependencies can be addressed by creating a new table. Take the determinant in the troublesome partial dependency and copy it to a new table (think cmd-c). Then take the dependent attribute and cut it (cmd-x) to the new table you just created. It&rsquo;s important that you leave a copy of the determinant behind as a foreign key - otherwise you lose the relationship between the two tables.</p>
 
@@ -443,8 +447,12 @@ ga('send', 'pageview');
       
     
   
+    
+      
+    
+  
 
-<div class="figure fig-100" >
+<div class="figure center fig-100" >
   
     <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table3_jkysab.png" title="Table 3" data-fancybox-group="">
   
@@ -473,8 +481,12 @@ ga('send', 'pageview');
       
     
   
+    
+      
+    
+  
 
-<div class="figure fig-100" >
+<div class="figure center fig-100" >
   
     <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table4_sr10pg.png" title="Table 4" data-fancybox-group="">
   
@@ -490,6 +502,10 @@ ga('send', 'pageview');
 
 <p>If your table doesn&rsquo;t have a composite key, then technically it&rsquo;s already in 2NF by default as long as it&rsquo;s already in 1NF. You can&rsquo;t have a partial dependency if the primary key doesn&rsquo;t have multiple parts.</p>
 
+<p>{% pullquote [left] %}
+If your table doesn&rsquo;t have a composite key, then technically it&rsquo;s already in 2NF by default as long as it&rsquo;s already in 1NF. You can&rsquo;t have a partial dependency if the primary key doesn&rsquo;t have multiple parts.
+{% endpullquote %}</p>
+
 <hr />
 
 <h2 id="3rd-normal-form">3rd Normal Form</h2>
@@ -498,7 +514,7 @@ ga('send', 'pageview');
 
 <p>Transitive dependencies occur when a single non-key attribute determines another non-key attribute. Sets of attributes that can determine another single attribute do not count. Just like before, transitive dependencies create redundancy issues.</p>
 
-<p>For example in the table below a transitive dependency exists between Roaster_ID and Roaster_Name.</p>
+<p>For example in the table below a transitive dependency exists between <code>Roaster_ID</code> and <code>Roaster_Name</code>.</p>
 
 <!--Table5-->
 
@@ -515,8 +531,12 @@ ga('send', 'pageview');
       
     
   
+    
+      
+    
+  
 
-<div class="figure fig-100" >
+<div class="figure center fig-100" >
   
     <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table5_q5weug.png" title="Table 5" data-fancybox-group="">
   
@@ -545,8 +565,12 @@ ga('send', 'pageview');
       
     
   
+    
+      
+    
+  
 
-<div class="figure fig-100" >
+<div class="figure center fig-100" >
   
     <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table6_v6hnxm.png" title="Table 6" data-fancybox-group="">
   
@@ -573,8 +597,12 @@ ga('send', 'pageview');
       
     
   
+    
+      
+    
+  
 
-<div class="figure fig-100" >
+<div class="figure center fig-100" >
   
     <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table7_qptxlg.png" title="Table 7" data-fancybox-group="">
   
@@ -639,8 +667,12 @@ ga('send', 'pageview');
       
     
   
+    
+      
+    
+  
 
-<div class="figure fig-100" >
+<div class="figure center fig-100" >
   
     <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/c_scale,w_350/v1517156729/5NormalForms_color_sb5c2i.png" data-fancybox-group="">
   
@@ -658,7 +690,7 @@ ga('send', 'pageview');
 
 <p>If the data your working with is mission critical - lives are on the line - then normalizing all your tables to 5th NF is probably the way you want to go. Maybe your requirements are not as dire however and you&rsquo;re comfortable sitting at 3rd NF.</p>
 
-<p>Normalizing to 3rd NF is what I typically shoot for. After 3rd NF, the effort invested is a lot greater than the return. The power of the Normal Forms is that they are applicable even if your data lives outside a database say in a Shapefile attribute table or Excel spreadsheet.</p>
+<p>Normalizing to 3rd NF is what I typically shoot for. After 3rd NF, the effort invested is a lot greater than the return. The power of the Normal Forms is that they are applicable even if your data lives outside a database - say in a Shapefile attribute table or Excel spreadsheet.</p>
 
 <p>Eliminating redundancy may not always be possible, but controlling it is key to protecting the integrity of your data.</p>
               
