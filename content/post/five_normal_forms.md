@@ -122,7 +122,7 @@ It's important that you leave a copy of the determinant behind as a foreign key 
 {{< image classes="fancybox center fig-100" src="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table4_sr10pg.png" thumbnail="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table4_sr10pg.png" title="Table 4">}}
 
 
-{{< blockquote left >}}
+{{< blockquote >}}
 If your table doesn't have a composite key, then technically it's already in 2NF by default as long as it's already in 1NF. You can't have a partial dependency if the primary key doesn't have multiple parts.
 {{< /blockquote >}}
 

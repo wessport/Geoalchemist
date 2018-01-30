@@ -390,10 +390,9 @@ ga('send', 'pageview');
   <p><strong>Partial dependencies</strong> exist when a part of the primary key can be used to determine the value of a non-key attribute.</p>
 </div>
 
-<p>For instance in the example table below a partial dependency exists between <code>Coffee_ID</code> and <code>Coffee_Name</code>.</p>
-
+<p>For instance in the example table below a partial dependency exists between <code>Coffee_ID</code> and <code>Coffee_Name</code>.
+<br>
 <!--Table2-->
-
 
 
  
@@ -424,13 +423,19 @@ ga('send', 'pageview');
     <span class="caption">Table 2</span>
   
 </div>
-
+</p>
 
 <p>Partial dependencies can introduce integrity issues into your data tables.</p>
 
 <p>For instance every time we store data concerning the <code>Coffee_ID</code>, we also repeatedly include the <code>Coffee_Name</code>. If we decide to rebrand a particular coffee and introduce a new name later on, every old name of the rebranded coffee has to be replaced. Furthermore, if we currently don’t have a particular coffee on hand, when we lose that <code>Coffee_ID</code> value we also lose the name of the coffee.</p>
 
-<p>Partial dependencies can be addressed by creating a new table. Take the determinant in the troublesome partial dependency and copy it to a new table (think cmd-c). Then take the dependent attribute and cut it (cmd-x) to the new table you just created. It&rsquo;s important that you leave a copy of the determinant behind as a foreign key - otherwise you lose the relationship between the two tables.</p>
+<p>Partial dependencies can be addressed by creating a new table. Take the determinant in the troublesome partial dependency and copy it to a new table (think cmd-c). Then take the dependent attribute and cut it (cmd-x) to the new table you just created.</p>
+
+<div class="alert warning ">
+  <p>It&rsquo;s important that you leave a copy of the determinant behind as a foreign key - otherwise you lose the relationship between the two tables.</p>
+</div>
+
+<p><br></p>
 
 <!--Table3-->
 
@@ -500,12 +505,18 @@ ga('send', 'pageview');
 </div>
 
 
-<p>If your table doesn&rsquo;t have a composite key, then technically it&rsquo;s already in 2NF by default as long as it&rsquo;s already in 1NF. You can&rsquo;t have a partial dependency if the primary key doesn&rsquo;t have multiple parts.</p>
-
-<blockquote class="pullquote left">
-	<p>
+<blockquote>
+  <p>
 If your table doesn't have a composite key, then technically it's already in 2NF by default as long as it's already in 1NF. You can't have a partial dependency if the primary key doesn't have multiple parts.
 </p>
+  <footer>
+    <strong></strong>
+    
+      
+        <cite></cite>
+      
+    
+  </footer>
 </blockquote>
 
 <hr />
@@ -518,8 +529,8 @@ If your table doesn't have a composite key, then technically it's already in 2NF
 
 <p>For example in the table below a transitive dependency exists between <code>Roaster_ID</code> and <code>Roaster_Name</code>.</p>
 
+<p><br>
 <!--Table5-->
-
 
 
  
@@ -551,8 +562,8 @@ If your table doesn't have a composite key, then technically it's already in 2NF
   
 </div>
 
-
-<p>To fix any existing transitive dependencies, we can use the same strategy we employed to put our tables into 2NF. Copy the determinants into a new table. Then cut the dependents into the new table you just created.</p>
+<br>
+To fix any existing transitive dependencies, we can use the same strategy we employed to put our tables into 2NF. Copy the determinants into a new table. Then cut the dependents into the new table you just created.</p>
 
 
 
@@ -586,7 +597,7 @@ If your table doesn't have a composite key, then technically it's already in 2NF
 </div>
 
 
-
+<p>
 
  
   
@@ -617,6 +628,7 @@ If your table doesn't have a composite key, then technically it's already in 2NF
   
 </div>
 
+<br></p>
 
 <h5 id="boyce-codd-normal-form-3-5-nf">Boyce Codd Normal Form (3.5 NF)</h5>
 
