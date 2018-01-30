@@ -117,9 +117,9 @@ Partial dependencies can be addressed by creating a new table. Take the determin
 
 If your table doesn't have a composite key, then technically it's already in 2NF by default as long as it's already in 1NF. You can't have a partial dependency if the primary key doesn't have multiple parts.
 
-{% pullquote [left] %}
+{{< pullquote left >}}
 If your table doesn't have a composite key, then technically it's already in 2NF by default as long as it's already in 1NF. You can't have a partial dependency if the primary key doesn't have multiple parts.
-{% endpullquote %}
+{{< /pullquote >}}
 
 ---
 
