@@ -657,6 +657,8 @@ To fix any existing transitive dependencies, we can use the same strategy we emp
 
 <hr />
 
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+
 
 
  
@@ -687,13 +689,13 @@ To fix any existing transitive dependencies, we can use the same strategy we emp
 </div>
 
 
-<p>If you&rsquo;ve made it to this point, you might have noticed that the solution to every problem thus far has been to create a new table. That&rsquo;s the nature of Normalization. Reduce redundancy but increase the number of tables you have to keep up with. This can make your database feel cumbersome.</p>
+<p>If you&rsquo;ve made it to this point, you might have noticed that the solution to every problem thus far has been to create a new table. That&rsquo;s the nature of Normalization. Reduce redundancy but increase the number of tables you have to keep up with.</p>
 
 <p>Normalizing all of your tables may be the <em>perfect</em> solution but <a href="http://sqlblog.com/blogs/louis_davidson/archive/2010/04/29/can-you-over-normalize.aspx">is it the right solution for your operational requirements</a>?</p>
 
-<p>If the data your working with is mission critical - lives are on the line - then normalizing all your tables to 5th NF is probably the way you want to go. Maybe your requirements are not as dire however and you&rsquo;re comfortable sitting at 3rd NF.</p>
+<p>If the data your working with is mission critical - normalizing all your tables to 5th NF is probably the way you want to go. If you&rsquo;re comfortable handling some redundancy, then 3rd NF may be a better choice.</p>
 
-<p>Normalizing to 3rd NF is what I typically shoot for. After 3rd NF, the effort invested is a lot greater than the return. The power of the Normal Forms is that they are applicable even if your data lives outside a database - say in a Shapefile attribute table or Excel spreadsheet.</p>
+<p>3rd NF is typically what I shoot for. After 3rd NF, the effort invested is a lot greater than the return. The power of the Normal Forms is that they are applicable even if your data lives outside a database - say in a Shapefile attribute table or Excel spreadsheet.</p>
 
 <p>Eliminating redundancy may not always be possible, but controlling it is key to protecting the integrity of your data.</p>
               
