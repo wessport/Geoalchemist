@@ -48,8 +48,8 @@ This post is just a quick code-along which shows you how to generate phenology c
 In between finishing up my database coursework, I’m usually doing remote sensing work.
 Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.
 This post is just a quick code-along which shows you how to generate phenology curves using R.">
-    <meta name="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png"/>
-    <meta name="twitter:image:src" content="https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png"/>
+    <meta name="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1519441910/corn_haxiri.png"/>
+    <meta name="twitter:image:src" content="https://res.cloudinary.com/wessport/image/upload/v1519441910/corn_haxiri.png"/>
 
 
     
@@ -60,10 +60,10 @@ This post is just a quick code-along which shows you how to generate phenology c
     
 
     
-      <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png"/>
+      <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1519441910/corn_haxiri.png"/>
     
     
-      <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1517089330/5NF_bg_ltoau5.png">
+      <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1519441582/field-corn-air-frisch-158827_dbs8ee.jpg">
     
     
 
@@ -250,7 +250,7 @@ ga('send', 'pageview');
   <div class="post-header-cover
               text-center
               "
-       style="background-image:url('https://res.cloudinary.com/wessport/image/upload/v1517089330/5NF_bg_ltoau5.png')"
+       style="background-image:url('https://res.cloudinary.com/wessport/image/upload/v1519441582/field-corn-air-frisch-158827_dbs8ee.jpg')"
        data-behavior="4">
     
       <div class="post-header main-content-wrap text-center">
@@ -297,7 +297,6 @@ ga('send', 'pageview');
             <div class="main-content-wrap">
               <p><em>An Example of how to use R to Generate Crop Growth Curves</em></p>
 <!--more-->
-<hr />
 <p>In between finishing up my database coursework, I’m usually doing remote sensing work.</p>
 <p>Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.</p>
 <p>This post is just a quick code-along which shows you how to generate phenology curves using R.</p>
@@ -465,7 +464,9 @@ for(i in 1:length(crops)){
   c &lt;- c + 1
 }</code></pre>
 <p><img src="https://www.geoalchemist.com/post/phenology_curves_files/figure-html/plotloop-1.png" width="672" /><img src="https://www.geoalchemist.com/post/phenology_curves_files/figure-html/plotloop-2.png" width="672" /><img src="https://www.geoalchemist.com/post/phenology_curves_files/figure-html/plotloop-3.png" width="672" /><img src="https://www.geoalchemist.com/post/phenology_curves_files/figure-html/plotloop-4.png" width="672" /><img src="https://www.geoalchemist.com/post/phenology_curves_files/figure-html/plotloop-5.png" width="672" /> Pretty neat.</p>
-<p>Immediately the Fallow phenology curve stands out, with little response during the year which shouldn’t be surprising since these fields are idle. Interestingly Cotton and Rice seem to have similarly shaped curves. Rice has a higher plateau near 8000 versus cotton which looks to be closer to 7000. According to the <a href="https://usda.mannlib.cornell.edu/usda/nass/planting/uph97.pdf">USDA Agricultural Statistics Board</a>, the usual plant date for Mississippi cotton is April 14 and the harvest date ends by November 13. Rice planting starts April 2 and the harvest is typically complete by October 27. So there’s definitely overlap in their production schedules. My initial thoughts are that the density of the rice plants and consistent irrigation might contribute to the high rice NDVI values as opposed to cotton which may or may not be irrigated depending on the farm thus lowering the overall NDVI average for cotton.</p>
+<p>Immediately the Fallow phenology curve stands out, with little response during the year which shouldn’t be surprising since these fields are idle.</p>
+<p>Interestingly Cotton and Rice seem to have similarly shaped curves. Rice has a higher plateau near 8000 versus cotton which looks to be closer to 7000. According to the <a href="https://usda.mannlib.cornell.edu/usda/nass/planting/uph97.pdf">USDA Agricultural Statistics Board</a>, the usual plant date for Mississippi cotton is April 14 and the harvest date ends by November 13. Rice planting starts April 2 and the harvest is typically complete by October 27.</p>
+<p>So there’s definitely overlap in their production schedules. My initial thoughts are that the density of the rice plants and consistent irrigation might contribute to the high rice NDVI values as opposed to cotton which may or may not be irrigated depending on the farm thus lowering the overall NDVI average for cotton.</p>
 <p>Eventually the idea is to use these phenology curves as references for historical crop classification of NDVI images from before 2000 when field scale crop landcover data doesn’t exist.</p>
 </div>
 

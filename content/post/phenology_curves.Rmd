@@ -3,8 +3,8 @@ title: "Measuring Crop Growth in R"
 date: 2018-02-23
 autoThumbnailImage: true
 thumbnailImagePosition: left
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png
-coverImage: https://res.cloudinary.com/wessport/image/upload/v1517089330/5NF_bg_ltoau5.png
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1519441910/corn_haxiri.png
+coverImage: https://res.cloudinary.com/wessport/image/upload/v1519441582/field-corn-air-frisch-158827_dbs8ee.jpg
 metaAlignment: center
 coverMeta: in
 comments: true
@@ -28,11 +28,12 @@ tags:
 - Phenology Curve
 - NDVI
 ---
+
 *An Example of how to use R to Generate Crop Growth Curves*
+
 
 <!--more-->
 
----
 
 In between finishing up my database coursework, I'm usually doing remote sensing work. 
 
@@ -150,6 +151,10 @@ for(i in 1:length(crops)){
 ```
 Pretty neat. 
 
-Immediately the Fallow phenology curve stands out, with little response during the year which shouldn't be surprising since these fields are idle. Interestingly Cotton and Rice seem to have similarly shaped curves. Rice has a higher plateau near 8000 versus cotton which looks to be closer to 7000. According to the [USDA Agricultural Statistics Board](https://usda.mannlib.cornell.edu/usda/nass/planting/uph97.pdf), the usual plant date for Mississippi cotton is April 14 and the harvest date ends by November 13. Rice planting starts April 2 and the harvest is typically complete by October 27. So there's definitely overlap in their production schedules. My initial thoughts are that the density of the rice plants and consistent irrigation might contribute to the high rice NDVI values as opposed to cotton which may or may not be irrigated depending on the farm thus lowering the overall NDVI average for cotton.
+Immediately the Fallow phenology curve stands out, with little response during the year which shouldn't be surprising since these fields are idle. 
+
+Interestingly Cotton and Rice seem to have similarly shaped curves. Rice has a higher plateau near 8000 versus cotton which looks to be closer to 7000. According to the [USDA Agricultural Statistics Board](https://usda.mannlib.cornell.edu/usda/nass/planting/uph97.pdf), the usual plant date for Mississippi cotton is April 14 and the harvest date ends by November 13. Rice planting starts April 2 and the harvest is typically complete by October 27. 
+
+So there's definitely overlap in their production schedules. My initial thoughts are that the density of the rice plants and consistent irrigation might contribute to the high rice NDVI values as opposed to cotton which may or may not be irrigated depending on the farm thus lowering the overall NDVI average for cotton.
 
 Eventually the idea is to use these phenology curves as references for historical crop classification of NDVI images from before 2000 when field scale crop landcover data doesn't exist. 
