@@ -19,7 +19,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.32.4 with theme Tranquilpeak 0.4.2-BETA">
+    <meta name="generator" content="Hugo 0.36.1 with theme Tranquilpeak 0.4.2-BETA">
     <title>Measuring Crop Growth in R</title>
     <meta name="author" content="Wes Porter">
     <meta name="keywords" content="R, Rstats, Remote Sensing, Phenology Curve, NDVI">
@@ -297,6 +297,7 @@ ga('send', 'pageview');
             <div class="main-content-wrap">
               <p><em>An Example of how to use R to Generate Crop Growth Curves</em></p>
 <!--more-->
+<hr />
 <p>In between finishing up my database coursework, I’m usually doing remote sensing work.</p>
 <p>Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.</p>
 <p>This post is just a quick code-along which shows you how to generate phenology curves using R.</p>
@@ -311,8 +312,7 @@ library(kableExtra)</code></pre>
 <p>This past weekend I spent some time writing a python script (more on this later) that calculated the average NDVI value for a few thousand fields in the Mississippi Delta region for 20 discrete days in 2000. <a href="https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index">NDVI</a> stands for Normalized Difference Vegetation Index - a measurement of vegetation health. The Delta is one of the most agriculturally productive regions in the country, which makes it a good target if we want to look at crop growth over time.</p>
 <pre class="r"><code># Read in NDVI data
 ndvi_stats_2000 &lt;- readr::read_csv(&#39;https://www.dropbox.com/s/rvqgnxc70gv4bhl/ndvi_stats_2000.csv?dl=1&#39;, guess_max = 10001)</code></pre>
-<p>{{&lt; alert success no-icon &gt;}} You might be wondering what <code>guess_max = 10001</code> is for. By default <code>readr</code> tries to guess the data type by reading the first 1000 rows. Since I’ve looked at our raw data table before hand, I know that the first few thousand rows are actually no data values represented by ‘0’. This misleads <code>readr</code> to assume incorrect data types resulting in data integrity issues.<br />
-{{&lt; /alert &gt;}}</p>
+<p>{{&lt; alert success no-icon &gt;}} You might be wondering what <code>guess_max = 10001</code> is for. By default <code>readr</code> tries to guess the data type by reading the first 1000 rows. Since I’ve looked at our raw data table before hand, I know that the first few thousand rows are actually no data values represented by ‘0’. This misleads <code>readr</code> to assume incorrect data types resulting in data integrity issues. {{&lt; /alert &gt;}}</p>
 <p>The next thing I wanted to do was filter crops into their own tables based on their crop IDs. These identifiers correspond to the respective identifiers from the Crop Data Layer - a really handy land-cover dataset provided by the USDA.</p>
 <pre class="r"><code># Filter by crop type
 corn &lt;- filter(ndvi_stats_2000, ndvi_stats_2000$cdl == 1)
@@ -426,43 +426,43 @@ fallow &lt;- filter(fallow, fallow$avg &gt; 0)</code></pre>
 <pre class="r"><code># Calculate stats on cleaned data
 corn %&gt;%
   group_by(doy) %&gt;%
-    summarise(average = mean(avg), maximum = max(avg), 
+    summarise(average = mean(avg), maximum = max(avg),
               minimum = min(avg), stdev = sd(avg) ) -&gt; corn_stats
 
 cotton %&gt;%
   group_by(doy) %&gt;%
-  summarise(average = mean(avg), maximum = max(avg), 
+  summarise(average = mean(avg), maximum = max(avg),
             minimum = min(avg), stdev = sd(avg) ) -&gt; cotton_stats
 
 rice %&gt;%
   group_by(doy) %&gt;%
-  summarise(average = mean(avg), maximum = max(avg), 
+  summarise(average = mean(avg), maximum = max(avg),
             minimum = min(avg), stdev = sd(avg) ) -&gt; rice_stats
 
 soybeans %&gt;%
   group_by(doy) %&gt;%
-  summarise(average = mean(avg), maximum = max(avg), 
+  summarise(average = mean(avg), maximum = max(avg),
             minimum = min(avg), stdev = sd(avg) ) -&gt; soybeans_stats
 
 fallow %&gt;%
   group_by(doy) %&gt;%
-  summarise(average = mean(avg), maximum = max(avg), 
+  summarise(average = mean(avg), maximum = max(avg),
             minimum = min(avg), stdev = sd(avg) ) -&gt; fallow_stats
 
 # Gather stats
-crops &lt;- list(corn_stats, cotton_stats, rice_stats, 
+crops &lt;- list(corn_stats, cotton_stats, rice_stats,
               soybeans_stats, fallow_stats)
 crop_names &lt;- c(&#39;Corn&#39;,&#39;Cotton&#39;,&#39;Rice&#39;,&#39;Soybean&#39;,&#39;Fallow&#39;)
-par(mfrow=c(2,3)) # all plots on one page </code></pre>
+par(mfrow=c(2,3)) # all plots on one page</code></pre>
 <p>Now if we want to plot our aggregated averages, we can use a simple for loop to produce a plot for each crop.</p>
-<pre class="r"><code>c &lt;- 2 
-for(i in 1:length(crops)){ 
+<pre class="r"><code>c &lt;- 2
+for(i in 1:length(crops)){
 
   crop &lt;- crops[[i]]
-  
-  heading = crop_names[i] 
-  plot(x=crop$doy, y=crop$average, ylim=c(1000, 8500), type=&quot;l&quot;, 
-       main=heading, col = c, xlab = &#39;Day of Year&#39;, ylab = &#39;Mean NDVI&#39;) 
+
+  heading = crop_names[i]
+  plot(x=crop$doy, y=crop$average, ylim=c(1000, 8500), type=&quot;l&quot;,
+       main=heading, col = c, xlab = &#39;Day of Year&#39;, ylab = &#39;Mean NDVI&#39;)
   lines(x=crop$doy, y=crop$average, type=&quot;l&quot;, col = c)
   c &lt;- c + 1
 }</code></pre>
