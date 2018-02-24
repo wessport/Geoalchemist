@@ -1,0 +1,179 @@
+---
+title: "Measuring Crop Growth in R"
+author: "Wes Porter"
+date: "February 23, 2018"
+output: html_document
+---
+
+
+
+<p>In between finishing up my database coursework, I’m usually doing remote sensing work.</p>
+<p>Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.</p>
+<p>This post is just a quick code-along which shows you how to generate phenology curves using R.</p>
+<p>I’ll try to always list any packages or addins I use so that if anyone else stumbles across this, they know what I’m using. Nothing’s more annoying than orphaned functions and having to hunt down packages. Also the link to download the data is public so it should be available to play around with as well.</p>
+<pre class="r"><code>library(dplyr)
+library(magrittr)
+library(readr)
+library(knitr)
+library(kableExtra)</code></pre>
+<div id="the-data" class="section level2">
+<h2>The Data</h2>
+<p>This past weekend I spent some time writing a python script (more on this later) that calculated the average NDVI value for a few thousand fields in the Mississippi Delta region for 20 discrete days in 2000. <a href="https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index">NDVI</a> stands for Normalized Difference Vegetation Index - a measurement of vegetation health. The Delta is one of the most agriculturally productive regions in the country, which makes it a good target if we want to look at crop growth over time.</p>
+<pre class="r"><code># Read in NDVI data
+ndvi_stats_2000 &lt;- readr::read_csv(&#39;https://www.dropbox.com/s/rvqgnxc70gv4bhl/ndvi_stats_2000.csv?dl=1&#39;, guess_max = 10001)</code></pre>
+<p>{{&lt; alert success no-icon &gt;}} You might be wondering what <code>guess_max = 10001</code> is for. By default <code>readr</code> tries to guess the data type by reading the first 1000 rows. Since I’ve looked at our raw data table before hand, I know that the first few thousand rows are actually no data values represented by ‘0’. This misleads <code>readr</code> to assume incorrect data types resulting in data integrity issues.<br />
+{{&lt; /alert &gt;}}</p>
+<p>The next thing I wanted to do was filter crops into their own tables based on their crop IDs. These identifiers correspond to the respective identifiers from the Crop Data Layer - a really handy land-cover dataset provided by the USDA.</p>
+<pre class="r"><code># Filter by crop type
+corn &lt;- filter(ndvi_stats_2000, ndvi_stats_2000$cdl == 1)
+cotton &lt;- filter(ndvi_stats_2000, ndvi_stats_2000$cdl == 2)
+rice &lt;- filter(ndvi_stats_2000, ndvi_stats_2000$cdl == 3)
+soybeans &lt;- filter(ndvi_stats_2000, ndvi_stats_2000$cdl == 5)
+fallow &lt;- filter(ndvi_stats_2000, ndvi_stats_2000$cdl == 61)</code></pre>
+<p>This particular dataset has quite a few no data values due to clouds. Before we can proceed we need to mask out these values.</p>
+<pre class="r"><code># Filter out no data
+corn &lt;- filter(corn, corn$avg &gt; 0)
+cotton &lt;- filter(cotton, cotton$avg &gt; 0)
+rice &lt;- filter(rice, rice$avg &gt; 0)
+soybeans &lt;- filter(soybeans, soybeans$avg &gt; 0)
+fallow &lt;- filter(fallow, fallow$avg &gt; 0)</code></pre>
+<p>If we look at our data, we’ll notice that we have an average NDVI value for each field. If we wanted we could look at the phenology curve for each field, but I’m more interested in what the phenology curve is for each crop.</p>
+<table>
+<caption>(#tab:corn_table)Filtered Corn Stats</caption>
+<thead>
+<tr class="header">
+<th align="right">field_id</th>
+<th align="right">doy</th>
+<th align="right">avg</th>
+<th align="right">max</th>
+<th align="right">min</th>
+<th align="right">range</th>
+<th align="right">std</th>
+<th align="right">count</th>
+<th align="right">area</th>
+<th align="right">cdl</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">4369</td>
+<td align="right">84</td>
+<td align="right">2257.465</td>
+<td align="right">3953</td>
+<td align="right">0</td>
+<td align="right">3953</td>
+<td align="right">807.3354</td>
+<td align="right">101</td>
+<td align="right">90900</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">4746</td>
+<td align="right">84</td>
+<td align="right">1635.798</td>
+<td align="right">3673</td>
+<td align="right">0</td>
+<td align="right">3673</td>
+<td align="right">549.2867</td>
+<td align="right">327</td>
+<td align="right">294300</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="right">82</td>
+<td align="right">20</td>
+<td align="right">3218.348</td>
+<td align="right">4946</td>
+<td align="right">0</td>
+<td align="right">4946</td>
+<td align="right">755.9517</td>
+<td align="right">164</td>
+<td align="right">147600</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">124</td>
+<td align="right">20</td>
+<td align="right">6144.165</td>
+<td align="right">7483</td>
+<td align="right">0</td>
+<td align="right">7483</td>
+<td align="right">572.2665</td>
+<td align="right">176</td>
+<td align="right">158400</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="right">197</td>
+<td align="right">20</td>
+<td align="right">2235.016</td>
+<td align="right">4798</td>
+<td align="right">0</td>
+<td align="right">4798</td>
+<td align="right">599.0628</td>
+<td align="right">183</td>
+<td align="right">164700</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">247</td>
+<td align="right">20</td>
+<td align="right">4121.549</td>
+<td align="right">7234</td>
+<td align="right">0</td>
+<td align="right">7234</td>
+<td align="right">1424.5496</td>
+<td align="right">268</td>
+<td align="right">241200</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<p>First we need to group by the day of year an image was collected. Then for each snapshot in time we can calculate aggregate statistics for each crop. What was the mean average NDVI value for every field growing corn on the 4th day of the year for instance.</p>
+<pre class="r"><code># Calculate stats on cleaned data
+corn %&gt;%
+  group_by(doy) %&gt;%
+    summarise(average = mean(avg), maximum = max(avg), 
+              minimum = min(avg), stdev = sd(avg) ) -&gt; corn_stats
+
+cotton %&gt;%
+  group_by(doy) %&gt;%
+  summarise(average = mean(avg), maximum = max(avg), 
+            minimum = min(avg), stdev = sd(avg) ) -&gt; cotton_stats
+
+rice %&gt;%
+  group_by(doy) %&gt;%
+  summarise(average = mean(avg), maximum = max(avg), 
+            minimum = min(avg), stdev = sd(avg) ) -&gt; rice_stats
+
+soybeans %&gt;%
+  group_by(doy) %&gt;%
+  summarise(average = mean(avg), maximum = max(avg), 
+            minimum = min(avg), stdev = sd(avg) ) -&gt; soybeans_stats
+
+fallow %&gt;%
+  group_by(doy) %&gt;%
+  summarise(average = mean(avg), maximum = max(avg), 
+            minimum = min(avg), stdev = sd(avg) ) -&gt; fallow_stats
+
+# Gather stats
+crops &lt;- list(corn_stats, cotton_stats, rice_stats, 
+              soybeans_stats, fallow_stats)
+crop_names &lt;- c(&#39;Corn&#39;,&#39;Cotton&#39;,&#39;Rice&#39;,&#39;Soybean&#39;,&#39;Fallow&#39;)
+par(mfrow=c(2,3)) # all plots on one page </code></pre>
+<p>Now if we want to plot our aggregated averages, we can use a simple for loop to produce a plot for each crop.</p>
+<pre class="r"><code>c &lt;- 2 
+for(i in 1:length(crops)){ 
+
+  crop &lt;- crops[[i]]
+  
+  heading = crop_names[i] 
+  plot(x=crop$doy, y=crop$average, ylim=c(1000, 8500), type=&quot;l&quot;, 
+       main=heading, col = c, xlab = &#39;Day of Year&#39;, ylab = &#39;Mean NDVI&#39;) 
+  lines(x=crop$doy, y=crop$average, type=&quot;l&quot;, col = c)
+  c &lt;- c + 1
+}</code></pre>
+<p><img src="/post/phenology_curves_files/figure-html/plotloop-1.png" width="672" /><img src="/post/phenology_curves_files/figure-html/plotloop-2.png" width="672" /><img src="/post/phenology_curves_files/figure-html/plotloop-3.png" width="672" /><img src="/post/phenology_curves_files/figure-html/plotloop-4.png" width="672" /><img src="/post/phenology_curves_files/figure-html/plotloop-5.png" width="672" /> Pretty neat.</p>
+<p>Immediately the Fallow phenology curve stands out, with little response during the year which shouldn’t be surprising since these fields are idle. Interestingly Cotton and Rice seem to have similarly shaped curves. Rice has a higher plateau near 8000 versus cotton which looks to be closer to 7000. According to the <a href="https://usda.mannlib.cornell.edu/usda/nass/planting/uph97.pdf">USDA Agricultural Statistics Board</a>, the usual plant date for Mississippi cotton is April 14 and the harvest date ends by November 13. Rice planting starts April 2 and the harvest is typically complete by October 27. So there’s definitely overlap in their production schedules. My initial thoughts are that the density of the rice plants and consistent irrigation might contribute to the high rice NDVI values as opposed to cotton which may or may not be irrigated depending on the farm thus lowering the overall NDVI average for cotton.</p>
+<p>Eventually the idea is to use these phenology curves as references for historical crop classification of NDVI images from before 2000 when field scale crop landcover data doesn’t exist.</p>
+</div>
