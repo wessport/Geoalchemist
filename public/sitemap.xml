@@ -64,13 +64,13 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/database/</loc>
+    <loc>https://www.geoalchemist.com/tags/database/</loc>
     <lastmod>2018-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/database/</loc>
+    <loc>https://www.geoalchemist.com/categories/database/</loc>
     <lastmod>2018-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -100,13 +100,13 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/gis/</loc>
+    <loc>https://www.geoalchemist.com/tags/gis/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/gis/</loc>
+    <loc>https://www.geoalchemist.com/categories/gis/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -130,13 +130,13 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/graduate-school/</loc>
+    <loc>https://www.geoalchemist.com/tags/graduate-school/</loc>
     <lastmod>2018-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/graduate-school/</loc>
+    <loc>https://www.geoalchemist.com/categories/graduate-school/</loc>
     <lastmod>2018-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -190,13 +190,13 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/playlist/</loc>
+    <loc>https://www.geoalchemist.com/tags/playlist/</loc>
     <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/playlist/</loc>
+    <loc>https://www.geoalchemist.com/categories/playlist/</loc>
     <lastmod>2018-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -208,25 +208,25 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/r/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.geoalchemist.com/tags/r/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/categories/remote-sensing/</loc>
+    <loc>https://www.geoalchemist.com/categories/r/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.geoalchemist.com/tags/remote-sensing/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/remote-sensing/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
