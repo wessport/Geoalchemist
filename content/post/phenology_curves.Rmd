@@ -32,6 +32,8 @@ tags:
 
 ---
 
+An Example of how to use R to Generate Crop Growth Curves
+<!--more-->
 
 In between finishing up my database coursework, I'm usually doing remote sensing work.
 

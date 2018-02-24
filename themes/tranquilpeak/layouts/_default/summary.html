@@ -40,7 +40,7 @@
       {{ partial "post/meta" . }}
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
-      {{ .Summary }}
+      {{default .Summary .Description}}
       <p>
         <a href="{{ .Permalink }}" class="postShorten-excerpt_link link">{{ i18n "post.read_more" }}</a>
         {{ with .Params.readingtime }}
@@ -59,9 +59,3 @@
     </a>
   {{ end }}
 </article>
-{{ with .Description }}
-  {{ $.Scratch.Set "summary" (markdownify .) }}
-{{ else }}
-  {{ $.Scratch.Set "summary" ((delimit (findRE "(<p.*?>(.|\n)*?</p>\\s*)+" .Content) "[&hellip;] ") | plainify | truncate (default 200 .Site.Params.summary_length) (default " &hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML) }}
-{{ end }}
-{{ $.Scratch.Get "summary" }}
