@@ -3,7 +3,7 @@ title: "Measuring Crop Growth in R"
 date: 2018-02-23
 autoThumbnailImage: true
 thumbnailImagePosition: left
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1519441910/corn_haxiri.png
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1519442308/corn_m58ifg.png
 coverImage: https://res.cloudinary.com/wessport/image/upload/v1519441582/field-corn-air-frisch-158827_dbs8ee.jpg
 metaAlignment: center
 coverMeta: in
@@ -155,6 +155,9 @@ fallow &lt;- filter(fallow, fallow$avg &gt; 0)</code></pre>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="the-analysis" class="section level2">
+<h2>The Analysis</h2>
 <p>First we need to group by the day of year an image was collected. Then for each snapshot in time we can calculate aggregate statistics for each crop. What was the mean average NDVI value for every field growing corn on the 4th day of the year for instance.</p>
 <pre class="r"><code># Calculate stats on cleaned data
 corn %&gt;%

@@ -98,6 +98,8 @@ kable(head(corn), caption = "Filtered Corn Stats")%>%
 kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
+## The Analysis ## 
+
 
 First we need to group by the day of year an image was collected. Then for each snapshot in time we can calculate aggregate statistics for each crop. What was the mean average NDVI value for every field growing corn on the 4th day of the year for instance.  
 ```{r}
