@@ -3,7 +3,7 @@ title: "Measuring Crop Growth in R"
 date: 2018-02-23
 autoThumbnailImage: true
 thumbnailImagePosition: left
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1519441910/corn_haxiri.png
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1519442308/corn_m58ifg.png
 coverImage: https://res.cloudinary.com/wessport/image/upload/v1519441582/field-corn-air-frisch-158827_dbs8ee.jpg
 metaAlignment: center
 coverMeta: in
