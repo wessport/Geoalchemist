@@ -1,8 +1,37 @@
 ---
 title: "Measuring Crop Growth in R"
-author: "Wes Porter"
-date: "February 23, 2018"
-output: html_document
+date: 2018-02-23
+autoThumbnailImage: true
+thumbnailImagePosition: left
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png
+coverImage: https://res.cloudinary.com/wessport/image/upload/v1517089330/5NF_bg_ltoau5.png
+metaAlignment: center
+coverMeta: in
+comments: true
+
+keywords:
+- R
+- Rstats
+- Remote Sensing
+- Phenology Curve
+- NDVI
+
+
+categories:
+- R
+- Remote Sensing
+
+tags:
+- R
+- Rstats
+- Remote Sensing
+- Phenology Curve
+- NDVI
+---
+*An Example of how to use R to Generate Crop Growth Curves*
+
+<!--more-->
+
 ---
 
 In between finishing up my database coursework, I'm usually doing remote sensing work. 
