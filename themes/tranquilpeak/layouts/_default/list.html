@@ -11,30 +11,17 @@
         <section class="postShorten-group main-content-wrap">
           {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
           {{ range $paginator.Pages }}
+            {{ with .Description }}
+              {{ $.Scratch.Set "summary" (markdownify .) }}
+            {{ else }}
+              {{ $.Scratch.Set "summary" ((delimit (findRE "(<p.*?>(.|\n)*?</p>\\s*)+" .Content) "[&hellip;] ") | plainify | truncate (default 200 .Site.Params.summary_length) (default " &hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML) }}
+            {{ end }}
+            {{ $.Scratch.Get "summary" }}
             {{ .Render "summary" }}
           {{ end }}
           {{ partial "pagination.html" . }}
         </section>
         {{ partial "footer.html" . }}
       </div>
-    </div>
-
-    <div class="summary">
-      <a href="{{ .URL }}">
-      {{ with .Params.thumbnail }}
-      <div class="thumbnail"><img src="{{ relURL . }}" alt="Thumbnail" /></div>
-      {{ else }}
-      {{ $img := findRE "<img src=\"[^\"]+\"" .Content 1 }}
-      {{ range $img }}
-      <div class="thumbnail">{{ (print . " alt=\"Thumbnail\" />") | safeHTML }}</div>
-      {{ end }}
-      {{ end }}
-      {{ with .Description }}
-        {{ $.Scratch.Set "summary" (markdownify .) }}
-      {{ else }}
-        {{ $.Scratch.Set "summary" ((delimit (findRE "(<p.*?>(.|\n)*?</p>\\s*)+" .Content) "[&hellip;] ") | plainify | truncate (default 200 .Site.Params.summary_length) (default " &hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML) }}
-      {{ end }}
-      {{ $.Scratch.Get "summary" }}
-      </a>
     </div>
 {{ partial "foot.html" . }}
