@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Geoalchemist</title>
+    <link>https://www.geoalchemist.com/tags/r/</link>
+    <description>Recent content in R on Geoalchemist</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.geoalchemist.com/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Measuring Crop Growth in R</title>
+      <link>https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/</guid>
+      <description>An Example of how to use R to Generate Crop Growth Curves
+In between finishing up my database coursework, I’m usually doing remote sensing work.
+Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.
+This post is just a quick code-along which shows you how to generate phenology curves using R.</description>
+    </item>
+    
+  </channel>
+</rss>

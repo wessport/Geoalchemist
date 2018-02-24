@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.geoalchemist.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Measuring Crop Growth in R</title>
+      <link>https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/</guid>
+      <description>An Example of how to use R to Generate Crop Growth Curves
+In between finishing up my database coursework, I’m usually doing remote sensing work.
+Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.
+This post is just a quick code-along which shows you how to generate phenology curves using R.</description>
+    </item>
     
     <item>
       <title>The Five Normal Forms</title>
@@ -84,18 +96,6 @@
       <description>&lt;p&gt;Nothing too fancy. Just a few maps I&amp;rsquo;ve made.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Measuring Crop Growth in R</title>
-      <link>https://www.geoalchemist.com/1/01/measuring-crop-growth-in-r/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/1/01/measuring-crop-growth-in-r/</guid>
-      <description>In between finishing up my database coursework, I’m usually doing remote sensing work.
-Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.
-This post is just a quick code-along which shows you how to generate phenology curves using R.
-I’ll try to always list any packages or addins I use so that if anyone else stumbles across this, they know what I’m using.</description>
     </item>
     
   </channel>
