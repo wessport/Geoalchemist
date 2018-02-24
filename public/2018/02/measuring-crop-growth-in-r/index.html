@@ -300,7 +300,7 @@ library(kableExtra)</code></pre>
 <p>This past weekend I spent some time writing a python script (more on this later) that calculated the average NDVI value for a few thousand fields in the Mississippi Delta region for 20 discrete days in 2000. <a href="https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index">NDVI</a> stands for Normalized Difference Vegetation Index - a measurement of vegetation health. The Delta is one of the most agriculturally productive regions in the country, which makes it a good target if we want to look at crop growth over time.</p>
 <pre class="r"><code># Read in NDVI data
 ndvi_stats_2000 &lt;- readr::read_csv(&#39;https://www.dropbox.com/s/rvqgnxc70gv4bhl/ndvi_stats_2000.csv?dl=1&#39;, guess_max = 10001)</code></pre>
-<p>{{&lt; alert success no-icon &gt;}} You might be wondering what <code>guess_max = 10001</code> is for. By default <code>readr</code> tries to guess the data type by reading the first 1000 rows. Since I’ve looked at our raw data table before hand, I know that the first few thousand rows are actually no data values represented by ‘0’. This misleads <code>readr</code> to assume incorrect data types resulting in data integrity issues. {{&lt; /alert &gt;}}</p>
+<p>You might be wondering what <code>guess_max = 10001</code> is for. By default <code>readr</code> tries to guess the data type by reading the first 1000 rows. Since I’ve looked at our raw data table before hand, I know that the first few thousand rows are actually no data values represented by ‘0’. This misleads <code>readr</code> to assume incorrect data types resulting in data integrity issues.</p>
 <p>The next thing I wanted to do was filter crops into their own tables based on their crop IDs. These identifiers correspond to the respective identifiers from the Crop Data Layer - a really handy land-cover dataset provided by the USDA.</p>
 <pre class="r"><code># Filter by crop type
 corn &lt;- filter(ndvi_stats_2000, ndvi_stats_2000$cdl == 1)
@@ -317,7 +317,6 @@ soybeans &lt;- filter(soybeans, soybeans$avg &gt; 0)
 fallow &lt;- filter(fallow, fallow$avg &gt; 0)</code></pre>
 <p>If we look at our data, we’ll notice that we have an average NDVI value for each field. If we wanted we could look at the phenology curve for each field, but I’m more interested in what the phenology curve is for each crop.</p>
 <table>
-<caption>(#tab:corn_table)Filtered Corn Stats</caption>
 <thead>
 <tr class="header">
 <th align="right">field_id</th>

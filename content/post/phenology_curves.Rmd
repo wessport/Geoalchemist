@@ -8,6 +8,7 @@ coverImage: https://res.cloudinary.com/wessport/image/upload/v1519441582/field-c
 metaAlignment: center
 coverMeta: in
 comments: true
+description: "An Example of how to use R to Generate Crop Growth Curves"
 
 keywords:
 - R
@@ -28,7 +29,6 @@ tags:
 - Phenology Curve
 - NDVI
 
-Description: "An Example of how to use R to Generate Crop Growth Curves"
 ---
 
 
@@ -64,9 +64,9 @@ This past weekend I spent some time writing a python script (more on this later)
 ndvi_stats_2000 <- readr::read_csv('https://www.dropbox.com/s/rvqgnxc70gv4bhl/ndvi_stats_2000.csv?dl=1', guess_max = 10001)
 ```
 
-{{< alert success no-icon >}}
+
 You might be wondering what `guess_max = 10001` is for. By default `readr` tries to guess the data type by reading the first 1000 rows. Since I've looked at our raw data table before hand, I know that the first few thousand rows are actually no data values represented by '0'. This misleads `readr` to assume incorrect data types resulting in data integrity issues.
-{{< /alert >}}
+
 
 The next thing I wanted to do was filter crops into their own tables based on their crop IDs. These identifiers correspond to the respective identifiers from the Crop Data Layer - a really handy land-cover dataset provided by the USDA.
 ```{r }
@@ -91,7 +91,7 @@ fallow <- filter(fallow, fallow$avg > 0)
 
 If we look at our data, we'll notice that we have an average NDVI value for each field. If we wanted we could look at the phenology curve for each field, but I'm more interested in what the phenology curve is for each crop.
 ```{r corn_table, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
-kable(head(corn), caption = "Filtered Corn Stats")%>%
+kable(head(corn))%>%
 kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
