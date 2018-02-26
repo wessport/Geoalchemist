@@ -44,7 +44,7 @@
     <meta property="og:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta property="og:url" content="{{ .URL }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
-    <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg"/>
+    <meta property="og:image" content="{{ .Site.Author.picture }}"/>
     <meta name="twitter:site" content="@Wes_Port">
     <meta name="twitter:creator" content="@Wes_Port">
     <meta name="twitter:card" content="summary"/>

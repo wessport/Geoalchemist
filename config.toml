@@ -39,7 +39,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   location = "Nashville"
 
   # Profile picture
-  picture = "https://res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg"
+  picture = "res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg"
 
   # Your Twitter username without the @. E.g : thibaudlepretre
   twitter = "Wes_Port"
