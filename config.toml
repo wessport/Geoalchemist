@@ -134,7 +134,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "My whimsical website"
+  description = "Wes Porter - Misadventures in GIS and programming."
 
   # Customization
   # Define the behavior of the sidebar
