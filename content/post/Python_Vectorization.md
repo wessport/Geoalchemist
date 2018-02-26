@@ -44,6 +44,7 @@ Most of the time using the ArcMap tool is the right choice – why reinvent the 
 
 {{< blockquote "Damian Spangrud, Geographer and Director of Solutions at Esri" "http://geohipster.com/2017/10/30/damian-spangrud-geohipster-reinvent-purpose/" "Reinvent with a purpose" >}} Don’t reinvent just because. Reinvent with a purpose that has real value. {{< /blockquote >}}
 
+---
 
 In my case, I needed to calculate NDVI statistics for approximately **6,000** farms and generate a table of the results that included every field - even when there was nothing to report i.e. Nulls, and I needed to generate these statistics not just for one, but 207 NDVI images.
 
@@ -64,6 +65,8 @@ This is **HUGE** problem.
 Going the ArcMap route would mean throwing out precious data for countless fields, drastically impacting the ability to provide meaningful analysis.
 
 So time to try and invent something of real value.
+
+---
 
 The idea that was initially suggested was to use Python to loop over every field, check for NoData values in the overlapping NDVI raster and throws those out, then calculate the desired statistics on the valid NDVI values.
 
@@ -112,9 +115,12 @@ What if they were inadvertently lost and needed to be regenerated?
 
 Well unfortunately, I would have to wait another 4 hours to get results.
 
+---
+# A New Hope #
+
 I thought there had to be another way to perform the same analysis without sacrificing so much time. So I began to research and ask new questions about how NumPy worked, thinking I can’t be the only one doing scientific computing like this.
 
-After playing around with Cython and not finding much success, I discovered how I could use Vectorization to achieve the speed I was searching for.
+After playing around with [Cython](http://cython.readthedocs.io/en/latest/src/tutorial/numpy.html) and not finding much success, I discovered how I could use Vectorization to achieve the speed I was searching for.
 
 ```Python
 from __future__ import division # Need this for proper division in Python2
