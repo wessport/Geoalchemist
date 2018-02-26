@@ -51,7 +51,8 @@
     <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta name="twitter:image" content="{{ .Params.thumbnailImage }}"/>
     <meta name="twitter:image:src" content="{{ .Params.thumbnailImage }}"/>
-    <meta property="og:image" content="{{ .Site.Author.picture | absURL }}">
+    <meta property="og:image" content="{{ .Site.Author.picture | absURL }}"/>
+    <meta property="og:image:src" content="{{ .Site.Author.picture | absURL }}"/>
 
 
     <!-- {{ with .Site.Params.fbAppId }}
@@ -65,9 +66,9 @@
       {{ end }}
     {{ end }} -->
 
-    {{ if .Site.Author.picture }}
+    <!-- {{ if .Site.Author.picture }}
       <meta property="og:image" content="{{ .Site.Author.picture | absURL }}">
-    {{ end }}
+    {{ end }} -->
 
     <!-- {{ with .Params.thumbnailImage }}
       <meta property="og:image" content="{{ . | absURL }}"/>
