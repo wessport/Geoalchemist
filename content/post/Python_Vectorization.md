@@ -36,6 +36,8 @@ tags:
 
 <!--more-->
 
+---
+
 You might be wondering - why write a Python script to calculate zonal statistics instead of using the ArcMap tool?
 
 Most of the time using the ArcMap tool is the right choice – why reinvent the wheel?
