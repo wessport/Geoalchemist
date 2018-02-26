@@ -51,7 +51,7 @@
     <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta name="twitter:image" content="{{ .Params.thumbnailImage }}"/>
     <meta name="twitter:image:src" content="{{ .Params.thumbnailImage }}"/>
-    <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg">
+    <meta property="og:image" content="{{ .Site.Author.picture | absURL }}">
 
 
     <!-- {{ with .Site.Params.fbAppId }}
