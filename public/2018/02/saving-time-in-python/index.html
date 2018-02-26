@@ -55,6 +55,8 @@
     
 
     
+      <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg">
+    
 
     
       <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1519680159/python_ufon72.png"/>
@@ -296,6 +298,8 @@ ga('send', 'pageview');
 
 <p></p>
 
+<hr />
+
 <p>You might be wondering - why write a Python script to calculate zonal statistics instead of using the ArcMap tool?</p>
 
 <p>Most of the time using the ArcMap tool is the right choice – why reinvent the wheel?</p>
@@ -309,6 +313,8 @@ ga('send', 'pageview');
     
   </footer>
 </blockquote>
+
+<hr />
 
 <p>In my case, I needed to calculate NDVI statistics for approximately <strong>6,000</strong> farms and generate a table of the results that included every field - even when there was nothing to report i.e. Nulls, and I needed to generate these statistics not just for one, but 207 NDVI images.</p>
 
@@ -329,6 +335,8 @@ ga('send', 'pageview');
 <p>Going the ArcMap route would mean throwing out precious data for countless fields, drastically impacting the ability to provide meaningful analysis.</p>
 
 <p>So time to try and invent something of real value.</p>
+
+<hr />
 
 <p>The idea that was initially suggested was to use Python to loop over every field, check for NoData values in the overlapping NDVI raster and throws those out, then calculate the desired statistics on the valid NDVI values.</p>
 
@@ -374,9 +382,13 @@ print(&quot;--- {} seconds ---&quot;.format(time.time() - start_time))
 
 <p>Well unfortunately, I would have to wait another 4 hours to get results.</p>
 
+<hr />
+
+<h1 id="a-new-hope">A New Hope</h1>
+
 <p>I thought there had to be another way to perform the same analysis without sacrificing so much time. So I began to research and ask new questions about how NumPy worked, thinking I can’t be the only one doing scientific computing like this.</p>
 
-<p>After playing around with Cython and not finding much success, I discovered how I could use Vectorization to achieve the speed I was searching for.</p>
+<p>After playing around with <a href="http://cython.readthedocs.io/en/latest/src/tutorial/numpy.html">Cython</a> and not finding much success, I discovered how I could use Vectorization to achieve the speed I was searching for.</p>
 
 <pre><code class="language-Python">from __future__ import division # Need this for proper division in Python2
 import numpy as np
