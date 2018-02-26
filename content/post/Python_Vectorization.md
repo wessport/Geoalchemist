@@ -6,7 +6,7 @@ date: 2018-02-26
 autoThumbnailImage: false
 thumbnailImagePosition: left
 thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1519680159/python_ufon72.png
-coverImage: http://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg
+coverImage: https://res.cloudinary.com/wessport/image/upload/v1517089330/5NF_bg_ltoau5.png
 metaAlignment: center
 coverMeta: out
 comments: true
