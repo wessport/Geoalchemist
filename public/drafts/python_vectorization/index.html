@@ -1,0 +1,916 @@
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.32.4 with theme Tranquilpeak 0.4.2-BETA">
+    <title>Saving Time in Python</title>
+    <meta name="author" content="Wes Porter">
+    <meta name="keywords" content="Python, NumPy, Vectorization, Optimization, Performance, GIS">
+
+    <link rel="icon" href="https://www.geoalchemist.com/favicon.png">
+    
+
+    
+    <meta name="description" content="How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.
+
+">
+    <meta property="og:description" content="How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.
+
+">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Saving Time in Python">
+    <meta property="og:url" content="/drafts/python_vectorization/">
+    <meta property="og:site_name" content="Geoalchemist">
+    <meta name="twitter:site" content="@Wes_Port">
+    <meta name="twitter:creator" content="@Wes_Port">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Saving Time in Python"/>
+    <meta name="twitter:description" content="How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.
+
+">
+    <meta name="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1519680159/python_ufon72.png"/>
+    <meta name="twitter:image:src" content="https://res.cloudinary.com/wessport/image/upload/v1519680159/python_ufon72.png"/>
+
+
+    
+
+    
+    
+
+    
+
+    
+      <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1519680159/python_ufon72.png"/>
+    
+    
+      <meta property="og:image" content="http://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg">
+    
+    
+
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://www.geoalchemist.com/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-111699620-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://www.geoalchemist.com/">Geoalchemist</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://www.geoalchemist.com/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://www.geoalchemist.com/#about">
+          <img class="sidebar-profile-picture" src="https://res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Wes Porter</h4>
+        
+          <h5 class="sidebar-profile-bio">Exploring geospatial data through code.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/Wes_Port" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/wessport" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/wes-porter-10250488/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/2017/10/map-gallery/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-map"></i>
+      
+      <span class="sidebar-button-desc">Map Gallery</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('http://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg')"
+       data-behavior="1">
+    
+  </div>
+
+
+      <div id="main" data-behavior="1"
+        class="hasCover
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Saving Time in Python
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-02-26T00:00:00Z">
+        
+  February 26, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.geoalchemist.com/categories/python">Python</a>, 
+    
+      <a class="category-link" href="https://www.geoalchemist.com/categories/gis">GIS</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p><em>How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.</em></p>
+
+<p></p>
+
+<p>You might be wondering - why write a Python script to calculate zonal statistics instead of using the ArcMap tool?</p>
+
+<p>Most of the time using the ArcMap tool is the right choice – why reinvent the wheel?</p>
+
+<blockquote>
+  <p> Don’t reinvent just because. Reinvent with a purpose that has real value. </p>
+  <footer>
+    <strong>Damian Spangrud, Geographer and Director of Solutions at Esri</strong>
+    
+      <cite><a href="http://geohipster.com/2017/10/30/damian-spangrud-geohipster-reinvent-purpose/" target="_blank" rel="external">Reinvent with a purpose</a></cite>
+    
+  </footer>
+</blockquote>
+
+<p>In my case, I needed to calculate NDVI statistics for approximately 6,000 farms and generate a table of the results that included every field - even when there was nothing to report i.e. Nulls, and I need to generate these statistics not just for one, but 207 NDVI images.</p>
+
+<p>[insert witty gif]</p>
+
+<p>The way that ArcMap’s ‘Zonal Statistics as Table’ tool handles NoData values is problematic. If “Ignore NoData in calculations” is left unchecked, the following constraint applies:
+“Within any particular zone, if any NoData cells exist in the Value raster, it is deemed that there is insufficient information to perform statistical calculations for all the cells in that zone; therefore, the entire zone will receive the NoData value on the output raster.”
+The majority of the NoData values in my NDVI rasters are cloudy pixels.
+Clouds of course are fairly common most days and the likelihood that a field has at least 1 NoData value is very high. This is HUGE problem. Going the ArcMap route would mean throwing out precious data for countless fields, drastically impacting the ability to provide meaningful analysis.</p>
+
+<p>So time to try and invent something of real value.
+The idea that was initially suggested was to use Python to loop over every field, check for NoData values in the overlapping NDVI raster and throws those out, then calculate the desired statistics on the valid NDVI values. While I liked the simplicity of this method, I quickly noticed a significant drawback to this approach – the execution time.</p>
+
+<p>{% codeblock Python_loop_ex.py lang:Python %}
+import numpy as np
+import time
+import gdal</p>
+
+<p>def py_loop_test(ndvi, fields):
+    ndvi_raster = gdal.Open(ndvi)
+    field_raster = gdal.Open(fields)</p>
+
+<pre><code>ndvi_array = np.array(ndvi_raster.GetRasterBand(1).ReadAsArray())
+field_array = np.array(field_raster.GetRasterBand(1).ReadAsArray())
+
+unique_fields = np.unique(field_array)
+unique_fields = unique_fields[unique_fields != -9999]
+
+for field_id in unique_fields:
+  f_ndvi_values = ndvi_array[np.logical_and(field_array == field_id, ndvi_array != -9999)]
+  f_avg = np.mean(f_ndvi_values)
+</code></pre>
+
+<p>start_time = time.time()</p>
+
+<p>py_loop_test(&ldquo;LT05_L1TP_023_19850126_msc_masked.tif&rdquo;,&ldquo;Fields.tif&rdquo;)</p>
+
+<p>print(&ldquo;&mdash; {} seconds &mdash;&rdquo;.format(time.time() - start_time))</p>
+
+<h1 id="73-860">73.860</h1>
+
+<p>{% endcodeblock %}</p>
+
+<p>Using a single Python loop and calculating only the average NDVI value per field as an example, the average run time was approximately 73 seconds. This was without adding another loop to go through all 207 NDVI images and writing the results to a csv file. This may not seem like much time at first, and in fact I wasn’t that concerned initially until I began to think about how quickly 73 seconds would add up. Using this approach, calculating stats for each NDVI would take an estimated 15,111 seconds (73*207) or 4.2 hours.</p>
+
+<p>What if they statistics were incorrectly calculated the first time? What if they were inadvertently lost and needed to be regenerated? Well unfortunately, I would have to wait another 4 hours to get results.</p>
+
+<p>I thought there had to be another way to perform the same analysis without sacrificing so much time. So I began to research and ask new questions about how NumPy worked, thinking I can’t be the only one doing scientific computing like this.
+After playing around with Cython and not finding much success, I discovered how I could use Vectorization to achieve the speed I was searching for.</p>
+
+<p>{% codeblock Vectorization_ex.py lang:Python %}
+from <strong>future</strong> import division # Need this for proper division in Python2
+import numpy as np
+import time
+import gdal</p>
+
+<p>def vectorization_test(ndvi, fields):
+    # Read in raster layers
+    ndvi_raster = gdal.Open(ndvi)
+    field_raster = gdal.Open(fields)</p>
+
+<pre><code># Convert to numpy arrays
+ndvi_array = np.array(ndvi_raster.GetRasterBand(1).ReadAsArray())
+field_array = np.array(field_raster.GetRasterBand(1).ReadAsArray())
+
+# Mask NoData
+mask = (ndvi_array != -9999) &amp; (field_array != -9999)
+nd = ndvi_array[mask]
+fi = field_array[mask]
+
+# Number of unique fields not count NoData
+unique_fields = np.unique(field_array)
+num_fields = unique_fields[unique_fields != -9999].size
+
+# Vecorized operation
+# Perform sums of NDVI values over variable-size chunks of field array
+counts = np.bincount(fi, minlength=num_fields)
+sums = np.bincount(fi, nd, minlength=num_fields)
+
+# Calculate averages
+avgs = sums / counts
+</code></pre>
+
+<p>start_time = time.time()</p>
+
+<p>vectorization_test(&ldquo;LT05_L1TP_023_19850126_msc_masked.tif&rdquo;,&ldquo;Fields.tif&rdquo;)</p>
+
+<p>print(&ldquo;&mdash; {} seconds &mdash;&rdquo;.format(time.time() - start_time))</p>
+
+<h1 id="0-194">0.194</h1>
+
+<p>{% endcodeblock %}</p>
+
+<p>This script relies on Vectorization to calculate statistics over variable chunks sizes (variable slices of the original NDVI raster based on the overlapping field). This dramatically reduces the computational cost of the looping operation. So instead of an average execution time of 73 seconds, how about 0.194 seconds. In total that’s about 40 seconds (0.194*207) to process all of my images.</p>
+
+<p>That’s <strong>38,000%</strong> faster! Let me say that again… thirty eight <strong>THOUSAND</strong> percent faster.</p>
+
+<p>But why is it so much faster?</p>
+
+<p><a href="https://stackoverflow.com/questions/1422149/what-is-vectorization">&ldquo;Vectorization (simplified) is the process of rewriting a loop so that instead of processing a single element of an array N times, it processes (say) 4 elements of the array simultaneously N/4 times”</a></p>
+
+<p>And from the same thread…</p>
+
+<p>&ldquo;Vectorization describes the absence of any explicit looping, indexing, etc., in the code - these things are taking place, of course, just “behind the scenes” in optimized, pre-compiled C code. Vectorized code has many advantages, among which are:</p>
+
+<ol>
+<li><p>vectorized code is more concise and easier to read</p></li>
+
+<li><p>fewer lines of code generally means fewer bugs</p></li>
+
+<li><p>the code more closely resembles standard mathematical notation (making it easier, typically, to correctly code mathematical constructs)</p></li>
+
+<li><p>vectorization results in more “Pythonic” code. Without vectorization, our code would be littered with inefficient and difficult to read for loops.&rdquo;</p></li>
+</ol>
+
+<p>By calculating the field statistics this way rather than relying on pure python loops, the overall run time is orders of magnitude faster. Essentially NumPy Vectorization is using C loops instead of Python to do the heavy lifting. Without going into too much detail, C is so much faster because it’ a typed language versus Python which attempts to interpret variable types.</p>
+
+<h1 id="closing-thoughts">Closing Thoughts&hellip;</h1>
+
+<p>A little research and curiosity pays off.</p>
+
+<p>I’d say a 38,000% return on investment is pretty good, especially if you consider time as your most valuable commodity.</p>
+
+<p>Now if only I could figure out a way to get that ROI on my retirement savings….</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/python/">Python</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/numpy/">NumPy</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/vectorization/">Vectorization</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/gis/">GIS</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/tips/">Tips</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.geoalchemist.com/drafts/gis_courses/" data-tooltip="GIS Curriculum">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.geoalchemist.com/drafts/python_vectorization/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.geoalchemist.com/drafts/python_vectorization/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.geoalchemist.com/drafts/python_vectorization/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 Wes Porter. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.geoalchemist.com/drafts/gis_courses/" data-tooltip="GIS Curriculum">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.geoalchemist.com/drafts/python_vectorization/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.geoalchemist.com/drafts/python_vectorization/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.geoalchemist.com/drafts/python_vectorization/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.geoalchemist.com%2Fdrafts%2Fpython_vectorization%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwww.geoalchemist.com%2Fdrafts%2Fpython_vectorization%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.geoalchemist.com%2Fdrafts%2Fpython_vectorization%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://res.cloudinary.com/wessport/image/upload/v1508186128/me_ggnccn.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Wes Porter</h4>
+    
+      <div id="about-card-bio">Exploring geospatial data through code.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Graduate Research Assistant
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Nashville
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/">
+                <h3 class="media-heading">Measuring Crop Growth in R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">An Example of how to use R to Generate Crop Growth Curves 
+In between finishing up my database coursework, I’m usually doing remote sensing work.
+Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.
+This post is just a quick code-along which shows you how to generate phenology curves using R.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
+                <h3 class="media-heading">The Five Normal Forms</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><em>Simple rules for improving the integrity of your data tables through Normalization.</em></p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/what-makes-a-graduate-program-valuable/">
+                <h3 class="media-heading">What Makes a Graduate Program Valuable?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>You&rsquo;re investing a substantial amount of time, energy, and most importantly <strong>money</strong> into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/music-for-coding/">
+                <h3 class="media-heading">Music For Coding</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>A little folk, a little jazz - a little bit of everything. A few songs I listen to while coding.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/">
+                <h3 class="media-heading">SQL Basics: The WHERE Clause</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Working with the WHERE clause and SQL operators to refine data requests.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/">
+                <h3 class="media-heading">SQL Basics: The SELECT Statement</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Over the next few weeks I&rsquo;m going to share some of the <strong>SQL Basics</strong> I&rsquo;ve picked up. Hopefully, these posts will make <strong>SQL</strong> a little less intimidating for other beginners.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/11/blog-launch/">
+                <h3 class="media-heading">Blog Launch</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>After much toil, I&rsquo;m finally launching a website to share my misadventures in GIS and programming.</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/10/map-gallery/">
+                <h3 class="media-heading">Map Gallery</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Nothing too fancy. Just a few maps I&rsquo;ve made.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         8 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://www.geoalchemist.com/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.geoalchemist.com\/drafts\/python_vectorization\/';
+          
+            this.page.identifier = '\/drafts\/python_vectorization\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'www-geoalchemist-com';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+

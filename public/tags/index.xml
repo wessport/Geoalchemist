@@ -50,7 +50,7 @@
     <item>
       <title>Gis</title>
       <link>https://www.geoalchemist.com/tags/gis/</link>
-      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/tags/gis/</guid>
       <description></description>
@@ -156,6 +156,15 @@
     </item>
     
     <item>
+      <title>Numpy</title>
+      <link>https://www.geoalchemist.com/tags/numpy/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/numpy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Phenology Curve</title>
       <link>https://www.geoalchemist.com/tags/phenology-curve/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
@@ -170,6 +179,15 @@
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/tags/playlist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.geoalchemist.com/tags/python/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/python/</guid>
       <description></description>
     </item>
     
@@ -221,7 +239,7 @@
     <item>
       <title>Tips</title>
       <link>https://www.geoalchemist.com/tags/tips/</link>
-      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/tags/tips/</guid>
       <description></description>
@@ -233,6 +251,15 @@
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/tags/tranquilpeak/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vectorization</title>
+      <link>https://www.geoalchemist.com/tags/vectorization/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/vectorization/</guid>
       <description></description>
     </item>
     

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.geoalchemist.com/drafts/python_vectorization/</loc>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
   </url>
@@ -83,7 +88,7 @@
   
   <url>
     <loc>https://www.geoalchemist.com/drafts/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -95,19 +100,19 @@
   
   <url>
     <loc>https://www.geoalchemist.com/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.geoalchemist.com/categories/gis/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.geoalchemist.com/tags/gis/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -184,6 +189,12 @@
   </url>
   
   <url>
+    <loc>https://www.geoalchemist.com/tags/numpy/</loc>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.geoalchemist.com/tags/phenology-curve/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -204,6 +215,18 @@
   <url>
     <loc>https://www.geoalchemist.com/post/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/python/</loc>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/python/</loc>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -257,13 +280,19 @@
   
   <url>
     <loc>https://www.geoalchemist.com/tags/tips/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.geoalchemist.com/tags/tranquilpeak/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/vectorization/</loc>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

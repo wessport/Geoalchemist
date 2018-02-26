@@ -4,11 +4,12 @@ author: "Wes"
 date: 2018-02-26
 
 autoThumbnailImage: false
-thumbnailImagePosition: "top"
-thumbnailImage:
+thumbnailImagePosition: left
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1519680159/python_ufon72.png
 coverImage: http://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg
 metaAlignment: center
 coverMeta: out
+comments: true
 
 keywords:
 - Python
