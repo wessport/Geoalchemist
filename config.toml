@@ -37,14 +37,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   bio = "Exploring geospatial data through code."
   job = "Graduate Research Assistant"
   location = "Nashville"
-
   # Profile picture
   picture = "https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg"
-
   # Your Twitter username without the @. E.g : thibaudlepretre
   twitter = "Wes_Port"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
   # googlePlus = "+ThibaudLepretre"
+  logo = "http://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"
 
 # Menu Configuration
 [[menu.main]]
