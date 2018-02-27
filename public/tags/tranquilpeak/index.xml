@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tranquilpeak on Geoalchemist</title>
-    <link>https://www.geoalchemist.com/tags/tranquilpeak/</link>
+    <link>//www.geoalchemist.com/tags/tranquilpeak/</link>
     <description>Recent content in Tranquilpeak on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.geoalchemist.com/tags/tranquilpeak/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//www.geoalchemist.com/tags/tranquilpeak/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog Launch</title>
-      <link>https://www.geoalchemist.com/2017/11/blog-launch/</link>
+      <link>//www.geoalchemist.com/2017/11/blog-launch/</link>
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://www.geoalchemist.com/2017/11/blog-launch/</guid>
+      <guid>//www.geoalchemist.com/2017/11/blog-launch/</guid>
       <description>&lt;p&gt;After much toil, I&amp;rsquo;m finally launching a website to share my misadventures in GIS and programming.&lt;/p&gt;</description>
     </item>
     

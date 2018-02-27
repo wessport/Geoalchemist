@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Normal Forms on Geoalchemist</title>
-    <link>https://www.geoalchemist.com/tags/normal-forms/</link>
+    <link>//www.geoalchemist.com/tags/normal-forms/</link>
     <description>Recent content in Normal Forms on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 28 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.geoalchemist.com/tags/normal-forms/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//www.geoalchemist.com/tags/normal-forms/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Five Normal Forms</title>
-      <link>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</link>
+      <link>//www.geoalchemist.com/2018/01/the-five-normal-forms/</link>
       <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</guid>
+      <guid>//www.geoalchemist.com/2018/01/the-five-normal-forms/</guid>
       <description>&lt;p&gt;&lt;em&gt;Simple rules for improving the integrity of your data tables through Normalization.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
