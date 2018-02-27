@@ -109,7 +109,7 @@ This was without adding another loop to go through all 207 NDVI images and writi
 
 Using this approach, calculating stats for each NDVI would take an estimated **15,111 seconds** (73\*207) or **4.2 hours**.
 
-What if they statistics were incorrectly calculated the first time?
+What if the statistics were incorrectly calculated the first time?
 
 What if they were inadvertently lost and needed to be regenerated?
 
