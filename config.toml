@@ -121,7 +121,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
 
   # Global keywords configuration. Following keywords will be add to every pages
   # keywords = ["development", "next-gen"]
-  og_image = "http://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"
+  og_image = "https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"
   # Syntax highlighter, possible choice between: "highligth.js" (recommanded) and "prism.js" (experimental)
   # You can comment it to disable syntax highligthing
   syntaxHighlighter = "highligth.js"
