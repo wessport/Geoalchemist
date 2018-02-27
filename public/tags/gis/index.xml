@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gis on Geoalchemist</title>
-    <link>//www.geoalchemist.com/tags/gis/</link>
+    <link>https://www.geoalchemist.com/tags/gis/</link>
     <description>Recent content in Gis on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//www.geoalchemist.com/tags/gis/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.geoalchemist.com/tags/gis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Saving Time in Python</title>
-      <link>//www.geoalchemist.com/2018/02/saving-time-in-python/</link>
+      <link>https://www.geoalchemist.com/2018/02/saving-time-in-python/</link>
       <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>//www.geoalchemist.com/2018/02/saving-time-in-python/</guid>
+      <guid>https://www.geoalchemist.com/2018/02/saving-time-in-python/</guid>
       <description>&lt;p&gt;&lt;em&gt;How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>GIS Curriculum</title>
-      <link>//www.geoalchemist.com/drafts/gis_courses/</link>
+      <link>https://www.geoalchemist.com/drafts/gis_courses/</link>
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>//www.geoalchemist.com/drafts/gis_courses/</guid>
+      <guid>https://www.geoalchemist.com/drafts/gis_courses/</guid>
       <description>&lt;p&gt;Courses I would like to see in a competitive GIS program:&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>Map Gallery</title>
-      <link>//www.geoalchemist.com/2017/10/map-gallery/</link>
+      <link>https://www.geoalchemist.com/2017/10/map-gallery/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>//www.geoalchemist.com/2017/10/map-gallery/</guid>
+      <guid>https://www.geoalchemist.com/2017/10/map-gallery/</guid>
       <description>&lt;p&gt;Nothing too fancy. Just a few maps I&amp;rsquo;ve made.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

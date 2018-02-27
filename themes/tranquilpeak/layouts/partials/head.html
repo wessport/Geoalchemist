@@ -42,7 +42,7 @@
     <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
-    <meta property="og:url" content="{{ .URL | relURL }}">
+    <meta property="og:url" content="{{ .URL }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:image:url" content="{{ .Site.Params.og_image | relURL }}"/>
     <meta property="og:image" content="{{ .Site.Params.og_image | relURL }}"/>
