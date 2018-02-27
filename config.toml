@@ -43,7 +43,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   twitter = "Wes_Port"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
   # googlePlus = "+ThibaudLepretre"
-  logo = "http://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"
+
 
 # Menu Configuration
 [[menu.main]]
@@ -121,7 +121,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
 
   # Global keywords configuration. Following keywords will be add to every pages
   # keywords = ["development", "next-gen"]
-
+  og_image = "http://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"
   # Syntax highlighter, possible choice between: "highligth.js" (recommanded) and "prism.js" (experimental)
   # You can comment it to disable syntax highligthing
   syntaxHighlighter = "highligth.js"
