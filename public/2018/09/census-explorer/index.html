@@ -1,0 +1,833 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.48 with theme Tranquilpeak 0.4.2-BETA">
+    <title>Census Explorer</title>
+    <meta name="author" content="Wes Porter">
+    <meta name="keywords" content="Shiny, R, Census, Leaflet, Nashville, GIS">
+
+    <link rel="icon" href="https://www.geoalchemist.com/favicon.png">
+    
+
+    
+    <meta name="description" content="This past summer I develop an interactive web map allowing users to visualize census data.
+
+">
+    <meta property="og:description" content="This past summer I develop an interactive web map allowing users to visualize census data.
+
+">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Census Explorer">
+    <meta property="og:url" content="https://www.geoalchemist.com/">
+    <meta property="og:site_name" content="Geoalchemist">
+    <meta property="og:image:url" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
+    <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
+    <meta name="twitter:site" content="@Wes_Port">
+    <meta name="twitter:creator" content="@Wes_Port">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Census Explorer"/>
+    <meta name="twitter:description" content="This past summer I develop an interactive web map allowing users to visualize census data.
+
+">
+    <meta name="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1519680159/python_ufon72.png"/>
+    <meta name="twitter:image:src" content="https://res.cloudinary.com/wessport/image/upload/v1519680159/python_ufon72.png"/>
+
+    
+    <meta property="og:image" content="http://geoalchemist.comhttps://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
+    <meta property="og:image:secure_url" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
+    
+
+    
+
+    
+    
+
+    
+
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://www.geoalchemist.com/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-111699620-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://www.geoalchemist.com/">Geoalchemist</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://www.geoalchemist.com/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://www.geoalchemist.com/#about">
+          <img class="sidebar-profile-picture" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Wes Porter</h4>
+        
+          <h5 class="sidebar-profile-bio">Exploring geospatial data through code.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/Wes_Port" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/wessport" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/wes-porter-10250488/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/2017/10/map-gallery/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-map"></i>
+      
+      <span class="sidebar-button-desc">Map Gallery</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.geoalchemist.com/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('https://res.cloudinary.com/wessport/image/upload/v1532117255/GNRC_App_ch1b1d.png')"
+       data-behavior="4">
+    
+      <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Census Explorer
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-09-21T00:00:00Z">
+        
+  September 21, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.geoalchemist.com/categories/r">R</a>, 
+    
+      <a class="category-link" href="https://www.geoalchemist.com/categories/gis">GIS</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p><em>This past summer I develop an interactive web map allowing users to visualize census data.</em></p>
+
+<p></p>
+
+<hr />
+
+<p>Why Census Data?</p>
+
+<p>It&rsquo;s used for everything. Census data is routinely relied on for urban planning, regional transportation projects, evaluation of proposed economic developments, solid waste planning, and determining legislative boundaries. That&rsquo;s just a small sampling of why you might need census data.</p>
+
+<p>A common complaint I heard from people working with census data was that it was time consuming and frustrating searching for on the census website.</p>
+
+<p>As part of a capstone project for my Master&rsquo;s program, I worked on making census data more accessible for regional planners at the Greater Nashville Regional Council. I created a Shiny Application in R that allows users to explore common census variables and export them to CSV for further analysis.</p>
+
+<hr />
+
+<p>A demo version of the app can be viewed here: <a href="https://wessport865.shinyapps.io/GNRC_Shiny_App/">Greater Nashville Census Explorer</a></p>
+
+<p><img src="https://media.giphy.com/media/qd9EkJ8S02pVu/giphy.gif" alt="A witty gif" /></p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/r/">R</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/shiny/">Shiny</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/leaflet/">Leaflet</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/gis/">GIS</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.geoalchemist.com/2018/02/saving-time-in-python/" data-tooltip="Saving Time in Python">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.geoalchemist.com/2018/09/census-explorer/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.geoalchemist.com/2018/09/census-explorer/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.geoalchemist.com/2018/09/census-explorer/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 Wes Porter. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.geoalchemist.com/2018/02/saving-time-in-python/" data-tooltip="Saving Time in Python">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.geoalchemist.com/2018/09/census-explorer/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.geoalchemist.com/2018/09/census-explorer/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.geoalchemist.com/2018/09/census-explorer/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.geoalchemist.com%2F2018%2F09%2Fcensus-explorer%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwww.geoalchemist.com%2F2018%2F09%2Fcensus-explorer%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.geoalchemist.com%2F2018%2F09%2Fcensus-explorer%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Wes Porter</h4>
+    
+      <div id="about-card-bio">Exploring geospatial data through code.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Graduate Research Assistant
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Nashville
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/09/census-explorer/">
+                <h3 class="media-heading">Census Explorer</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><em>This past summer I develop an interactive web map allowing users to visualize census data.</em></p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/02/saving-time-in-python/">
+                <h3 class="media-heading">Saving Time in Python</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><em>How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.</em></p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/">
+                <h3 class="media-heading">Measuring Crop Growth in R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">An Example of how to use R to Generate Crop Growth Curves 
+In between finishing up my database coursework, I’m usually doing remote sensing work.
+Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.
+This post is just a quick code-along which shows you how to generate phenology curves using R.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
+                <h3 class="media-heading">The Five Normal Forms</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><em>Simple rules for improving the integrity of your data tables through Normalization.</em></p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/what-makes-a-graduate-program-valuable/">
+                <h3 class="media-heading">What Makes a Graduate Program Valuable?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>You&rsquo;re investing a substantial amount of time, energy, and most importantly <strong>money</strong> into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/music-for-coding/">
+                <h3 class="media-heading">Music For Coding</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>A little folk, a little jazz - a little bit of everything. A few songs I listen to while coding.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/">
+                <h3 class="media-heading">SQL Basics: The WHERE Clause</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Working with the WHERE clause and SQL operators to refine data requests.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/">
+                <h3 class="media-heading">SQL Basics: The SELECT Statement</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Over the next few weeks I&rsquo;m going to share some of the <strong>SQL Basics</strong> I&rsquo;ve picked up. Hopefully, these posts will make <strong>SQL</strong> a little less intimidating for other beginners.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/11/blog-launch/">
+                <h3 class="media-heading">Blog Launch</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>After much toil, I&rsquo;m finally launching a website to share my misadventures in GIS and programming.</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/10/map-gallery/">
+                <h3 class="media-heading">Map Gallery</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Nothing too fancy. Just a few maps I&rsquo;ve made.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         10 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://www.geoalchemist.com/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.geoalchemist.com\/2018\/09\/census-explorer\/';
+          
+            this.page.identifier = '\/2018\/09\/census-explorer\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'www-geoalchemist-com';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+

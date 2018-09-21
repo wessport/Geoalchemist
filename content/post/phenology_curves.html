@@ -32,6 +32,7 @@ tags:
 
 ---
 
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 
 
 <p>An Example of how to use R to Generate Crop Growth Curves <!--more--></p>
@@ -64,94 +65,234 @@ cotton &lt;- filter(cotton, cotton$avg &gt; 0)
 rice &lt;- filter(rice, rice$avg &gt; 0)
 soybeans &lt;- filter(soybeans, soybeans$avg &gt; 0)
 fallow &lt;- filter(fallow, fallow$avg &gt; 0)</code></pre>
-<p>If we look at our data, we’ll notice that we have an average NDVI value for each field. If we wanted we could look at the phenology curve for each field, but I’m more interested in what the phenology curve is for each crop.</p>
-<table>
+If we look at our data, we’ll notice that we have an average NDVI value for each field. If we wanted we could look at the phenology curve for each field, but I’m more interested in what the phenology curve is for each crop.
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="right">field_id</th>
-<th align="right">doy</th>
-<th align="right">avg</th>
-<th align="right">max</th>
-<th align="right">min</th>
-<th align="right">range</th>
-<th align="right">std</th>
-<th align="right">count</th>
-<th align="right">area</th>
-<th align="right">cdl</th>
+<tr>
+<th style="text-align:right;">
+field_id
+</th>
+<th style="text-align:right;">
+doy
+</th>
+<th style="text-align:right;">
+avg
+</th>
+<th style="text-align:right;">
+max
+</th>
+<th style="text-align:right;">
+min
+</th>
+<th style="text-align:right;">
+range
+</th>
+<th style="text-align:right;">
+std
+</th>
+<th style="text-align:right;">
+count
+</th>
+<th style="text-align:right;">
+area
+</th>
+<th style="text-align:right;">
+cdl
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="right">4369</td>
-<td align="right">84</td>
-<td align="right">2257.465</td>
-<td align="right">3953</td>
-<td align="right">0</td>
-<td align="right">3953</td>
-<td align="right">807.3354</td>
-<td align="right">101</td>
-<td align="right">90900</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:right;">
+4369
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:right;">
+2257.465
+</td>
+<td style="text-align:right;">
+3953
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3953
+</td>
+<td style="text-align:right;">
+807.3354
+</td>
+<td style="text-align:right;">
+101
+</td>
+<td style="text-align:right;">
+90900
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="right">4746</td>
-<td align="right">84</td>
-<td align="right">1635.798</td>
-<td align="right">3673</td>
-<td align="right">0</td>
-<td align="right">3673</td>
-<td align="right">549.2867</td>
-<td align="right">327</td>
-<td align="right">294300</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:right;">
+4746
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:right;">
+1635.798
+</td>
+<td style="text-align:right;">
+3673
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3673
+</td>
+<td style="text-align:right;">
+549.2867
+</td>
+<td style="text-align:right;">
+327
+</td>
+<td style="text-align:right;">
+294300
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="odd">
-<td align="right">82</td>
-<td align="right">20</td>
-<td align="right">3218.348</td>
-<td align="right">4946</td>
-<td align="right">0</td>
-<td align="right">4946</td>
-<td align="right">755.9517</td>
-<td align="right">164</td>
-<td align="right">147600</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:right;">
+82
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+3218.348
+</td>
+<td style="text-align:right;">
+4946
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+4946
+</td>
+<td style="text-align:right;">
+755.9517
+</td>
+<td style="text-align:right;">
+164
+</td>
+<td style="text-align:right;">
+147600
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="right">124</td>
-<td align="right">20</td>
-<td align="right">6144.165</td>
-<td align="right">7483</td>
-<td align="right">0</td>
-<td align="right">7483</td>
-<td align="right">572.2665</td>
-<td align="right">176</td>
-<td align="right">158400</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:right;">
+124
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+6144.165
+</td>
+<td style="text-align:right;">
+7483
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+7483
+</td>
+<td style="text-align:right;">
+572.2665
+</td>
+<td style="text-align:right;">
+176
+</td>
+<td style="text-align:right;">
+158400
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="odd">
-<td align="right">197</td>
-<td align="right">20</td>
-<td align="right">2235.016</td>
-<td align="right">4798</td>
-<td align="right">0</td>
-<td align="right">4798</td>
-<td align="right">599.0628</td>
-<td align="right">183</td>
-<td align="right">164700</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:right;">
+197
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+2235.016
+</td>
+<td style="text-align:right;">
+4798
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+4798
+</td>
+<td style="text-align:right;">
+599.0628
+</td>
+<td style="text-align:right;">
+183
+</td>
+<td style="text-align:right;">
+164700
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="right">247</td>
-<td align="right">20</td>
-<td align="right">4121.549</td>
-<td align="right">7234</td>
-<td align="right">0</td>
-<td align="right">7234</td>
-<td align="right">1424.5496</td>
-<td align="right">268</td>
-<td align="right">241200</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:right;">
+247
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+4121.549
+</td>
+<td style="text-align:right;">
+7234
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+7234
+</td>
+<td style="text-align:right;">
+1424.5496
+</td>
+<td style="text-align:right;">
+268
+</td>
+<td style="text-align:right;">
+241200
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
 </tbody>
 </table>
