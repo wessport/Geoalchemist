@@ -6,7 +6,7 @@ date: 2018-09-21
 autoThumbnailImage: false
 thumbnailImagePosition: left
 thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1519680159/python_ufon72.png
-coverImage: https://res.cloudinary.com/wessport/image/upload/v1532117255/GNRC_App_ch1b1d.png
+coverImage: https://res.cloudinary.com/wessport/image/upload/v1537559080/Nashville_tdyakv.jpg
 metaAlignment: center
 coverMeta: in
 comments: true
@@ -46,9 +46,8 @@ A common complaint I heard from people working with census data was that it was 
 
 As part of a capstone project for my Master's program, I worked on making census data more accessible for regional planners at the Greater Nashville Regional Council. I created a Shiny Application in R that allows users to explore common census variables and export them to CSV for further analysis.
 
+![A witty gif](https://media.giphy.com/media/qd9EkJ8S02pVu/giphy.gif)
+
 ---
 
 A demo version of the app can be viewed here: [Greater Nashville Census Explorer]( https://wessport865.shinyapps.io/GNRC_Shiny_App/)
-
-
-![A witty gif](https://media.giphy.com/media/qd9EkJ8S02pVu/giphy.gif)
