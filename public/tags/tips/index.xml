@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tips on Geoalchemist</title>
@@ -6,20 +6,14 @@
     <description>Recent content in Tips on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Feb 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.geoalchemist.com/tags/tips/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 26 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/tags/tips/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Saving Time in Python</title>
       <link>https://www.geoalchemist.com/2018/02/saving-time-in-python/</link>
       <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2018/02/saving-time-in-python/</guid>
-      <description>&lt;p&gt;&lt;em&gt;How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,9 +22,7 @@
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/drafts/gis_courses/</guid>
-      <description>&lt;p&gt;Courses I would like to see in a competitive GIS program:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Courses I would like to see in a competitive GIS program:&lt;/p&gt;</description>
     </item>
     
   </channel>

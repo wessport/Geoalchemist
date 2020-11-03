@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Geoalchemist</title>
@@ -6,9 +6,69 @@
     <description>Recent content in Categories on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 03 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>category1</title>
+      <link>https://www.geoalchemist.com/categories/category1/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/categories/category1/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://www.geoalchemist.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>category2</title>
+      <link>https://www.geoalchemist.com/categories/category2/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/categories/category2/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>Tech Blogging</title>
+      <link>https://www.geoalchemist.com/categories/tech-blogging/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/categories/tech-blogging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GIS</title>
+      <link>https://www.geoalchemist.com/categories/gis/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/categories/gis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://www.geoalchemist.com/categories/r/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.geoalchemist.com/categories/python/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Remote Sensing</title>
+      <link>https://www.geoalchemist.com/categories/remote-sensing/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/categories/remote-sensing/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Database</title>
@@ -16,15 +76,6 @@
       <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/categories/database/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gis</title>
-      <link>https://www.geoalchemist.com/categories/gis/</link>
-      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/categories/gis/</guid>
       <description></description>
     </item>
     
@@ -43,33 +94,6 @@
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/categories/playlist/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://www.geoalchemist.com/categories/python/</link>
-      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://www.geoalchemist.com/categories/r/</link>
-      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/categories/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Remote Sensing</title>
-      <link>https://www.geoalchemist.com/categories/remote-sensing/</link>
-      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/categories/remote-sensing/</guid>
       <description></description>
     </item>
     

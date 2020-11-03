@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Geoalchemist</title>
@@ -6,10 +6,24 @@
     <description>Recent content on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Content</title>
+      <link>https://www.geoalchemist.com/2020/11/new-content/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/2020/11/new-content/</guid>
+      <description>&lt;p&gt;&lt;em&gt;It&amp;rsquo;s been a minute!&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     
-	<atom:link href="https://www.geoalchemist.com/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>TITLE</title>
+      <link>https://www.geoalchemist.com/drafts/template/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/drafts/template/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Short summary line&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Census Explorer</title>
@@ -17,9 +31,7 @@
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2018/09/census-explorer/</guid>
-      <description>&lt;p&gt;&lt;em&gt;This past summer I develop an interactive web map allowing users to visualize census data.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;This past summer I developed an interactive web map allowing users to visualize census data.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,9 +40,7 @@
       <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2018/02/saving-time-in-python/</guid>
-      <description>&lt;p&gt;&lt;em&gt;How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39,10 +49,11 @@
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/</guid>
-      <description>An Example of how to use R to Generate Crop Growth Curves 
-In between finishing up my database coursework, I’m usually doing remote sensing work.
-Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.
-This post is just a quick code-along which shows you how to generate phenology curves using R.</description>
+      <description>
+&lt;script src=&#34;https://www.geoalchemist.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;i&gt;An Example of how to use R to Generate Crop Growth Curves&lt;/i&gt; </description>
     </item>
     
     <item>
@@ -51,9 +62,7 @@ This post is just a quick code-along which shows you how to generate phenology c
       <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Simple rules for improving the integrity of your data tables through Normalization.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Simple rules for improving the integrity of your data tables through Normalization.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -62,9 +71,7 @@ This post is just a quick code-along which shows you how to generate phenology c
       <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2018/01/what-makes-a-graduate-program-valuable/</guid>
-      <description>&lt;p&gt;You&amp;rsquo;re investing a substantial amount of time, energy, and most importantly &lt;strong&gt;money&lt;/strong&gt; into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;You&amp;rsquo;re investing a substantial amount of time, energy, and most importantly &lt;strong&gt;money&lt;/strong&gt; into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,9 +80,7 @@ This post is just a quick code-along which shows you how to generate phenology c
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2018/01/music-for-coding/</guid>
-      <description>&lt;p&gt;A little folk, a little jazz - a little bit of everything. A few songs I listen to while coding.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;A little folk, a little jazz - a little bit of everything. A few songs I listen to while coding.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -84,9 +89,7 @@ This post is just a quick code-along which shows you how to generate phenology c
       <pubDate>Thu, 28 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/</guid>
-      <description>&lt;p&gt;Working with the WHERE clause and SQL operators to refine data requests.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Working with the WHERE clause and SQL operators to refine data requests.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -95,9 +98,7 @@ This post is just a quick code-along which shows you how to generate phenology c
       <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/</guid>
-      <description>&lt;p&gt;Over the next few weeks I&amp;rsquo;m going to share some of the &lt;strong&gt;SQL Basics&lt;/strong&gt; I&amp;rsquo;ve picked up. Hopefully, these posts will make &lt;strong&gt;SQL&lt;/strong&gt; a little less intimidating for other beginners.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Over the next few weeks I&amp;rsquo;m going to share some of the &lt;strong&gt;SQL Basics&lt;/strong&gt; I&amp;rsquo;ve picked up. Hopefully, these posts will make &lt;strong&gt;SQL&lt;/strong&gt; a little less intimidating for other beginners.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -106,7 +107,7 @@ This post is just a quick code-along which shows you how to generate phenology c
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2017/11/blog-launch/</guid>
-      <description>&lt;p&gt;After much toil, I&amp;rsquo;m finally launching a website to share my misadventures in GIS and programming.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;After much toil, I&amp;rsquo;m finally launching a website to share my misadventures in GIS and programming.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -115,9 +116,7 @@ This post is just a quick code-along which shows you how to generate phenology c
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/drafts/gis_courses/</guid>
-      <description>&lt;p&gt;Courses I would like to see in a competitive GIS program:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Courses I would like to see in a competitive GIS program:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -126,9 +125,7 @@ This post is just a quick code-along which shows you how to generate phenology c
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2017/10/map-gallery/</guid>
-      <description>&lt;p&gt;Nothing too fancy. Just a few maps I&amp;rsquo;ve made.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Nothing too fancy. Just a few maps I&amp;rsquo;ve made.&lt;/p&gt;</description>
     </item>
     
   </channel>

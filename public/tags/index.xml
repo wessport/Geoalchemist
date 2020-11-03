@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Geoalchemist</title>
@@ -6,17 +6,148 @@
     <description>Recent content in Tags on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.geoalchemist.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 03 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tag1</title>
+      <link>https://www.geoalchemist.com/tags/tag1/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/tag1/</guid>
+      <description></description>
+    </item>
     
     <item>
-      <title>Blogdown</title>
-      <link>https://www.geoalchemist.com/tags/blogdown/</link>
-      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <title>tag2</title>
+      <link>https://www.geoalchemist.com/tags/tag2/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.geoalchemist.com/tags/blogdown/</guid>
+      <guid>https://www.geoalchemist.com/tags/tag2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag3</title>
+      <link>https://www.geoalchemist.com/tags/tag3/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/tag3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tech blogging</title>
+      <link>https://www.geoalchemist.com/tags/tech-blogging/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/tech-blogging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GIS</title>
+      <link>https://www.geoalchemist.com/tags/gis/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/gis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Leaflet</title>
+      <link>https://www.geoalchemist.com/tags/leaflet/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/leaflet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://www.geoalchemist.com/tags/r/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shiny</title>
+      <link>https://www.geoalchemist.com/tags/shiny/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/shiny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NumPy</title>
+      <link>https://www.geoalchemist.com/tags/numpy/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/numpy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.geoalchemist.com/tags/python/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tips</title>
+      <link>https://www.geoalchemist.com/tags/tips/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/tips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vectorization</title>
+      <link>https://www.geoalchemist.com/tags/vectorization/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/vectorization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NDVI</title>
+      <link>https://www.geoalchemist.com/tags/ndvi/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/ndvi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Phenology Curve</title>
+      <link>https://www.geoalchemist.com/tags/phenology-curve/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/phenology-curve/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Remote Sensing</title>
+      <link>https://www.geoalchemist.com/tags/remote-sensing/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/remote-sensing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rstats</title>
+      <link>https://www.geoalchemist.com/tags/rstats/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/rstats/</guid>
       <description></description>
     </item>
     
@@ -39,20 +170,20 @@
     </item>
     
     <item>
-      <title>Folk</title>
-      <link>https://www.geoalchemist.com/tags/folk/</link>
-      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      <title>Normal forms</title>
+      <link>https://www.geoalchemist.com/tags/normal-forms/</link>
+      <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.geoalchemist.com/tags/folk/</guid>
+      <guid>https://www.geoalchemist.com/tags/normal-forms/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Gis</title>
-      <link>https://www.geoalchemist.com/tags/gis/</link>
-      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      <title>Normalization</title>
+      <link>https://www.geoalchemist.com/tags/normalization/</link>
+      <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.geoalchemist.com/tags/gis/</guid>
+      <guid>https://www.geoalchemist.com/tags/normalization/</guid>
       <description></description>
     </item>
     
@@ -93,11 +224,11 @@
     </item>
     
     <item>
-      <title>Hugo</title>
-      <link>https://www.geoalchemist.com/tags/hugo/</link>
-      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      <title>Folk</title>
+      <link>https://www.geoalchemist.com/tags/folk/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.geoalchemist.com/tags/hugo/</guid>
+      <guid>https://www.geoalchemist.com/tags/folk/</guid>
       <description></description>
     </item>
     
@@ -120,69 +251,6 @@
     </item>
     
     <item>
-      <title>Leaflet</title>
-      <link>https://www.geoalchemist.com/tags/leaflet/</link>
-      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/leaflet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Map Gallery</title>
-      <link>https://www.geoalchemist.com/tags/map-gallery/</link>
-      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/map-gallery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ndvi</title>
-      <link>https://www.geoalchemist.com/tags/ndvi/</link>
-      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/ndvi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Normal Forms</title>
-      <link>https://www.geoalchemist.com/tags/normal-forms/</link>
-      <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/normal-forms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Normalization</title>
-      <link>https://www.geoalchemist.com/tags/normalization/</link>
-      <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/normalization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Numpy</title>
-      <link>https://www.geoalchemist.com/tags/numpy/</link>
-      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/numpy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Phenology Curve</title>
-      <link>https://www.geoalchemist.com/tags/phenology-curve/</link>
-      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/phenology-curve/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Playlist</title>
       <link>https://www.geoalchemist.com/tags/playlist/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
@@ -192,52 +260,7 @@
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://www.geoalchemist.com/tags/python/</link>
-      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://www.geoalchemist.com/tags/r/</link>
-      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Remote Sensing</title>
-      <link>https://www.geoalchemist.com/tags/remote-sensing/</link>
-      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/remote-sensing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rstats</title>
-      <link>https://www.geoalchemist.com/tags/rstats/</link>
-      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/rstats/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shiny</title>
-      <link>https://www.geoalchemist.com/tags/shiny/</link>
-      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/shiny/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sql</title>
+      <title>SQL</title>
       <link>https://www.geoalchemist.com/tags/sql/</link>
       <pubDate>Thu, 28 Dec 2017 00:00:00 +0000</pubDate>
       
@@ -246,7 +269,7 @@
     </item>
     
     <item>
-      <title>Sql Basics</title>
+      <title>SQL Basics</title>
       <link>https://www.geoalchemist.com/tags/sql-basics/</link>
       <pubDate>Thu, 28 Dec 2017 00:00:00 +0000</pubDate>
       
@@ -255,11 +278,20 @@
     </item>
     
     <item>
-      <title>Tips</title>
-      <link>https://www.geoalchemist.com/tags/tips/</link>
-      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      <title>Blogdown</title>
+      <link>https://www.geoalchemist.com/tags/blogdown/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://www.geoalchemist.com/tags/tips/</guid>
+      <guid>https://www.geoalchemist.com/tags/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://www.geoalchemist.com/tags/hugo/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/hugo/</guid>
       <description></description>
     </item>
     
@@ -273,11 +305,11 @@
     </item>
     
     <item>
-      <title>Vectorization</title>
-      <link>https://www.geoalchemist.com/tags/vectorization/</link>
-      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      <title>map gallery</title>
+      <link>https://www.geoalchemist.com/tags/map-gallery/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://www.geoalchemist.com/tags/vectorization/</guid>
+      <guid>https://www.geoalchemist.com/tags/map-gallery/</guid>
       <description></description>
     </item>
     

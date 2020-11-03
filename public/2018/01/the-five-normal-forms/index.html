@@ -1,69 +1,86 @@
-
-
-  
-    
-  
-
-
-  
-
-
-
-
-
-  
-
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.48 with theme Tranquilpeak 0.4.2-BETA">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.77.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Wes Porter">
+<meta name="keywords" content="Database, Normalization, Normal Forms, design, database 101, normal form, the five normal forms">
+<meta name="description" content="Simple rules for improving the integrity of your data tables through Normalization.">
+
+
+<meta property="og:description" content="Simple rules for improving the integrity of your data tables through Normalization.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Five Normal Forms">
+<meta name="twitter:title" content="The Five Normal Forms">
+<meta property="og:url" content="https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
+<meta property="twitter:url" content="https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
+<meta property="og:site_name" content="Geoalchemist">
+<meta property="og:description" content="Simple rules for improving the integrity of your data tables through Normalization.">
+<meta name="twitter:description" content="Simple rules for improving the integrity of your data tables through Normalization.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-01-28T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2018-01-28T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Database">
+    
+  
+  
+    
+      <meta property="article:tag" content="Database">
+    
+      <meta property="article:tag" content="Normalization">
+    
+      <meta property="article:tag" content="Normal forms">
+    
+      <meta property="article:tag" content="Design">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@Wes_Port">
+
+
+  <meta name="twitter:creator" content="@Wes_Port">
+
+
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png">
+  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png">
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1517089330/5NF_bg_ltoau5.png">
+  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1517089330/5NF_bg_ltoau5.png">
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg">
+
+
     <title>The Five Normal Forms</title>
-    <meta name="author" content="Wes Porter">
-    <meta name="keywords" content="Database, Normalization, Normal Forms, design, database 101, normal form, the five normal forms">
 
     <link rel="icon" href="https://www.geoalchemist.com/favicon.png">
     
 
     
-    <meta name="description" content="Simple rules for improving the integrity of your data tables through Normalization.
 
-">
-    <meta property="og:description" content="Simple rules for improving the integrity of your data tables through Normalization.
-
-">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="The Five Normal Forms">
-    <meta property="og:url" content="https://www.geoalchemist.com/">
-    <meta property="og:site_name" content="Geoalchemist">
-    <meta property="og:image:url" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    <meta name="twitter:site" content="@Wes_Port">
-    <meta name="twitter:creator" content="@Wes_Port">
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="The Five Normal Forms"/>
-    <meta name="twitter:description" content="Simple rules for improving the integrity of your data tables through Normalization.
-
-">
-    <meta name="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png"/>
-    <meta name="twitter:image:src" content="https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png"/>
-
-    
-    <meta property="og:image" content="http://geoalchemist.comhttps://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    <meta property="og:image:secure_url" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    
-
-    
-
-    
-    
-
-    
-
-
-    
+    <link rel="canonical" href="https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -71,7 +88,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://www.geoalchemist.com/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    <link rel="stylesheet" href="https://www.geoalchemist.com/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
 
@@ -292,35 +309,20 @@ if (!doNotTrack) {
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p><em>Simple rules for improving the integrity of your data tables through Normalization.</em></p>
-
-<p></p>
-
-<hr />
-
+<hr>
 <p>If you&rsquo;re like me when you get a new dataset on your hands, the first thing you want to do is throw it into one giant table and start analyzing it. Historically table design (table structure) hasn&rsquo;t always been at the top of my priority list. As long as I could find what I needed I was happy.</p>
-
 <p>Inevitably at some point in a project however I would need to perform updates. This is where poor design always came back to haunt me. Simple updates could require all kinds of complex filtering and sorting to ensure I accurately updated each field.</p>
-
 <p>Do to the nature of putting all of my data into one table, I had unintentionally introduced rampant redundancy. Even simple updates or deletes became annoying timesinks and always left me questioning - did I really update everything I was supposed to?</p>
-
-<p><img src="https://media.giphy.com/media/P9RRyBd6ABYJi/giphy.gif" alt="A witty gif" /></p>
-
+<p><img src="https://media.giphy.com/media/P9RRyBd6ABYJi/giphy.gif" alt="A witty gif"></p>
 <p>By adhering to the Five Normal Forms it&rsquo;s possible to weed out most redundancy issues.</p>
-
 <div class="alert success no-icon ">
   <p><strong>Normalization -</strong> a process of systematically reducing redundancy in data tables.</p>
 </div>
-
 <h2 id="1st-normal-form">1st Normal Form</h2>
-
 <p>A data table is in first normal form (1NF) when:</p>
-
 <h5 id="a-table-consists-of-cells-where-each-cell-contains-1-and-only-1-value">A table consists of cells where each cell contains 1 and only 1 value</h5>
-
 <p>This means you cannot have multiple values stored in a single cell like in the example table below.</p>
-
-<!--Table1-->
-
+<!-- raw HTML omitted -->
 
 
  
@@ -352,48 +354,29 @@ if (!doNotTrack) {
   
 </div>
 
-
-<h5 id="the-order-doesn-t-matter">The order doesn&rsquo;t matter</h5>
-
+<h5 id="the-order-doesnt-matter">The order doesn&rsquo;t matter</h5>
 <p>The position of the rows and also the columns shouldn&rsquo;t carry any significance. If they do, you have implicit information in the table order that should be made explicit by creating a new attribute. For instance if the priority of the data is indicated by the order it appears in the table, then a new attribute should be created to indicate priority. This makes future maintenance easier.</p>
-
 <h5 id="no-two-rows-are-exactly-alike">No two rows are exactly alike</h5>
-
 <p>This constraint makes sense given that we’re trying to reduce redundancy as much as possible.</p>
-
-<h5 id="the-column-attribute-names-are-unique">The column/attribute names are unique</h5>
-
+<h5 id="the-columnattribute-names-are-unique">The column/attribute names are unique</h5>
 <p>Say for instance you need to update the name of a coffee in your coffee database. If there are two columns named ‘Coffee_Name’ which one should you update – both? This leads to data integrity issues and makes it more difficult to reference columns reliably.</p>
-
 <h5 id="the-datatype-of-each-column-is-consistent">The datatype of each column is consistent</h5>
-
 <p>A column shouldn&rsquo;t contain cells with text <strong>and</strong> numerical values. Columns with multiple datatypes can produce unexpected results when attempting to calculate numerical values or search text leading to integrity issues and future headaches.</p>
-
-<hr />
-
+<hr>
 <h2 id="2nd-normal-form">2nd Normal Form</h2>
-
 <h5 id="functional-dependencies">Functional Dependencies</h5>
-
 <p>Before we talk about the second normal form, we need to know what functional dependencies are.</p>
-
 <p>A functional dependency exists when you can take a value from one attribute (or set of attributes) and use it to find the value of another.</p>
-
 <p>The determinant attribute determines the value of the dependent attribute. In other words, it is the attribute you need first before you can link to the second attribute.</p>
-
 <p>There are two common types of dependencies which give rise to the second and third normal forms.</p>
-
 <h5 id="2nd-normal-form-1">2nd Normal Form</h5>
-
 <p>Second normal form (2NF) is realized when there are no partial dependencies.</p>
-
 <div class="alert success no-icon ">
   <p><strong>Partial dependencies</strong> exist when a part of the primary key can be used to determine the value of a non-key attribute.</p>
 </div>
-
 <p>For instance in the example table below a partial dependency exists between <code>Coffee_ID</code> and <code>Coffee_Name</code>.
-<br>
-<!--Table2-->
+<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 
 
  
@@ -424,22 +407,15 @@ if (!doNotTrack) {
     <span class="caption">Table 2</span>
   
 </div>
-</p>
 
 <p>Partial dependencies can introduce integrity issues into your data tables.</p>
-
 <p>For instance every time we store data concerning the <code>Coffee_ID</code>, we also repeatedly include the <code>Coffee_Name</code>. If we decide to rebrand a particular coffee and introduce a new name later on, every old name of the rebranded coffee has to be replaced. Furthermore, if we currently don’t have a particular coffee on hand, when we lose that <code>Coffee_ID</code> value we also lose the name of the coffee.</p>
-
 <p>Partial dependencies can be addressed by creating a new table. Take the determinant in the troublesome partial dependency and copy it to a new table (think cmd-c). Then take the dependent attribute and cut it (cmd-x) to the new table you just created.</p>
-
 <div class="alert warning ">
   <p>It&rsquo;s important that you leave a copy of the determinant behind as a foreign key - otherwise you lose the relationship between the two tables.</p>
 </div>
-
-<p><br></p>
-
-<!--Table3-->
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
 
  
@@ -471,9 +447,7 @@ if (!doNotTrack) {
   
 </div>
 
-
-<!--Table4-->
-
+<!-- raw HTML omitted -->
 
 
  
@@ -505,56 +479,13 @@ if (!doNotTrack) {
   
 </div>
 
-
-<p><br>
-If your table doesn&rsquo;t have a composite key, then technically it&rsquo;s already in 2NF by default as long as it&rsquo;s already in 1NF. <em>You can&rsquo;t have a partial dependency if your primary key doesn&rsquo;t have multiple parts.</em></p>
-
-<hr />
-
+<!-- raw HTML omitted -->
+<hr>
 <h2 id="3rd-normal-form">3rd Normal Form</h2>
-
 <p>For a table to be in third normal form (3NF), transitive dependencies must not exist.</p>
-
 <p>Transitive dependencies occur when a single non-key attribute determines another non-key attribute. Sets of attributes that can determine another single attribute do not count. Just like before, transitive dependencies create redundancy issues.</p>
-
 <p>For example in the table below a transitive dependency exists between <code>Roaster_ID</code> and <code>Roaster_Name</code>.</p>
-
-<p><br>
-<!--Table5-->
-
-
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-
-<div class="figure center fig-100" >
-  
-    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table5_q5weug.png" title="Table 5" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table5_q5weug.png"  alt="Table 5">
-  
-    </a>
-  
-   
-    <span class="caption">Table 5</span>
-  
-</div>
-
-<br>
-To fix any existing transitive dependencies, we can use the same strategy we employed to put our tables into 2NF. Copy the determinants into a new table. Then cut the dependents into the new table you just created.</p>
-
+<!-- raw HTML omitted -->
 
 
  
@@ -585,7 +516,6 @@ To fix any existing transitive dependencies, we can use the same strategy we emp
     <span class="caption">Table 6</span>
   
 </div>
-
 
 <p>
 
@@ -618,48 +548,27 @@ To fix any existing transitive dependencies, we can use the same strategy we emp
   
 </div>
 
-<br></p>
-
-<h5 id="boyce-codd-normal-form-3-5-nf">Boyce Codd Normal Form (3.5 NF)</h5>
-
+<!-- raw HTML omitted --></p>
+<h5 id="boyce-codd-normal-form-35-nf">Boyce Codd Normal Form (3.5 NF)</h5>
 <p>Boyce Codd Normal Form (BCNF) is at first glance a reverse of the Second Normal Form. You&rsquo;re essentially removing dependencies in the opposite direction now.</p>
-
 <p>A table is in BCNF when there are no non-key attributes that determine part of a composite-key attribute. In a composite key, every partial-key attribute can only depend on a superkey.</p>
-
 <p>For a more technical breakdown of the difference between 3NF and BCNF, check out this discussion: <a href="https://stackoverflow.com/questions/8437957/difference-between-3nf-and-bcnf-in-simple-terms-must-be-able-to-explain-to-an-8">Data depends on the key [1NF], the whole key [2NF] and nothing but the key [3NF]</a>.</p>
-
-<hr />
-
+<hr>
 <h2 id="4th-normal-form">4th Normal Form</h2>
-
 <p>Fourth normal form is achieved when a table meets the requirements of the 1-3NF as well as BCNF, and all existing multivalued facts have been separated into their own tables.</p>
-
 <p>Multivalued dependency occurs when an attribute can determine multiple facts about more than one independent attributes.</p>
-
 <p>This leads to formatting and update problems where multiple changes might have to be made across the table when updating records.</p>
-
 <p>To circumvent these issues, each multivalued fact/dependency should be put into its own table consisting of the determinant and dependent - pairwise decomposition.</p>
-
-<hr />
-
+<hr>
 <h2 id="5th-normal-form">5th Normal Form</h2>
-
 <p>A table is in fifth normal form when it cannot be further subdivided into smaller tables.</p>
-
 <p>If you can reconstruct your original table from several smaller tables, then you haven&rsquo;t reached 5th normal form.</p>
-
 <p>Firth normal form alleviates redundancies that we could not address up to this point with pairwise decomposition which is essentially just breaking a table up into two smaller tables.</p>
-
 <p>Three or more smaller tables maybe necessary to achieve 5NF. The greater amount of attributes you have, the greater number of possible table decompositions.</p>
-
 <p>This is what makes 5NF challenging to put into practice.</p>
-
 <p>Interestingly removing even a single row in your original table could change whether your smaller tables successfully reconstruct.</p>
-
-<hr />
-
+<hr>
 <h2 id="closing-thoughts">Closing Thoughts</h2>
-
 
 
  
@@ -689,15 +598,10 @@ To fix any existing transitive dependencies, we can use the same strategy we emp
   
 </div>
 
-
 <p>If you&rsquo;ve made it to this point, you might have noticed that the solution to every problem thus far has been to create a new table. That&rsquo;s the nature of Normalization. Reduce redundancy but increase the number of tables you have to keep up with.</p>
-
 <p>Normalizing all of your tables may be the <em>perfect</em> solution but <a href="http://sqlblog.com/blogs/louis_davidson/archive/2010/04/29/can-you-over-normalize.aspx">is it the right solution for your operational requirements</a>?</p>
-
 <p>If the data your working with is mission critical - normalizing all your tables to 5th NF is probably the way you want to go. If you&rsquo;re comfortable handling some redundancy, then 3rd NF may be a better choice.</p>
-
 <p>3rd NF is typically what I shoot for. After 3rd NF, the effort invested is a lot greater than the return. The power of the Normal Forms is that they are applicable even if your data lives outside a database - say in a Shapefile attribute table or Excel spreadsheet.</p>
-
 <p>Eliminating redundancy may not always be possible, but controlling it is key to protecting the integrity of your data.</p>
               
             </div>
@@ -722,8 +626,8 @@ To fix any existing transitive dependencies, we can use the same strategy we emp
                 
               
             
-            
-  <div class="post-actions-wrap">
+            <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -788,8 +692,8 @@ To fix any existing transitive dependencies, we can use the same strategy we emp
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
             
               
@@ -802,14 +706,14 @@ To fix any existing transitive dependencies, we can use the same strategy we emp
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2018 Wes Porter. All Rights Reserved
+    &copy; 2020 Wes Porter. All Rights Reserved
   </span>
 </footer>
 
       </div>
       <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        
-  <div class="post-actions-wrap">
+        <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -874,8 +778,8 @@ To fix any existing transitive dependencies, we can use the same strategy we emp
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
       </div>
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
@@ -934,229 +838,10 @@ To fix any existing transitive dependencies, we can use the same strategy we emp
   </div>
 </div>
 
-    <div id="algolia-search-modal" class="modal-container">
-  <div class="modal">
-    <div class="modal-header">
-      <span class="close-button"><i class="fa fa-close"></i></span>
-      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
-        <span class="searchby-algolia-text text-color-light text-small">by</span>
-        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
-      </a>
-      <i class="search-icon fa fa-search"></i>
-      <form id="algolia-search-form">
-        <input type="text" id="algolia-search-input" name="search"
-          class="form-control input--large search-input" placeholder="Search" />
-      </form>
-    </div>
-    <div class="modal-body">
-      <div class="no-result text-color-light text-center">no post found</div>
-      <div class="results">
-        
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/09/census-explorer/">
-                <h3 class="media-heading">Census Explorer</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Sep 9, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p><em>This past summer I develop an interactive web map allowing users to visualize census data.</em></p>
+    
 
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/02/saving-time-in-python/">
-                <h3 class="media-heading">Saving Time in Python</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Feb 2, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p><em>How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.</em></p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/">
-                <h3 class="media-heading">Measuring Crop Growth in R</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Feb 2, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">An Example of how to use R to Generate Crop Growth Curves 
-In between finishing up my database coursework, I’m usually doing remote sensing work.
-Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.
-This post is just a quick code-along which shows you how to generate phenology curves using R.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
-                <h3 class="media-heading">The Five Normal Forms</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p><em>Simple rules for improving the integrity of your data tables through Normalization.</em></p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/what-makes-a-graduate-program-valuable/">
-                <h3 class="media-heading">What Makes a Graduate Program Valuable?</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>You&rsquo;re investing a substantial amount of time, energy, and most importantly <strong>money</strong> into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/music-for-coding/">
-                <h3 class="media-heading">Music For Coding</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>A little folk, a little jazz - a little bit of everything. A few songs I listen to while coding.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/">
-                <h3 class="media-heading">SQL Basics: The WHERE Clause</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Dec 12, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Working with the WHERE clause and SQL operators to refine data requests.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/">
-                <h3 class="media-heading">SQL Basics: The SELECT Statement</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Dec 12, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Over the next few weeks I&rsquo;m going to share some of the <strong>SQL Basics</strong> I&rsquo;ve picked up. Hopefully, these posts will make <strong>SQL</strong> a little less intimidating for other beginners.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/11/blog-launch/">
-                <h3 class="media-heading">Blog Launch</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Nov 11, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>After much toil, I&rsquo;m finally launching a website to share my misadventures in GIS and programming.</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/10/map-gallery/">
-                <h3 class="media-heading">Map Gallery</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Oct 10, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Nothing too fancy. Just a few maps I&rsquo;ve made.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-      </div>
-    </div>
-    <div class="modal-footer">
-      <p class="results-count text-medium"
-         data-message-zero="no post found"
-         data-message-one="1 post found"
-         data-message-other="{n} posts found">
-         10 posts found
-      </p>
-    </div>
-  </div>
-</div>
     
   
-    
     <div id="cover" style="background-image:url('https://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg');"></div>
   
 
@@ -1164,25 +849,25 @@ This post is just a quick code-along which shows you how to generate phenology c
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://www.geoalchemist.com/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+<script src="https://www.geoalchemist.com/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
-
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight > code, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
 </script>
 
 
@@ -1211,6 +896,7 @@ $(document).ready(function() {
       </script>
     
   
+
 
 
 

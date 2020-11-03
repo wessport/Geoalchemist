@@ -1,6 +1,76 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/category1/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/category2/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/drafts/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/2020/11/new-content/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/post/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/tag1/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/tag2/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/tag3/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/tech-blogging/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/tech-blogging/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/drafts/template/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
   
   <url>
     <loc>https://www.geoalchemist.com/2018/09/census-explorer/</loc>
@@ -8,7 +78,62 @@
   </url>
   
   <url>
+    <loc>https://www.geoalchemist.com/tags/gis/</loc>
+    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/gis/</loc>
+    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/leaflet/</loc>
+    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/r/</loc>
+    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/r/</loc>
+    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/shiny/</loc>
+    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/numpy/</loc>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/python/</loc>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/python/</loc>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.geoalchemist.com/2018/02/saving-time-in-python/</loc>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/tips/</loc>
+    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/vectorization/</loc>
     <lastmod>2018-02-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -18,8 +143,83 @@
   </url>
   
   <url>
+    <loc>https://www.geoalchemist.com/tags/ndvi/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/phenology-curve/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/remote-sensing/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/remote-sensing/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/rstats/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/database/</loc>
+    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/database/</loc>
+    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/design/</loc>
+    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/normal-forms/</loc>
+    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/normalization/</loc>
+    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</loc>
     <lastmod>2018-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/grad-school-cost/</loc>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/grad-school-search/</loc>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/grad-school-tips/</loc>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/graduate-school/</loc>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/graduate-school/</loc>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,8 +228,43 @@
   </url>
   
   <url>
+    <loc>https://www.geoalchemist.com/tags/folk/</loc>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/indie/</loc>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/jazz/</loc>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.geoalchemist.com/2018/01/music-for-coding/</loc>
     <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/playlist/</loc>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/playlist/</loc>
+    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/sql/</loc>
+    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/sql-basics/</loc>
+    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -48,7 +283,27 @@
   </url>
   
   <url>
+    <loc>https://www.geoalchemist.com/tags/blogdown/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.geoalchemist.com/drafts/gis_courses/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/hugo/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/tags/tranquilpeak/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.geoalchemist.com/categories/web-development/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -58,265 +313,12 @@
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/archives/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/blogdown/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/database/</loc>
-    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/categories/database/</loc>
-    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/design/</loc>
-    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/drafts/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/folk/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/</loc>
-    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/gis/</loc>
-    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/categories/gis/</loc>
-    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/grad-school-cost/</loc>
-    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/grad-school-search/</loc>
-    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/grad-school-tips/</loc>
-    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/graduate-school/</loc>
-    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/categories/graduate-school/</loc>
-    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/hugo/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/indie/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/jazz/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/leaflet/</loc>
-    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.geoalchemist.com/tags/map-gallery/</loc>
     <lastmod>2017-10-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.geoalchemist.com/tags/ndvi/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/normal-forms/</loc>
-    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/normalization/</loc>
-    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/numpy/</loc>
-    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/phenology-curve/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/playlist/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/categories/playlist/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/post/</loc>
-    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/python/</loc>
-    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/categories/python/</loc>
-    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/r/</loc>
-    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/categories/r/</loc>
-    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/remote-sensing/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/categories/remote-sensing/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/rstats/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/shiny/</loc>
-    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/sql/</loc>
-    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/sql-basics/</loc>
-    <lastmod>2017-12-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/tips/</loc>
-    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/tranquilpeak/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/tags/vectorization/</loc>
-    <lastmod>2018-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.geoalchemist.com/categories/web-development/</loc>
-    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://www.geoalchemist.com/archives/</loc>
   </url>
   
 </urlset>

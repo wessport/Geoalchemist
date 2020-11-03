@@ -1,69 +1,84 @@
-
-
-  
-    
-  
-
-
-  
-
-
-
-
-
-  
-
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.48 with theme Tranquilpeak 0.4.2-BETA">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.77.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Wes Porter">
+<meta name="keywords" content="SQL, SQL basics, SQL beginner, SQL Operators, WHERE clause, Database">
+<meta name="description" content="Working with the WHERE clause and SQL operators to refine data requests.">
+
+
+<meta property="og:description" content="Working with the WHERE clause and SQL operators to refine data requests.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL Basics: The WHERE Clause">
+<meta name="twitter:title" content="SQL Basics: The WHERE Clause">
+<meta property="og:url" content="https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/">
+<meta property="twitter:url" content="https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/">
+<meta property="og:site_name" content="Geoalchemist">
+<meta property="og:description" content="Working with the WHERE clause and SQL operators to refine data requests.">
+<meta name="twitter:description" content="Working with the WHERE clause and SQL operators to refine data requests.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2017-12-28T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2017-12-28T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Database">
+    
+  
+  
+    
+      <meta property="article:tag" content="SQL">
+    
+      <meta property="article:tag" content="Database">
+    
+      <meta property="article:tag" content="SQL Basics">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@Wes_Port">
+
+
+  <meta name="twitter:creator" content="@Wes_Port">
+
+
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1514506561/magnifying_bw_vklcfj.png">
+  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1514506561/magnifying_bw_vklcfj.png">
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1514486830/macbook_qwzedr.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1514486830/macbook_qwzedr.jpg">
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg">
+
+
     <title>SQL Basics: The WHERE Clause</title>
-    <meta name="author" content="Wes Porter">
-    <meta name="keywords" content="SQL, SQL basics, SQL beginner, SQL Operators, WHERE clause, Database">
 
     <link rel="icon" href="https://www.geoalchemist.com/favicon.png">
     
 
     
-    <meta name="description" content="Working with the WHERE clause and SQL operators to refine data requests.
 
-">
-    <meta property="og:description" content="Working with the WHERE clause and SQL operators to refine data requests.
-
-">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="SQL Basics: The WHERE Clause">
-    <meta property="og:url" content="https://www.geoalchemist.com/">
-    <meta property="og:site_name" content="Geoalchemist">
-    <meta property="og:image:url" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    <meta name="twitter:site" content="@Wes_Port">
-    <meta name="twitter:creator" content="@Wes_Port">
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="SQL Basics: The WHERE Clause"/>
-    <meta name="twitter:description" content="Working with the WHERE clause and SQL operators to refine data requests.
-
-">
-    <meta name="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1514506561/magnifying_bw_vklcfj.png"/>
-    <meta name="twitter:image:src" content="https://res.cloudinary.com/wessport/image/upload/v1514506561/magnifying_bw_vklcfj.png"/>
-
-    
-    <meta property="og:image" content="http://geoalchemist.comhttps://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    <meta property="og:image:secure_url" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    
-
-    
-
-    
-    
-
-    
-
-
-    
+    <link rel="canonical" href="https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -71,7 +86,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://www.geoalchemist.com/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    <link rel="stylesheet" href="https://www.geoalchemist.com/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
 
@@ -291,29 +306,17 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Working with the WHERE clause and SQL operators to refine data requests.</p>
-
-<p></p>
-
+              <p><em>Working with the WHERE clause and SQL operators to refine data requests.</em></p>
 <p>In my last post I covered the basics of the <code>SELECT</code> statement and what exactly Structured Query Language (<strong>SQL</strong>) is. In today&rsquo;s post, we&rsquo;re adding a new clause to the <code>SELECT</code> statement that will allow us to constrain our data requests. If this is your first introduction to <strong>SQL</strong>, I recommend you check out my previous post which you can find <a href="https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/">here</a>.</p>
-
 <h2 id="the-where-clause">The WHERE Clause</h2>
-
 <p><em>Oh WHERE, oh WHERE can my data be?</em> - Eddie Vedder, Pearl Jam lead singer and SQL enthusiast.</p>
-
-<p><img src="https://media.giphy.com/media/lXo6htNUAqMgM/giphy.gif" alt="Portlandia Eddie Vedder" /></p>
-
+<p><img src="https://media.giphy.com/media/lXo6htNUAqMgM/giphy.gif" alt="Portlandia Eddie Vedder"></p>
 <p>Okay so <a href="https://www.youtube.com/watch?v=LJsEpNIY5IA">Eddie Vedder</a> probably isn&rsquo;t an SQL enthusiast, but if he were, I&rsquo;d bet he would be a big fan of the <code>WHERE</code> clause.</p>
-
 <p>Put simply, the <code>WHERE</code> clause is used to filter rows in a table. When we want to limit the number of rows returned based on a condition or set of conditions, we use the <code>WHERE</code> clause.</p>
-
 <p>Remember our <code>BREWERY</code> table from last time?</p>
-
 <pre><code>SELECT *
 FROM BREWERY;
-</code></pre>
-
-<table>
+</code></pre><table>
 <thead>
 <tr>
 <th>BREWERY_ID</th>
@@ -322,7 +325,6 @@ FROM BREWERY;
 <th>BREWERY_LICENSE</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1000</td>
@@ -330,63 +332,54 @@ FROM BREWERY;
 <td>TN</td>
 <td>HK41/TFA</td>
 </tr>
-
 <tr>
 <td>1001</td>
 <td>GREEN MAN BREWERY</td>
 <td>NC</td>
 <td>3000-TBTL</td>
 </tr>
-
 <tr>
 <td>1003</td>
 <td>The Black Abbey Brewing Company</td>
 <td>TN</td>
 <td>DFTBA-10102017</td>
 </tr>
-
 <tr>
 <td>1004</td>
 <td>New Belgium Brewing Company</td>
 <td>NC</td>
 <td>FT/21CRAV</td>
 </tr>
-
 <tr>
 <td>1005</td>
 <td>Wicked Weed Brewing</td>
 <td>NC</td>
 <td>WWB-28801</td>
 </tr>
-
 <tr>
 <td>1006</td>
 <td>BURIAL BEER CO.</td>
 <td>NC</td>
 <td>40-COLAV</td>
 </tr>
-
 <tr>
 <td>1007</td>
 <td>Bearded Iris Brewing</td>
 <td>TN</td>
 <td>NASH/615</td>
 </tr>
-
 <tr>
 <td>1008</td>
 <td>TWIN LEAF BREWERY</td>
 <td>NC</td>
 <td>144/COX</td>
 </tr>
-
 <tr>
 <td>1009</td>
 <td>CRAFTY BASTARD BREWING</td>
 <td>TN</td>
 <td>865-37917</td>
 </tr>
-
 <tr>
 <td>1010</td>
 <td>Highland Brewing Company</td>
@@ -395,15 +388,11 @@ FROM BREWERY;
 </tr>
 </tbody>
 </table>
-
 <p>Let&rsquo;s say we&rsquo;re planning a trip to Asheville, NC, a town known for its eccentric style and thriving beer scene. Before we drive up into the mountains to sample some brews, we would like to know what breweries we can potentially visit in NC. Now we could use <code>SELECT * FROM BREWERY</code> and scroll through our table searching for breweries where the value for the <code>BREWERY_STATE</code> attribute is <code>TN</code> or we could use the <code>WHERE</code> clause.</p>
-
 <pre><code>SELECT *
 FROM BREWERY
 WHERE BREWERY_STATE = 'TN';
-</code></pre>
-
-<table>
+</code></pre><table>
 <thead>
 <tr>
 <th>BREWERY_ID</th>
@@ -412,7 +401,6 @@ WHERE BREWERY_STATE = 'TN';
 <th>BREWERY_LICENSE</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1001</td>
@@ -420,35 +408,30 @@ WHERE BREWERY_STATE = 'TN';
 <td>NC</td>
 <td>3000-TBTL</td>
 </tr>
-
 <tr>
 <td>1004</td>
 <td>New Belgium Brewing Company</td>
 <td>NC</td>
 <td>FT/21CRAV</td>
 </tr>
-
 <tr>
 <td>1005</td>
 <td>Wicked Weed Brewing</td>
 <td>NC</td>
 <td>WWB-28801</td>
 </tr>
-
 <tr>
 <td>1006</td>
 <td>BURIAL BEER CO.</td>
 <td>NC</td>
 <td>40-COLAV</td>
 </tr>
-
 <tr>
 <td>1008</td>
 <td>TWIN LEAF BREWERY</td>
 <td>NC</td>
 <td>144/COX</td>
 </tr>
-
 <tr>
 <td>1010</td>
 <td>Highland Brewing Company</td>
@@ -457,19 +440,14 @@ WHERE BREWERY_STATE = 'TN';
 </tr>
 </tbody>
 </table>
-
 <p>Maybe instead of looking at a list of all of the breweries in NC, we want to look up a specific brewery we heard about to check and see if it&rsquo;s located in NC.</p>
-
 <div class="alert warning ">
   <p>Note that the state abbreviation is in single quotation marks signifying that &lsquo;TN&rsquo; is a string data type.</p>
 </div>
-
 <pre><code>SELECT *
 FROM BREWERY
 WHERE BREWERY_NAME = 'GREEN MAN BREWERY';
-</code></pre>
-
-<table>
+</code></pre><table>
 <thead>
 <tr>
 <th>BREWERY_ID</th>
@@ -478,7 +456,6 @@ WHERE BREWERY_NAME = 'GREEN MAN BREWERY';
 <th>BREWERY_LICENSE</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1001</td>
@@ -488,15 +465,11 @@ WHERE BREWERY_NAME = 'GREEN MAN BREWERY';
 </tr>
 </tbody>
 </table>
-
 <p>Be sure to pay special attention to the case of your string conditions inside your <code>WHERE</code> clause. Had we tried to use <code>WHERE BREWERY_NAME = 'Green Man Brewery';</code>  our return would have been empty because in the <code>BREWERY</code> table, &ldquo;GREEN MAN BREWERY&rdquo; is in all caps.</p>
-
 <pre><code>SELECT BREWERY_ID, BREWERY_NAME, BREWERY_STATE, BREWERY_LICENSE
 FROM BREWERY
 WHERE LOWER(BREWERY_NAME) = 'green man brewery';
-</code></pre>
-
-<table>
+</code></pre><table>
 <thead>
 <tr>
 <th>BREWERY_ID</th>
@@ -505,7 +478,6 @@ WHERE LOWER(BREWERY_NAME) = 'green man brewery';
 <th>BREWERY_LICENSE</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1001</td>
@@ -515,27 +487,18 @@ WHERE LOWER(BREWERY_NAME) = 'green man brewery';
 </tr>
 </tbody>
 </table>
-
-<p>Because we only included the text manipulation function <code>LOWER</code> in the where clause and not in the <code>SELECT</code> clause, the &ldquo;GREEN MAN BREWERY&rdquo; was returned in its default case instead of lower case.</p>
-
+<p>Because we only included the text manipulation function <code>LOWER</code> in the where clause and not in the <code>SELECT </code> clause, the &ldquo;GREEN MAN BREWERY&rdquo; was returned in its default case instead of lower case.</p>
 <p>If we have any uncertainty surrounding case when searching inside a particular table, most DBMS have text manipulation functions such as <code>UPPER</code> and <code>LOWER</code> that we can use to temporarily convert text to one case or another.</p>
-
 <div class="alert success no-icon ">
   <p><strong>Database Management System</strong> (<strong>DBMS</strong>) is the software used to manage a database and the engine for executing your SQL queries. For example Oracle, PostgreSQL, MySQL, etc.</p>
 </div>
-
 <div class="alert info ">
   <p>The <strong>WHERE</strong> clause can also be used with <strong>UPDATE</strong>, <strong>INSERT</strong>, and <strong>DELETE</strong> commands, but more on this later.</p>
 </div>
-
-<hr />
-
+<hr>
 <h2 id="conditional-operators">Conditional Operators</h2>
-
 <p>Sometimes we don&rsquo;t have an exact value we&rsquo;re looking for. In those search cases we need to use conditional operators. They allow us to expand our search criteria beyond exact values.</p>
-
 <p>Here are some of the most common conditional operators you&rsquo;ll encounter.</p>
-
 <table>
 <thead>
 <tr>
@@ -543,67 +506,53 @@ WHERE LOWER(BREWERY_NAME) = 'green man brewery';
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>=</td>
 <td>Equality</td>
 </tr>
-
 <tr>
 <td>&gt;</td>
 <td>Greater than</td>
 </tr>
-
 <tr>
 <td>&lt;</td>
 <td>Less than</td>
 </tr>
-
 <tr>
 <td>&gt;=</td>
 <td>Greater than or equal to</td>
 </tr>
-
 <tr>
 <td>&lt;=</td>
 <td>Less than or equal to</td>
 </tr>
-
 <tr>
 <td>&lt;&gt;</td>
 <td>Not equal</td>
 </tr>
-
 <tr>
 <td>!&lt;&gt;</td>
 <td>Not equal</td>
 </tr>
-
 <tr>
 <td>BETWEEN</td>
 <td>Between two values</td>
 </tr>
-
 <tr>
 <td>IS NULL</td>
 <td>Contains a NULL value</td>
 </tr>
 </tbody>
 </table>
-
 <div class="alert info ">
   <p><strong>NULL</strong> stands for <em>no value</em>. They are <strong>empty</strong> fields. Empty here means no spaces, no placeholder values like -9999 - nothing. <strong>NULL</strong> values typically occur in our data when we don&rsquo;t know the actual value of a field (cell) within our data table so we leave it blank.</p>
 </div>
-
 <p>If we wanted to find brewery IDs where the BREWERY_ID is between 1002 and 1005, we would write our query like this:</p>
-
 <pre><code>SELECT BREWERY_ID
 FROM BREWERY
 WHERE BREWERY_ID BETWEEN 1002 AND 1005;
-</code></pre>
-
-<table>
+</code></pre><table>
 <thead>
 <tr>
 <th>BREWERY_ID</th>
@@ -612,7 +561,6 @@ WHERE BREWERY_ID BETWEEN 1002 AND 1005;
 <th>BREWERY_LICENSE</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1003</td>
@@ -620,14 +568,12 @@ WHERE BREWERY_ID BETWEEN 1002 AND 1005;
 <td>TN</td>
 <td>DFTBA-10102017</td>
 </tr>
-
 <tr>
 <td>1004</td>
 <td>New Belgium Brewing Company</td>
 <td>NC</td>
 <td>FT/21CRAV</td>
 </tr>
-
 <tr>
 <td>1005</td>
 <td>Wicked Weed Brewing</td>
@@ -636,13 +582,9 @@ WHERE BREWERY_ID BETWEEN 1002 AND 1005;
 </tr>
 </tbody>
 </table>
-
 <p>The <code>WHERE</code> clause in this example actually uses two operators. The <code>AND</code> in this statement is actually an operator itself.</p>
-
-<hr />
-
+<hr>
 <h2 id="logical-operators">Logical Operators</h2>
-
 <table>
 <thead>
 <tr>
@@ -650,35 +592,27 @@ WHERE BREWERY_ID BETWEEN 1002 AND 1005;
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>AND</td>
 <td>Return only rows that meet all conditions</td>
 </tr>
-
 <tr>
 <td>OR</td>
 <td>Return rows that meet either condition</td>
 </tr>
-
 <tr>
 <td>NOT</td>
 <td>Return only rows that do not meet the specified condition</td>
 </tr>
 </tbody>
 </table>
-
 <p>Logic operators allow you to combine more than one search condition at a time. For instance if we want to limit our results for breweries where the <code>BREWERY_ID</code> is 1005 and the state is NC, our query would use the <code>AND</code> logic operator. If we wanted to return a list of breweries located in NC or TN we would use the <code>OR</code> operator. The nice thing about logic operators in <strong>SQL</strong> is that they&rsquo;re pretty intuitive.</p>
-
 <p>For practice let&rsquo;s write a query with multiple conditions. Let&rsquo;s say we want to look at breweries in either <code>NC</code> or <code>TN</code> where the <code>BREWERY_ID</code> is greater than <code>1005</code>.</p>
-
 <pre><code>SELECT *
 FROM BREWERY
 WHERE BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN' AND BREWERY_ID &gt; 1005;
-</code></pre>
-
-<table>
+</code></pre><table>
 <thead>
 <tr>
 <th>BREWERY_ID</th>
@@ -687,7 +621,6 @@ WHERE BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN' AND BREWERY_ID &gt; 1005;
 <th>BREWERY_LICENSE</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1001</td>
@@ -695,49 +628,42 @@ WHERE BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN' AND BREWERY_ID &gt; 1005;
 <td>NC</td>
 <td>3000-TBTL</td>
 </tr>
-
 <tr>
 <td>1004</td>
 <td>New Belgium Brewing Company</td>
 <td>NC</td>
 <td>FT/21CRAV</td>
 </tr>
-
 <tr>
 <td>1005</td>
 <td>Wicked Weed Brewing</td>
 <td>NC</td>
 <td>WWB-28801</td>
 </tr>
-
 <tr>
 <td>1006</td>
 <td>BURIAL BEER CO.</td>
 <td>NC</td>
 <td>40-COLAV</td>
 </tr>
-
 <tr>
 <td>1007</td>
 <td>Bearded Iris Brewing</td>
 <td>TN</td>
 <td>NASH/615</td>
 </tr>
-
 <tr>
 <td>1008</td>
 <td>TWIN LEAF BREWERY</td>
 <td>NC</td>
 <td>144/COX</td>
 </tr>
-
 <tr>
 <td>1009</td>
 <td>CRAFTY BASTARD BREWING</td>
 <td>TN</td>
 <td>865-37917</td>
 </tr>
-
 <tr>
 <td>1010</td>
 <td>Highland Brewing Company</td>
@@ -746,23 +672,15 @@ WHERE BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN' AND BREWERY_ID &gt; 1005;
 </tr>
 </tbody>
 </table>
-
 <p>Hmm&hellip;</p>
-
 <p>Was this the table you were expecting?</p>
-
 <p>Looks like we&rsquo;ve got NC breweries where the IDs is below 1005 even though we requested only IDs above 1005. Let&rsquo;s look closely at what&rsquo;s actually going on here.</p>
-
 <p>The order in which the operators are evaluated is causing us trouble. In most DBMS environments, the <code>AND</code> operator is executed first. This means that in our example above, <em>any breweries located in TN and with a BREWERY_ID &gt; 1005 are returned, and any breweries located in NC regardless of their ID</em>.</p>
-
 <p>To fix this problem we just need to be more specific. By adding parentheses around our conditions, we can control the order in which they&rsquo;re evaluated. Think of your old TI-83 calculator days.</p>
-
 <pre><code>SELECT *
 FROM BREWERY
 WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
-</code></pre>
-
-<table>
+</code></pre><table>
 <thead>
 <tr>
 <th>BREWERY_ID</th>
@@ -771,7 +689,6 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
 <th>BREWERY_LICENSE</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1005</td>
@@ -779,35 +696,30 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
 <td>NC</td>
 <td>WWB-28801</td>
 </tr>
-
 <tr>
 <td>1006</td>
 <td>BURIAL BEER CO.</td>
 <td>NC</td>
 <td>40-COLAV</td>
 </tr>
-
 <tr>
 <td>1007</td>
 <td>Bearded Iris Brewing</td>
 <td>TN</td>
 <td>NASH/615</td>
 </tr>
-
 <tr>
 <td>1008</td>
 <td>TWIN LEAF BREWERY</td>
 <td>NC</td>
 <td>144/COX</td>
 </tr>
-
 <tr>
 <td>1009</td>
 <td>CRAFTY BASTARD BREWING</td>
 <td>TN</td>
 <td>865-37917</td>
 </tr>
-
 <tr>
 <td>1010</td>
 <td>Highland Brewing Company</td>
@@ -816,13 +728,9 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
 </tr>
 </tbody>
 </table>
-
-<hr />
-
+<hr>
 <h2 id="to-sum-it-up">To Sum It Up</h2>
-
 <p>The <code>WHERE</code> clause should be used whenever you need to constrain your data. Conditional operators can help you further refine your queries beyond exact matches, and if you find you need multiple conditions, include logic operators such as <code>AND</code> and <code>OR</code>.</p>
-
 <p>In the next post of the <strong>SQL BASICS</strong> series, we&rsquo;ll continue expanding our SQL toolkit. I&rsquo;ll go into how grouping rows using the <code>GROUP BY</code> clause can be handy and how to sort our returned rows using the <code>ORDER BY</code> clause.</p>
               
             </div>
@@ -845,8 +753,8 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
                 
               
             
-            
-  <div class="post-actions-wrap">
+            <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -911,8 +819,8 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
             
               
@@ -925,14 +833,14 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2018 Wes Porter. All Rights Reserved
+    &copy; 2020 Wes Porter. All Rights Reserved
   </span>
 </footer>
 
       </div>
       <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        
-  <div class="post-actions-wrap">
+        <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -997,8 +905,8 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
       </div>
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
@@ -1057,229 +965,10 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
   </div>
 </div>
 
-    <div id="algolia-search-modal" class="modal-container">
-  <div class="modal">
-    <div class="modal-header">
-      <span class="close-button"><i class="fa fa-close"></i></span>
-      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
-        <span class="searchby-algolia-text text-color-light text-small">by</span>
-        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
-      </a>
-      <i class="search-icon fa fa-search"></i>
-      <form id="algolia-search-form">
-        <input type="text" id="algolia-search-input" name="search"
-          class="form-control input--large search-input" placeholder="Search" />
-      </form>
-    </div>
-    <div class="modal-body">
-      <div class="no-result text-color-light text-center">no post found</div>
-      <div class="results">
-        
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/09/census-explorer/">
-                <h3 class="media-heading">Census Explorer</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Sep 9, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p><em>This past summer I develop an interactive web map allowing users to visualize census data.</em></p>
+    
 
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/02/saving-time-in-python/">
-                <h3 class="media-heading">Saving Time in Python</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Feb 2, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p><em>How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.</em></p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/">
-                <h3 class="media-heading">Measuring Crop Growth in R</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Feb 2, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">An Example of how to use R to Generate Crop Growth Curves 
-In between finishing up my database coursework, I’m usually doing remote sensing work.
-Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.
-This post is just a quick code-along which shows you how to generate phenology curves using R.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
-                <h3 class="media-heading">The Five Normal Forms</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p><em>Simple rules for improving the integrity of your data tables through Normalization.</em></p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/what-makes-a-graduate-program-valuable/">
-                <h3 class="media-heading">What Makes a Graduate Program Valuable?</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>You&rsquo;re investing a substantial amount of time, energy, and most importantly <strong>money</strong> into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/music-for-coding/">
-                <h3 class="media-heading">Music For Coding</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>A little folk, a little jazz - a little bit of everything. A few songs I listen to while coding.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/">
-                <h3 class="media-heading">SQL Basics: The WHERE Clause</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Dec 12, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Working with the WHERE clause and SQL operators to refine data requests.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/">
-                <h3 class="media-heading">SQL Basics: The SELECT Statement</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Dec 12, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Over the next few weeks I&rsquo;m going to share some of the <strong>SQL Basics</strong> I&rsquo;ve picked up. Hopefully, these posts will make <strong>SQL</strong> a little less intimidating for other beginners.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/11/blog-launch/">
-                <h3 class="media-heading">Blog Launch</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Nov 11, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>After much toil, I&rsquo;m finally launching a website to share my misadventures in GIS and programming.</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/10/map-gallery/">
-                <h3 class="media-heading">Map Gallery</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Oct 10, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Nothing too fancy. Just a few maps I&rsquo;ve made.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-      </div>
-    </div>
-    <div class="modal-footer">
-      <p class="results-count text-medium"
-         data-message-zero="no post found"
-         data-message-one="1 post found"
-         data-message-other="{n} posts found">
-         10 posts found
-      </p>
-    </div>
-  </div>
-</div>
     
   
-    
     <div id="cover" style="background-image:url('https://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg');"></div>
   
 
@@ -1287,25 +976,25 @@ This post is just a quick code-along which shows you how to generate phenology c
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://www.geoalchemist.com/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+<script src="https://www.geoalchemist.com/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
-
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight > code, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
 </script>
 
 
@@ -1334,6 +1023,7 @@ $(document).ready(function() {
       </script>
     
   
+
 
 
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design on Geoalchemist</title>
@@ -6,20 +6,14 @@
     <description>Recent content in Design on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jan 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.geoalchemist.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 28 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Five Normal Forms</title>
       <link>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</link>
       <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Simple rules for improving the integrity of your data tables through Normalization.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Simple rules for improving the integrity of your data tables through Normalization.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

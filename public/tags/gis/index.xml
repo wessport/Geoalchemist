@@ -1,25 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gis on Geoalchemist</title>
+    <title>GIS on Geoalchemist</title>
     <link>https://www.geoalchemist.com/tags/gis/</link>
-    <description>Recent content in Gis on Geoalchemist</description>
+    <description>Recent content in GIS on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Sep 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.geoalchemist.com/tags/gis/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 21 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/tags/gis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Census Explorer</title>
       <link>https://www.geoalchemist.com/2018/09/census-explorer/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2018/09/census-explorer/</guid>
-      <description>&lt;p&gt;&lt;em&gt;This past summer I develop an interactive web map allowing users to visualize census data.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;This past summer I developed an interactive web map allowing users to visualize census data.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,9 +22,7 @@
       <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2018/02/saving-time-in-python/</guid>
-      <description>&lt;p&gt;&lt;em&gt;How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39,9 +31,7 @@
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/drafts/gis_courses/</guid>
-      <description>&lt;p&gt;Courses I would like to see in a competitive GIS program:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Courses I would like to see in a competitive GIS program:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -50,9 +40,7 @@
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2017/10/map-gallery/</guid>
-      <description>&lt;p&gt;Nothing too fancy. Just a few maps I&amp;rsquo;ve made.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Nothing too fancy. Just a few maps I&amp;rsquo;ve made.&lt;/p&gt;</description>
     </item>
     
   </channel>

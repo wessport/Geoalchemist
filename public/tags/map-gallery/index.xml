@@ -1,25 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Map Gallery on Geoalchemist</title>
+    <title>map gallery on Geoalchemist</title>
     <link>https://www.geoalchemist.com/tags/map-gallery/</link>
-    <description>Recent content in Map Gallery on Geoalchemist</description>
+    <description>Recent content in map gallery on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.geoalchemist.com/tags/map-gallery/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/tags/map-gallery/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Map Gallery</title>
       <link>https://www.geoalchemist.com/2017/10/map-gallery/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/2017/10/map-gallery/</guid>
-      <description>&lt;p&gt;Nothing too fancy. Just a few maps I&amp;rsquo;ve made.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Nothing too fancy. Just a few maps I&amp;rsquo;ve made.&lt;/p&gt;</description>
     </item>
     
   </channel>

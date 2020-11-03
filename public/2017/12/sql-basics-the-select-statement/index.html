@@ -1,69 +1,84 @@
-
-
-  
-    
-  
-
-
-  
-
-
-
-
-
-  
-
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.48 with theme Tranquilpeak 0.4.2-BETA">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.77.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Wes Porter">
+<meta name="keywords" content="SQL, SQL basics, SQL beginner, SELECT statement, Database">
+<meta name="description" content="Over the next few weeks I&rsquo;m going to share some of the SQL Basics I&rsquo;ve picked up. Hopefully, these posts will make SQL a little less intimidating for other beginners.">
+
+
+<meta property="og:description" content="Over the next few weeks I&rsquo;m going to share some of the SQL Basics I&rsquo;ve picked up. Hopefully, these posts will make SQL a little less intimidating for other beginners.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL Basics: The SELECT Statement">
+<meta name="twitter:title" content="SQL Basics: The SELECT Statement">
+<meta property="og:url" content="https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/">
+<meta property="twitter:url" content="https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/">
+<meta property="og:site_name" content="Geoalchemist">
+<meta property="og:description" content="Over the next few weeks I&rsquo;m going to share some of the SQL Basics I&rsquo;ve picked up. Hopefully, these posts will make SQL a little less intimidating for other beginners.">
+<meta name="twitter:description" content="Over the next few weeks I&rsquo;m going to share some of the SQL Basics I&rsquo;ve picked up. Hopefully, these posts will make SQL a little less intimidating for other beginners.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2017-12-15T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2017-12-15T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Database">
+    
+  
+  
+    
+      <meta property="article:tag" content="SQL">
+    
+      <meta property="article:tag" content="Database">
+    
+      <meta property="article:tag" content="SQL Basics">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@Wes_Port">
+
+
+  <meta name="twitter:creator" content="@Wes_Port">
+
+
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1514073271/SQL_bw_400_dz3urm.png">
+  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1514073271/SQL_bw_400_dz3urm.png">
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,h_1080,w_1920/v1513372413/mountain_sunset_iu7zey.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,h_1080,w_1920/v1513372413/mountain_sunset_iu7zey.jpg">
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg">
+
+
     <title>SQL Basics: The SELECT Statement</title>
-    <meta name="author" content="Wes Porter">
-    <meta name="keywords" content="SQL, SQL basics, SQL beginner, SELECT statement, Database">
 
     <link rel="icon" href="https://www.geoalchemist.com/favicon.png">
     
 
     
-    <meta name="description" content="Over the next few weeks I&rsquo;m going to share some of the SQL Basics I&rsquo;ve picked up. Hopefully, these posts will make SQL a little less intimidating for other beginners.
 
-">
-    <meta property="og:description" content="Over the next few weeks I&rsquo;m going to share some of the SQL Basics I&rsquo;ve picked up. Hopefully, these posts will make SQL a little less intimidating for other beginners.
-
-">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="SQL Basics: The SELECT Statement">
-    <meta property="og:url" content="https://www.geoalchemist.com/">
-    <meta property="og:site_name" content="Geoalchemist">
-    <meta property="og:image:url" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    <meta name="twitter:site" content="@Wes_Port">
-    <meta name="twitter:creator" content="@Wes_Port">
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="SQL Basics: The SELECT Statement"/>
-    <meta name="twitter:description" content="Over the next few weeks I&rsquo;m going to share some of the SQL Basics I&rsquo;ve picked up. Hopefully, these posts will make SQL a little less intimidating for other beginners.
-
-">
-    <meta name="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1514073271/SQL_bw_400_dz3urm.png"/>
-    <meta name="twitter:image:src" content="https://res.cloudinary.com/wessport/image/upload/v1514073271/SQL_bw_400_dz3urm.png"/>
-
-    
-    <meta property="og:image" content="http://geoalchemist.comhttps://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    <meta property="og:image:secure_url" content="https://res.cloudinary.com/wessport/image/upload/v1509732391/geoalchemist_logo_kiwwbn.png"/>
-    
-
-    
-
-    
-    
-
-    
-
-
-    
+    <link rel="canonical" href="https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -71,7 +86,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://www.geoalchemist.com/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    <link rel="stylesheet" href="https://www.geoalchemist.com/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
 
@@ -291,130 +306,90 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Over the next few weeks I&rsquo;m going to share some of the <strong>SQL Basics</strong> I&rsquo;ve picked up. Hopefully, these posts will make <strong>SQL</strong> a little less intimidating for other beginners.</p>
-
-<p></p>
-
+              <p><em>Over the next few weeks I&rsquo;m going to share some of the <strong>SQL Basics</strong> I&rsquo;ve picked up. Hopefully, these posts will make <strong>SQL</strong> a little less intimidating for other beginners.</em></p>
 <h2 id="structured-query-language">Structured Query Language</h2>
-
 <p>This past semester I was fortunate enough to find my way into a <strong>Database Design and Development</strong> course. Having struggled with <strong>ArcMap SQL</strong>  queries in the past, I decided to sharpen my data wrangling abilities by honing a few fundamental <strong>SQL</strong> skills.</p>
-
 <p><strong>SQL</strong> or <strong>Structured Query Language</strong> is the language we use to explore databases. It&rsquo;s a bit like a roadmap comprised of sequential directions. These directions outline exactly where we&rsquo;re going and what treasure (data) we&rsquo;re going to find. The directions can be simple or they can be very complex (looking at you subqueries in the FROM clause). After a little practice though, even complex statements can be mastered relatively quickly. With even a basic knowledge of <strong>SQL</strong>, you can do more than you might think. The hard part is defining what you actually want to retrieve from your database.</p>
-
-<p><img src="https://media.giphy.com/media/3oKIPnuhcwE9tywW5y/giphy.gif" alt="A witty gif" /></p>
-
-<hr />
-
+<p><img src="https://media.giphy.com/media/3oKIPnuhcwE9tywW5y/giphy.gif" alt="A witty gif"></p>
+<hr>
 <h2 id="select-statement">SELECT Statement</h2>
-
 <p>The <strong>SELECT</strong> statement is used to retrieve data from tables stored inside your database. Maybe you want to survey the contents of a customer table or perhaps you would like to pull customer data into another tool like <strong>R</strong> or <strong>Python</strong> for analysis. Either way, you&rsquo;re going to need a <strong>SELECT</strong> query.</p>
-
 <p>The most basic <strong>SELECT</strong> statement requires two clauses.</p>
-
 <pre><code>SELECT BREWERY_NAME
 FROM BREWERY;
-</code></pre>
-
-<table>
+</code></pre><table>
 <thead>
 <tr>
 <th>BREWERY_NAME</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Yee-Haw Brewing Co.</td>
 </tr>
-
 <tr>
 <td>GREEN MAN BREWERY</td>
 </tr>
-
 <tr>
 <td>The Black Abbey Brewing Company</td>
 </tr>
 </tbody>
 </table>
-
 <p>The first clause is the <strong>SELECT</strong> clause. This is where you specify which <strong>columns</strong> (attributes) you want to retrieve using the &lsquo;<strong>SELECT</strong>&rsquo; keyword followed by the name(s) of the desired column.</p>
-
 <p>The &lsquo;<strong>FROM</strong>&rsquo; keyword is used to specify the <strong>table</strong> you&rsquo;re selecting data from.</p>
-
 <p>In this case I want to know the names of breweries in our example <strong>BREWERY</strong> table. I use a <strong>SELECT</strong> statement to request only the names of the breweries <strong>FROM</strong> the <strong>BREWERY</strong> table. Any other attributes in the <strong>BREWERY</strong> table are excluded because I didn&rsquo;t explicitly request them.</p>
-
 <p>The semicolon &lsquo;<strong>;</strong>&rsquo; placed at the end of the line is used to designate the end of an <strong>SQL</strong> command. Every <strong>SELECT</strong> statement should conclude with a semicolon. We use the semicolon to distinguish multiple <strong>SQL</strong> commands from one another.</p>
-
 <p>Formatting rules are not as strict as they are in other languages like <strong>Python</strong>. I could also structure my <strong>SELECT</strong> statement like this:</p>
-
 <pre><code>SELECT BREWERY_NAME FROM BREWERY;
-</code></pre>
-
-<table>
+</code></pre><table>
 <thead>
 <tr>
 <th>BREWERY_NAME</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Yee-Haw Brewing Co.</td>
 </tr>
-
 <tr>
 <td>GREEN MAN BREWERY</td>
 </tr>
-
 <tr>
 <td>The Black Abbey Brewing Company</td>
 </tr>
 </tbody>
 </table>
-
 <p>Notice how the results are the same. More than one clause can be placed on the same line, however I like to keep clauses on separate lines for readability. Note that the order of the clauses is important. We will look at order of execution in more detail later.</p>
-
 <p>If we want to look at multiple columns, it&rsquo;s as easy as adding a comma and the column name in our <strong>SELECT</strong> clause.</p>
-
 <pre><code>SELECT BREWERY_NAME, BREWERY_STATE
 FROM BREWERY;
-</code></pre>
-
-<table>
+</code></pre><table>
 <thead>
 <tr>
 <th>BREWERY_NAME</th>
 <th>BREWERY_STATE</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Yee-Haw Brewing Co.</td>
 <td>TN</td>
 </tr>
-
 <tr>
 <td>GREEN MAN BREWERY</td>
 <td>NC</td>
 </tr>
-
 <tr>
 <td>The Black Abbey Brewing Company</td>
 <td>TN</td>
 </tr>
 </tbody>
 </table>
-
 <p>The order of the returned columns is dependent on the order you specify in your <strong>SELECT</strong> clause.</p>
-
-<p>To view all of the columns in the <strong>BREWERY</strong> table, we need to use a <strong>wildcard</strong> &lsquo;*&lsquo;.</p>
-
+<p>To view all of the columns in the <strong>BREWERY</strong> table, we need to use a <strong>wildcard</strong> &lsquo;*&rsquo;.</p>
 <pre><code>SELECT *
 FROM BREWERY;
-</code></pre>
-
-<table>
+</code></pre><table>
 <thead>
 <tr>
 <th>BREWERY_ID</th>
@@ -423,7 +398,6 @@ FROM BREWERY;
 <th>BREWERY_LICENSE</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1000</td>
@@ -431,14 +405,12 @@ FROM BREWERY;
 <td>TN</td>
 <td>HK41/TFA</td>
 </tr>
-
 <tr>
 <td>1001</td>
 <td>GREEN MAN BREWERY</td>
 <td>NC</td>
 <td>3000-TBTL</td>
 </tr>
-
 <tr>
 <td>1003</td>
 <td>The Black Abbey Brewing Company</td>
@@ -447,26 +419,17 @@ FROM BREWERY;
 </tr>
 </tbody>
 </table>
-
 <p>Be conservative when using wildcards. Ask yourself do I really need to use a wildcard here? Requesting more columns than you need is generally inefficient and bad practice. Knowing when and when not to use a wildcard will become clearer once we add additional keyword clauses in the future.</p>
-
 <p>As you might have guessed from our breweries example, <strong>SQL</strong> is not a cryptic language. It does its best to resemble regular English. This makes the syntax often times intuitive to the point where you can guess ahead of time the keyword you need based on the logic of your query. As a beginner, I enjoyed this aspect of the language the most. It helps tremendously when translating the logic behind your query into actual <strong>SQL</strong> code.</p>
-
-<hr />
-
+<hr>
 <ul>
-<li><strong>Disclaimer:</strong> I learned SQL in an ORACLE Client environment. The syntax of my examples will follow ORACLE conventions. The core logic behind the code however should translate regardless of the database environment you&rsquo;re working in.
-&mdash;&mdash;</li>
+<li><strong>Disclaimer:</strong> I learned SQL in an ORACLE Client environment. The syntax of my examples will follow ORACLE conventions. The core logic behind the code however should translate regardless of the database environment you&rsquo;re working in.</li>
 </ul>
-
+<hr>
 <h2 id="to-sum-it-up">To Sum It Up</h2>
-
 <p>When you need to interact with the database, you write a <strong>SELECT</strong> statement. Vary rarely do we want to look at entire columns of data as we did in the examples above. Typically we are interested in constraining our data. In the next post I&rsquo;ll get into how we can use the <strong>WHERE</strong> clause and special operators to make our <strong>SELECT</strong> queries even more useful.</p>
-
-<hr />
-
-<h2 id="tl-dr">TL;DR</h2>
-
+<hr>
+<h2 id="tldr">TL;DR</h2>
 <p><strong>SQL</strong> is the language we use to retrieve data from a database. The <strong>SELECT</strong> statement is a structured query comprised of separate keyword clauses. The <strong>SELECT</strong> clause is used to request specified columns. The <strong>FROM</strong> clause designates from which table the columns originate.</p>
               
             </div>
@@ -489,8 +452,8 @@ FROM BREWERY;
                 
               
             
-            
-  <div class="post-actions-wrap">
+            <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -555,8 +518,8 @@ FROM BREWERY;
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
             
               
@@ -569,14 +532,14 @@ FROM BREWERY;
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2018 Wes Porter. All Rights Reserved
+    &copy; 2020 Wes Porter. All Rights Reserved
   </span>
 </footer>
 
       </div>
       <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        
-  <div class="post-actions-wrap">
+        <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -641,8 +604,8 @@ FROM BREWERY;
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
       </div>
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
@@ -701,229 +664,10 @@ FROM BREWERY;
   </div>
 </div>
 
-    <div id="algolia-search-modal" class="modal-container">
-  <div class="modal">
-    <div class="modal-header">
-      <span class="close-button"><i class="fa fa-close"></i></span>
-      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
-        <span class="searchby-algolia-text text-color-light text-small">by</span>
-        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
-      </a>
-      <i class="search-icon fa fa-search"></i>
-      <form id="algolia-search-form">
-        <input type="text" id="algolia-search-input" name="search"
-          class="form-control input--large search-input" placeholder="Search" />
-      </form>
-    </div>
-    <div class="modal-body">
-      <div class="no-result text-color-light text-center">no post found</div>
-      <div class="results">
-        
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/09/census-explorer/">
-                <h3 class="media-heading">Census Explorer</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Sep 9, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p><em>This past summer I develop an interactive web map allowing users to visualize census data.</em></p>
+    
 
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/02/saving-time-in-python/">
-                <h3 class="media-heading">Saving Time in Python</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Feb 2, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p><em>How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.</em></p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/">
-                <h3 class="media-heading">Measuring Crop Growth in R</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Feb 2, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">An Example of how to use R to Generate Crop Growth Curves 
-In between finishing up my database coursework, I’m usually doing remote sensing work.
-Most of what I’ve been working on lately is an attempt to create crop phenology curves. In a nut shell phenology curves are just a measurement of crop growth throughout the year.
-This post is just a quick code-along which shows you how to generate phenology curves using R.</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
-                <h3 class="media-heading">The Five Normal Forms</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p><em>Simple rules for improving the integrity of your data tables through Normalization.</em></p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/what-makes-a-graduate-program-valuable/">
-                <h3 class="media-heading">What Makes a Graduate Program Valuable?</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>You&rsquo;re investing a substantial amount of time, energy, and most importantly <strong>money</strong> into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2018/01/music-for-coding/">
-                <h3 class="media-heading">Music For Coding</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>A little folk, a little jazz - a little bit of everything. A few songs I listen to while coding.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/">
-                <h3 class="media-heading">SQL Basics: The WHERE Clause</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Dec 12, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Working with the WHERE clause and SQL operators to refine data requests.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/">
-                <h3 class="media-heading">SQL Basics: The SELECT Statement</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Dec 12, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Over the next few weeks I&rsquo;m going to share some of the <strong>SQL Basics</strong> I&rsquo;ve picked up. Hopefully, these posts will make <strong>SQL</strong> a little less intimidating for other beginners.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/11/blog-launch/">
-                <h3 class="media-heading">Blog Launch</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Nov 11, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>After much toil, I&rsquo;m finally launching a website to share my misadventures in GIS and programming.</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.geoalchemist.com/2017/10/map-gallery/">
-                <h3 class="media-heading">Map Gallery</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Oct 10, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Nothing too fancy. Just a few maps I&rsquo;ve made.</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-      </div>
-    </div>
-    <div class="modal-footer">
-      <p class="results-count text-medium"
-         data-message-zero="no post found"
-         data-message-one="1 post found"
-         data-message-other="{n} posts found">
-         10 posts found
-      </p>
-    </div>
-  </div>
-</div>
     
   
-    
     <div id="cover" style="background-image:url('https://res.cloudinary.com/wessport/image/upload/v1509731967/forest_e3myyq.jpg');"></div>
   
 
@@ -931,25 +675,25 @@ This post is just a quick code-along which shows you how to generate phenology c
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://www.geoalchemist.com/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+<script src="https://www.geoalchemist.com/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
-
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight > code, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
 </script>
 
 
@@ -978,6 +722,7 @@ $(document).ready(function() {
       </script>
     
   
+
 
 
 
