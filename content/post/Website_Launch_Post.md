@@ -18,7 +18,7 @@ tags:
 - Tranquilpeak
 ---
 
-After much toil, I'm finally launching a website to share my misadventures in GIS and programming.
+_After much toil, I'm finally launching a website to share my misadventures in GIS and programming._
 
 <!--more-->
  Here you'll find semi-frequent posts (ramblings) on GIS, programming, and life as a graduate student. Oh and maybe the occasional cat picture too.

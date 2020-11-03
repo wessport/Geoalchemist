@@ -25,7 +25,7 @@ tags:
 - SQL Basics
 ---
 
-Over the next few weeks I'm going to share some of the **SQL Basics** I've picked up. Hopefully, these posts will make **SQL** a little less intimidating for other beginners.
+_Over the next few weeks I'm going to share some of the **SQL Basics** I've picked up. Hopefully, these posts will make **SQL** a little less intimidating for other beginners._
 
 <!--more-->
 ## Structured Query Language ##

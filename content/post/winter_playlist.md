@@ -21,7 +21,7 @@ tags:
 - Indie
 ---
 
-A little folk, a little jazz - a little bit of everything. A few songs I listen to while coding.
+_A little folk, a little jazz - a little bit of everything. A few songs I listen to while coding._
 
 <!--more-->
 

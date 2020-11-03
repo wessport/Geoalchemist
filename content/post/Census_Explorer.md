@@ -5,7 +5,7 @@ date: 2018-09-21
 
 autoThumbnailImage: false
 thumbnailImagePosition: left
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1519680159/python_ufon72.png
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1604438918/noun_neighbors_400_ttjvvn.png
 coverImage: https://res.cloudinary.com/wessport/image/upload/v1537559080/Nashville_tdyakv.jpg
 metaAlignment: center
 coverMeta: in
@@ -32,7 +32,7 @@ tags:
 
 ---
 
-*This past summer I develop an interactive web map allowing users to visualize census data.*
+*This past summer I developed an interactive web map allowing users to visualize census data.*
 
 <!--more-->
 

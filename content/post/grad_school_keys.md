@@ -32,7 +32,8 @@ tags:
 - Grad School Search
 - Grad School Cost
 ---
-You're investing a substantial amount of time, energy, and most importantly **money** into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.
+
+*You're investing a substantial amount of time, energy, and most importantly **money** into pursuing a graduate degree. Here are a few characteristics to look at when evaluating potential graduate programs.*
 
 <!--more-->
 

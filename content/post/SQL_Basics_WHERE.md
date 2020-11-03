@@ -26,7 +26,7 @@ tags:
 - SQL Basics
 ---
 
-Working with the WHERE clause and SQL operators to refine data requests.
+_Working with the WHERE clause and SQL operators to refine data requests._
 
 <!--more-->
 
