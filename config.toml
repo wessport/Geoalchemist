@@ -35,7 +35,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
 [author]
   name = "Wes Porter"
   bio = "Exploring geospatial data through code."
-  job = "Graduate Research Assistant"
+  job = "Geographic Data Analyst"
   location = "Nashville"
   # Profile picture
   picture = "https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg"
