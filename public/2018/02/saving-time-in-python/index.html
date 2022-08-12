@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.77.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.101.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Wes Porter">
 <meta name="keywords" content="Python, NumPy, Vectorization, Optimization, Performance, GIS">
 <meta name="description" content="How I achieved a 38,000% boost in execution speed while calculating Zonal Statistics in Python.">
@@ -110,7 +110,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
     
     
   </head>
@@ -341,33 +340,33 @@ if (!doNotTrack) {
 <hr>
 <p>The idea that was initially suggested was to use Python to loop over every field, check for NoData values in the overlapping NDVI raster and throws those out, then calculate the desired statistics on the valid NDVI values.</p>
 <p>While I liked the simplicity of this method, I quickly noticed a significant drawback to this approach – the execution time.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
-<span style="color:#f92672">import</span> time
-<span style="color:#f92672">import</span> gdal
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">py_loop_test</span>(ndvi, fields):
-    ndvi_raster <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(ndvi)
-    field_raster <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(fields)
-
-    ndvi_array <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(ndvi_raster<span style="color:#f92672">.</span>GetRasterBand(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>ReadAsArray())
-    field_array <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(field_raster<span style="color:#f92672">.</span>GetRasterBand(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>ReadAsArray())
-
-    unique_fields <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>unique(field_array)
-    unique_fields <span style="color:#f92672">=</span> unique_fields[unique_fields <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">9999</span>]
-
-    <span style="color:#66d9ef">for</span> field_id <span style="color:#f92672">in</span> unique_fields:
-      f_ndvi_values <span style="color:#f92672">=</span> ndvi_array[np<span style="color:#f92672">.</span>logical_and(field_array <span style="color:#f92672">==</span> field_id, ndvi_array <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">9999</span>)]
-      f_avg <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(f_ndvi_values)
-
-
-start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
-
-py_loop_test(<span style="color:#e6db74">&#34;LT05_L1TP_023_19850126_msc_masked.tif&#34;</span>,<span style="color:#e6db74">&#34;Fields.tif&#34;</span>)
-
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;--- {} seconds ---&#34;</span><span style="color:#f92672">.</span>format(time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start_time))
-
-<span style="color:#75715e"># &gt;&gt; --- 73.860 seconds ---</span>
-</code></pre></div><p>Using a single Python loop and calculating only the average NDVI value per field as an example, the average run time was approximately 73 seconds.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> gdal
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">py_loop_test</span>(ndvi, fields):
+</span></span><span style="display:flex;"><span>    ndvi_raster <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(ndvi)
+</span></span><span style="display:flex;"><span>    field_raster <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(fields)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ndvi_array <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(ndvi_raster<span style="color:#f92672">.</span>GetRasterBand(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>ReadAsArray())
+</span></span><span style="display:flex;"><span>    field_array <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(field_raster<span style="color:#f92672">.</span>GetRasterBand(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>ReadAsArray())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    unique_fields <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>unique(field_array)
+</span></span><span style="display:flex;"><span>    unique_fields <span style="color:#f92672">=</span> unique_fields[unique_fields <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">9999</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> field_id <span style="color:#f92672">in</span> unique_fields:
+</span></span><span style="display:flex;"><span>      f_ndvi_values <span style="color:#f92672">=</span> ndvi_array[np<span style="color:#f92672">.</span>logical_and(field_array <span style="color:#f92672">==</span> field_id, ndvi_array <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">9999</span>)]
+</span></span><span style="display:flex;"><span>      f_avg <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(f_ndvi_values)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>py_loop_test(<span style="color:#e6db74">&#34;LT05_L1TP_023_19850126_msc_masked.tif&#34;</span>,<span style="color:#e6db74">&#34;Fields.tif&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;--- </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> seconds ---&#34;</span><span style="color:#f92672">.</span>format(time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start_time))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &gt;&gt; --- 73.860 seconds ---</span>
+</span></span></code></pre></div><p>Using a single Python loop and calculating only the average NDVI value per field as an example, the average run time was approximately 73 seconds.</p>
 <p>This was without adding another loop to go through all 207 NDVI images and writing the results to a csv file. This may not seem like much time at first, and in fact I wasn’t that concerned initially until I began to think about how quickly 73 seconds would add up.</p>
 <p>Using this approach, calculating stats for each NDVI would take an estimated <strong>15,111 seconds</strong> (73*207) or <strong>4.2 hours</strong>.</p>
 <p>What if the statistics were incorrectly calculated the first time?</p>
@@ -377,45 +376,45 @@ py_loop_test(<span style="color:#e6db74">&#34;LT05_L1TP_023_19850126_msc_masked.
 <h1 id="a-new-hope">A New Hope</h1>
 <p>I thought there had to be another way to perform the same analysis without sacrificing so much time. So I began to research and ask new questions about how NumPy worked, thinking I can’t be the only one doing scientific computing like this.</p>
 <p>After playing around with <a href="http://cython.readthedocs.io/en/latest/src/tutorial/numpy.html">Cython</a> and not finding much success, I discovered how I could use Vectorization to achieve the speed I was searching for.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> division <span style="color:#75715e"># Need this for proper division in Python2</span>
-<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
-<span style="color:#f92672">import</span> time
-<span style="color:#f92672">import</span> gdal
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">vectorization_test</span>(ndvi, fields):
-    <span style="color:#75715e"># Read in raster layers</span>
-    ndvi_raster <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(ndvi)
-    field_raster <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(fields)
-
-    <span style="color:#75715e"># Convert to numpy arrays</span>
-    ndvi_array <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(ndvi_raster<span style="color:#f92672">.</span>GetRasterBand(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>ReadAsArray())
-    field_array <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(field_raster<span style="color:#f92672">.</span>GetRasterBand(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>ReadAsArray())
-
-    <span style="color:#75715e"># Mask NoData</span>
-    mask <span style="color:#f92672">=</span> (ndvi_array <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">9999</span>) <span style="color:#f92672">&amp;</span> (field_array <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">9999</span>)
-    nd <span style="color:#f92672">=</span> ndvi_array[mask]
-    fi <span style="color:#f92672">=</span> field_array[mask]
-
-    <span style="color:#75715e"># Number of unique fields not count NoData</span>
-    unique_fields <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>unique(field_array)
-    num_fields <span style="color:#f92672">=</span> unique_fields[unique_fields <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">9999</span>]<span style="color:#f92672">.</span>size
-
-    <span style="color:#75715e"># Vecorized operation</span>
-    <span style="color:#75715e"># Perform sums of NDVI values over variable-size chunks of field array</span>
-    counts <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>bincount(fi, minlength<span style="color:#f92672">=</span>num_fields)
-    sums <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>bincount(fi, nd, minlength<span style="color:#f92672">=</span>num_fields)
-
-    <span style="color:#75715e"># Calculate averages</span>
-    avgs <span style="color:#f92672">=</span> sums <span style="color:#f92672">/</span> counts
-
-start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
-
-vectorization_test(<span style="color:#e6db74">&#34;LT05_L1TP_023_19850126_msc_masked.tif&#34;</span>,<span style="color:#e6db74">&#34;Fields.tif&#34;</span>)
-
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;--- {} seconds ---&#34;</span><span style="color:#f92672">.</span>format(time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start_time))
-
-<span style="color:#75715e"># &gt;&gt; --- 0.194 seconds ---</span>
-</code></pre></div><p>This script relies on Vectorization to calculate statistics over variable chunks sizes (variable slices of the original NDVI raster based on the overlapping field).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> division <span style="color:#75715e"># Need this for proper division in Python2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> gdal
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">vectorization_test</span>(ndvi, fields):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Read in raster layers</span>
+</span></span><span style="display:flex;"><span>    ndvi_raster <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(ndvi)
+</span></span><span style="display:flex;"><span>    field_raster <span style="color:#f92672">=</span> gdal<span style="color:#f92672">.</span>Open(fields)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Convert to numpy arrays</span>
+</span></span><span style="display:flex;"><span>    ndvi_array <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(ndvi_raster<span style="color:#f92672">.</span>GetRasterBand(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>ReadAsArray())
+</span></span><span style="display:flex;"><span>    field_array <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(field_raster<span style="color:#f92672">.</span>GetRasterBand(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>ReadAsArray())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Mask NoData</span>
+</span></span><span style="display:flex;"><span>    mask <span style="color:#f92672">=</span> (ndvi_array <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">9999</span>) <span style="color:#f92672">&amp;</span> (field_array <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">9999</span>)
+</span></span><span style="display:flex;"><span>    nd <span style="color:#f92672">=</span> ndvi_array[mask]
+</span></span><span style="display:flex;"><span>    fi <span style="color:#f92672">=</span> field_array[mask]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Number of unique fields not count NoData</span>
+</span></span><span style="display:flex;"><span>    unique_fields <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>unique(field_array)
+</span></span><span style="display:flex;"><span>    num_fields <span style="color:#f92672">=</span> unique_fields[unique_fields <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">9999</span>]<span style="color:#f92672">.</span>size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Vecorized operation</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Perform sums of NDVI values over variable-size chunks of field array</span>
+</span></span><span style="display:flex;"><span>    counts <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>bincount(fi, minlength<span style="color:#f92672">=</span>num_fields)
+</span></span><span style="display:flex;"><span>    sums <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>bincount(fi, nd, minlength<span style="color:#f92672">=</span>num_fields)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Calculate averages</span>
+</span></span><span style="display:flex;"><span>    avgs <span style="color:#f92672">=</span> sums <span style="color:#f92672">/</span> counts
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>vectorization_test(<span style="color:#e6db74">&#34;LT05_L1TP_023_19850126_msc_masked.tif&#34;</span>,<span style="color:#e6db74">&#34;Fields.tif&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;--- </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> seconds ---&#34;</span><span style="color:#f92672">.</span>format(time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start_time))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &gt;&gt; --- 0.194 seconds ---</span>
+</span></span></code></pre></div><p>This script relies on Vectorization to calculate statistics over variable chunks sizes (variable slices of the original NDVI raster based on the overlapping field).</p>
 <p>This dramatically reduces the computational cost of the looping operation.</p>
 <p>So instead of an average execution time of 73 seconds, how about <strong>0.194 seconds</strong>. In total that’s about 40 seconds (0.194*207) to process <strong>all</strong> of my images.</p>
 <p>That’s <strong>38,000%</strong> faster! Let me say that again… thirty eight <strong>THOUSAND</strong> percent faster.</p>
@@ -547,7 +546,7 @@ vectorization_test(<span style="color:#e6db74">&#34;LT05_L1TP_023_19850126_msc_m
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2020 Wes Porter. All Rights Reserved
+    &copy; 2022 Wes Porter. All Rights Reserved
   </span>
 </footer>
 
@@ -666,14 +665,14 @@ vectorization_test(<span style="color:#e6db74">&#34;LT05_L1TP_023_19850126_msc_m
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        Geographic Data Analyst
+        Sr. Location Data Analyst
       </div>
     
     
       <div id="about-card-location">
         <i class="fa fa-map-marker"></i>
         <br/>
-        Nashville
+        Knoxville
       </div>
     
   </div>

@@ -6,7 +6,52 @@
     <description>Recent content in Tags on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>alltheplaces</title>
+      <link>https://www.geoalchemist.com/tags/alltheplaces/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/alltheplaces/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OSS</title>
+      <link>https://www.geoalchemist.com/tags/oss/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/oss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.geoalchemist.com/tags/python/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QGIS</title>
+      <link>https://www.geoalchemist.com/tags/qgis/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/qgis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tech blogging</title>
+      <link>https://www.geoalchemist.com/tags/tech-blogging/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/tags/tech-blogging/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>tag1</title>
       <link>https://www.geoalchemist.com/tags/tag1/</link>
@@ -31,15 +76,6 @@
       <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/tags/tag3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tech blogging</title>
-      <link>https://www.geoalchemist.com/tags/tech-blogging/</link>
-      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/tech-blogging/</guid>
       <description></description>
     </item>
     
@@ -85,15 +121,6 @@
       <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.geoalchemist.com/tags/numpy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://www.geoalchemist.com/tags/python/</link>
-      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/tags/python/</guid>
       <description></description>
     </item>
     

@@ -21,7 +21,7 @@ $font-families: (
    'post-content':      $merriweather-serif,
    'post-excerpt-link': $open-sans-sans-serif,
    'highlight':         $menlo,
-   // layout
+   // layouts
    'sidebar':           $open-sans-sans-serif
 );
 
@@ -59,7 +59,7 @@ $colors: (
 );
 
 // Z-indexes
-// `l-` prefix for layout
+// `l-` prefix for layouts
 // `c-` prefix for components
 $z-indexes: (
     // position the cover below the whole blog
@@ -128,7 +128,7 @@ $headings-font-size-sm-screen-reduction-factor: 0.2rem;
 $headings-font-size-md-screen-reduction-factor: 0.15rem;
 
 // Layout settings
-// Files are located in `layout` folder
+// Files are located in `layouts` folder
 // --------------------------------------------
 
 // Main

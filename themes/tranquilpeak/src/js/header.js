@@ -10,7 +10,7 @@
   var Header = function() {
     this.$header = $('#header');
     this.headerHeight = this.$header.height();
-    // CSS class located in `source/_css/layout/_header.scss`
+    // CSS class located in `source/_css/layouts/_header.scss`
     this.headerUpCSSClass = 'header-up';
     this.delta = 5;
     this.lastScrollTop = 0;

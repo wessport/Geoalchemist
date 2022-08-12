@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.77.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.101.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Wes Porter">
 <meta name="keywords" content="SQL, SQL basics, SQL beginner, SQL Operators, WHERE clause, Database">
 <meta name="description" content="Working with the WHERE clause and SQL operators to refine data requests.">
@@ -104,7 +104,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
     
     
   </head>
@@ -314,7 +313,7 @@ if (!doNotTrack) {
 <p>Okay so <a href="https://www.youtube.com/watch?v=LJsEpNIY5IA">Eddie Vedder</a> probably isn&rsquo;t an SQL enthusiast, but if he were, I&rsquo;d bet he would be a big fan of the <code>WHERE</code> clause.</p>
 <p>Put simply, the <code>WHERE</code> clause is used to filter rows in a table. When we want to limit the number of rows returned based on a condition or set of conditions, we use the <code>WHERE</code> clause.</p>
 <p>Remember our <code>BREWERY</code> table from last time?</p>
-<pre><code>SELECT *
+<pre tabindex="0"><code>SELECT *
 FROM BREWERY;
 </code></pre><table>
 <thead>
@@ -389,9 +388,9 @@ FROM BREWERY;
 </tbody>
 </table>
 <p>Let&rsquo;s say we&rsquo;re planning a trip to Asheville, NC, a town known for its eccentric style and thriving beer scene. Before we drive up into the mountains to sample some brews, we would like to know what breweries we can potentially visit in NC. Now we could use <code>SELECT * FROM BREWERY</code> and scroll through our table searching for breweries where the value for the <code>BREWERY_STATE</code> attribute is <code>TN</code> or we could use the <code>WHERE</code> clause.</p>
-<pre><code>SELECT *
+<pre tabindex="0"><code>SELECT *
 FROM BREWERY
-WHERE BREWERY_STATE = 'TN';
+WHERE BREWERY_STATE = &#39;TN&#39;;
 </code></pre><table>
 <thead>
 <tr>
@@ -444,9 +443,9 @@ WHERE BREWERY_STATE = 'TN';
 <div class="alert warning ">
   <p>Note that the state abbreviation is in single quotation marks signifying that &lsquo;TN&rsquo; is a string data type.</p>
 </div>
-<pre><code>SELECT *
+<pre tabindex="0"><code>SELECT *
 FROM BREWERY
-WHERE BREWERY_NAME = 'GREEN MAN BREWERY';
+WHERE BREWERY_NAME = &#39;GREEN MAN BREWERY&#39;;
 </code></pre><table>
 <thead>
 <tr>
@@ -466,9 +465,9 @@ WHERE BREWERY_NAME = 'GREEN MAN BREWERY';
 </tbody>
 </table>
 <p>Be sure to pay special attention to the case of your string conditions inside your <code>WHERE</code> clause. Had we tried to use <code>WHERE BREWERY_NAME = 'Green Man Brewery';</code>  our return would have been empty because in the <code>BREWERY</code> table, &ldquo;GREEN MAN BREWERY&rdquo; is in all caps.</p>
-<pre><code>SELECT BREWERY_ID, BREWERY_NAME, BREWERY_STATE, BREWERY_LICENSE
+<pre tabindex="0"><code>SELECT BREWERY_ID, BREWERY_NAME, BREWERY_STATE, BREWERY_LICENSE
 FROM BREWERY
-WHERE LOWER(BREWERY_NAME) = 'green man brewery';
+WHERE LOWER(BREWERY_NAME) = &#39;green man brewery&#39;;
 </code></pre><table>
 <thead>
 <tr>
@@ -549,7 +548,7 @@ WHERE LOWER(BREWERY_NAME) = 'green man brewery';
   <p><strong>NULL</strong> stands for <em>no value</em>. They are <strong>empty</strong> fields. Empty here means no spaces, no placeholder values like -9999 - nothing. <strong>NULL</strong> values typically occur in our data when we don&rsquo;t know the actual value of a field (cell) within our data table so we leave it blank.</p>
 </div>
 <p>If we wanted to find brewery IDs where the BREWERY_ID is between 1002 and 1005, we would write our query like this:</p>
-<pre><code>SELECT BREWERY_ID
+<pre tabindex="0"><code>SELECT BREWERY_ID
 FROM BREWERY
 WHERE BREWERY_ID BETWEEN 1002 AND 1005;
 </code></pre><table>
@@ -609,9 +608,9 @@ WHERE BREWERY_ID BETWEEN 1002 AND 1005;
 </table>
 <p>Logic operators allow you to combine more than one search condition at a time. For instance if we want to limit our results for breweries where the <code>BREWERY_ID</code> is 1005 and the state is NC, our query would use the <code>AND</code> logic operator. If we wanted to return a list of breweries located in NC or TN we would use the <code>OR</code> operator. The nice thing about logic operators in <strong>SQL</strong> is that they&rsquo;re pretty intuitive.</p>
 <p>For practice let&rsquo;s write a query with multiple conditions. Let&rsquo;s say we want to look at breweries in either <code>NC</code> or <code>TN</code> where the <code>BREWERY_ID</code> is greater than <code>1005</code>.</p>
-<pre><code>SELECT *
+<pre tabindex="0"><code>SELECT *
 FROM BREWERY
-WHERE BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN' AND BREWERY_ID &gt; 1005;
+WHERE BREWERY_STATE = &#39;NC&#39; OR BREWERY_STATE = &#39;TN&#39; AND BREWERY_ID &gt; 1005;
 </code></pre><table>
 <thead>
 <tr>
@@ -677,9 +676,9 @@ WHERE BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN' AND BREWERY_ID &gt; 1005;
 <p>Looks like we&rsquo;ve got NC breweries where the IDs is below 1005 even though we requested only IDs above 1005. Let&rsquo;s look closely at what&rsquo;s actually going on here.</p>
 <p>The order in which the operators are evaluated is causing us trouble. In most DBMS environments, the <code>AND</code> operator is executed first. This means that in our example above, <em>any breweries located in TN and with a BREWERY_ID &gt; 1005 are returned, and any breweries located in NC regardless of their ID</em>.</p>
 <p>To fix this problem we just need to be more specific. By adding parentheses around our conditions, we can control the order in which they&rsquo;re evaluated. Think of your old TI-83 calculator days.</p>
-<pre><code>SELECT *
+<pre tabindex="0"><code>SELECT *
 FROM BREWERY
-WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
+WHERE (BREWERY_STATE = &#39;NC&#39; OR BREWERY_STATE = &#39;TN&#39;) AND BREWERY_ID &gt; 1005;
 </code></pre><table>
 <thead>
 <tr>
@@ -833,7 +832,7 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2020 Wes Porter. All Rights Reserved
+    &copy; 2022 Wes Porter. All Rights Reserved
   </span>
 </footer>
 
@@ -952,14 +951,14 @@ WHERE (BREWERY_STATE = 'NC' OR BREWERY_STATE = 'TN') AND BREWERY_ID &gt; 1005;
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        Geographic Data Analyst
+        Sr. Location Data Analyst
       </div>
     
     
       <div id="about-card-location">
         <i class="fa fa-map-marker"></i>
         <br/>
-        Nashville
+        Knoxville
       </div>
     
   </div>

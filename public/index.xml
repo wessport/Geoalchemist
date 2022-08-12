@@ -6,7 +6,16 @@
     <description>Recent content on Geoalchemist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimizing Geometric Search Grids</title>
+      <link>https://www.geoalchemist.com/2022/06/optimizing-geometric-search-grids/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.geoalchemist.com/2022/06/optimizing-geometric-search-grids/</guid>
+      <description>&lt;p&gt;&lt;em&gt;How I leveraged a scientific paper on Multifractal Analysis to capture all of Dollar General&amp;rsquo;s US stores&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>New Content</title>
       <link>https://www.geoalchemist.com/2020/11/new-content/</link>

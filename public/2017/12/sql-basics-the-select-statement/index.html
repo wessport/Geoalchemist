@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.77.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.101.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Wes Porter">
 <meta name="keywords" content="SQL, SQL basics, SQL beginner, SELECT statement, Database">
 <meta name="description" content="Over the next few weeks I&rsquo;m going to share some of the SQL Basics I&rsquo;ve picked up. Hopefully, these posts will make SQL a little less intimidating for other beginners.">
@@ -104,7 +104,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
     
     
   </head>
@@ -315,7 +314,7 @@ if (!doNotTrack) {
 <h2 id="select-statement">SELECT Statement</h2>
 <p>The <strong>SELECT</strong> statement is used to retrieve data from tables stored inside your database. Maybe you want to survey the contents of a customer table or perhaps you would like to pull customer data into another tool like <strong>R</strong> or <strong>Python</strong> for analysis. Either way, you&rsquo;re going to need a <strong>SELECT</strong> query.</p>
 <p>The most basic <strong>SELECT</strong> statement requires two clauses.</p>
-<pre><code>SELECT BREWERY_NAME
+<pre tabindex="0"><code>SELECT BREWERY_NAME
 FROM BREWERY;
 </code></pre><table>
 <thead>
@@ -340,7 +339,7 @@ FROM BREWERY;
 <p>In this case I want to know the names of breweries in our example <strong>BREWERY</strong> table. I use a <strong>SELECT</strong> statement to request only the names of the breweries <strong>FROM</strong> the <strong>BREWERY</strong> table. Any other attributes in the <strong>BREWERY</strong> table are excluded because I didn&rsquo;t explicitly request them.</p>
 <p>The semicolon &lsquo;<strong>;</strong>&rsquo; placed at the end of the line is used to designate the end of an <strong>SQL</strong> command. Every <strong>SELECT</strong> statement should conclude with a semicolon. We use the semicolon to distinguish multiple <strong>SQL</strong> commands from one another.</p>
 <p>Formatting rules are not as strict as they are in other languages like <strong>Python</strong>. I could also structure my <strong>SELECT</strong> statement like this:</p>
-<pre><code>SELECT BREWERY_NAME FROM BREWERY;
+<pre tabindex="0"><code>SELECT BREWERY_NAME FROM BREWERY;
 </code></pre><table>
 <thead>
 <tr>
@@ -361,7 +360,7 @@ FROM BREWERY;
 </table>
 <p>Notice how the results are the same. More than one clause can be placed on the same line, however I like to keep clauses on separate lines for readability. Note that the order of the clauses is important. We will look at order of execution in more detail later.</p>
 <p>If we want to look at multiple columns, it&rsquo;s as easy as adding a comma and the column name in our <strong>SELECT</strong> clause.</p>
-<pre><code>SELECT BREWERY_NAME, BREWERY_STATE
+<pre tabindex="0"><code>SELECT BREWERY_NAME, BREWERY_STATE
 FROM BREWERY;
 </code></pre><table>
 <thead>
@@ -387,7 +386,7 @@ FROM BREWERY;
 </table>
 <p>The order of the returned columns is dependent on the order you specify in your <strong>SELECT</strong> clause.</p>
 <p>To view all of the columns in the <strong>BREWERY</strong> table, we need to use a <strong>wildcard</strong> &lsquo;*&rsquo;.</p>
-<pre><code>SELECT *
+<pre tabindex="0"><code>SELECT *
 FROM BREWERY;
 </code></pre><table>
 <thead>
@@ -532,7 +531,7 @@ FROM BREWERY;
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2020 Wes Porter. All Rights Reserved
+    &copy; 2022 Wes Porter. All Rights Reserved
   </span>
 </footer>
 
@@ -651,14 +650,14 @@ FROM BREWERY;
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        Geographic Data Analyst
+        Sr. Location Data Analyst
       </div>
     
     
       <div id="about-card-location">
         <i class="fa fa-map-marker"></i>
         <br/>
-        Nashville
+        Knoxville
       </div>
     
   </div>

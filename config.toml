@@ -35,8 +35,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
 [author]
   name = "Wes Porter"
   bio = "Exploring geospatial data through code."
-  job = "Geographic Data Analyst"
-  location = "Nashville"
+  job = "Sr. Location Data Analyst"
+  location = "Knoxville"
   # Profile picture
   picture = "https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg"
   # Your Twitter username without the @. E.g : thibaudlepretre
