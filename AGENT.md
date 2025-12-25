@@ -22,6 +22,7 @@ hugo
 - Use feature branches for major changes (e.g., `site-revival-2025`)
 - Test that `hugo` builds successfully before committing
 - Direct commits to `main` acceptable for minor fixes
+- **Do not include Amp co-author trailers in commits** (no `Co-authored-by: Amp` or `Amp-Thread-ID`)
 
 ## Content
 
