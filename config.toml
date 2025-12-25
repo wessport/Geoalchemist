@@ -41,11 +41,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
 
 [params.author]
   name = "Wes Porter"
-  bio = "Building data pipelines and exploring geospatial data through code."
+  bio = "Exploring geospatial data through code."
   job = "Senior Location Data Analyst"
   location = "Nashville"
-  picture = "https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg"
-  twitter = "Wes_Port"
+  picture = "https://res.cloudinary.com/wessport/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,z_1.2,b_rgb:262c35/v1766687672/Wes_and_Winnie_dmnau0.jpg"
 
 
 # Menu Configuration
@@ -82,30 +81,23 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
 
 [[menu.links]]
   weight = 1
-  identifier = "twitter"
-  name = "Twitter"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-twitter\"></i>"
-  url = "https://twitter.com/Wes_Port"
+  identifier = "github"
+  name = "GitHub"
+  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\"></i>"
+  url = "https://github.com/wessport"
 
 [[menu.links]]
   weight = 2
-  identifier = "github"
-  name = "GitHub"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/wessport"
-
-  [[menu.links]]
-    weight = 3
-    identifier = "linkedin"
-    name = "LinkedIn"
-    pre = "<i class=\"sidebar-button-icon fa fa-linkedin-square\"></i>"
-    url = "https://www.linkedin.com/in/wes-porter-10250488/"
+  identifier = "linkedin"
+  name = "LinkedIn"
+  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-linkedin\"></i>"
+  url = "https://www.linkedin.com/in/wes-porter-10250488/"
 
 [[menu.links]]
-  weight = 4
+  weight = 3
   identifier = "maps"
   name = "Map Gallery"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-map\"></i>"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-map\"></i>"
   url = "/2017/10/map-gallery/"
 
 [[menu.misc]]
