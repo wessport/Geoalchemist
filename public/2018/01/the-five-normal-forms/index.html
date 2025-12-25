@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"http:\/\/localhost:1313\/",
+  "author": {
+    "@type": "Person",
+    "name": "Wes Porter",
+    
+    "image": "https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg"
+    
+  },
+  "name":"Geoalchemist",
+  "description":"\u003cp\u003e\u003cem\u003eSimple rules for improving the integrity of your data tables through Normalization.\u003c\/em\u003e\u003c\/p\u003e",
+  "url":"http:\/\/localhost:1313\/2018\/01\/the-five-normal-forms\/",
+  "keywords":"[Database, Normalization, Normal Forms, design, database 101, normal form, the five normal forms]"
+}
+
+</script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.101.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.153.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Wes Porter">
 <meta name="keywords" content="Database, Normalization, Normal Forms, design, database 101, normal form, the five normal forms">
 <meta name="description" content="Simple rules for improving the integrity of your data tables through Normalization.">
@@ -15,8 +35,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="The Five Normal Forms">
 <meta name="twitter:title" content="The Five Normal Forms">
-<meta property="og:url" content="https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
-<meta property="twitter:url" content="https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
+<meta property="og:url" content="http://localhost:1313/2018/01/the-five-normal-forms/">
+<meta property="twitter:url" content="http://localhost:1313/2018/01/the-five-normal-forms/">
 <meta property="og:site_name" content="Geoalchemist">
 <meta property="og:description" content="Simple rules for improving the integrity of your data tables through Normalization.">
 <meta name="twitter:description" content="Simple rules for improving the integrity of your data tables through Normalization.">
@@ -59,53 +79,37 @@
 
 
 
-  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png">
-  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png">
+  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg">
+
+
 
 
   <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1517089330/5NF_bg_ltoau5.png">
   <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1517089330/5NF_bg_ltoau5.png">
 
 
-
-
-  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg">
-  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg">
+  <meta property="og:image" content="https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png">
+  <meta property="twitter:image" content="https://res.cloudinary.com/wessport/image/upload/v1517087773/5NormalForms_ls5glx.png">
 
 
     <title>The Five Normal Forms</title>
 
-    <link rel="icon" href="https://www.geoalchemist.com/favicon.png">
+    <link rel="icon" href="/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
+    <link rel="canonical" href="http://localhost:1313/2018/01/the-five-normal-forms/">
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     
-    <link rel="stylesheet" href="https://www.geoalchemist.com/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
+    <link rel="stylesheet" href="http://localhost:1313/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
     
-
-    
-      
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-111699620-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
     
     
   </head>
@@ -115,12 +119,12 @@ if (!doNotTrack) {
       <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://www.geoalchemist.com/">Geoalchemist</a>
+    <a class="header-title-link" href="/" aria-label="Go to homepage">Geoalchemist</a>
   </div>
   
     
       <a class="header-right-picture "
-         href="https://www.geoalchemist.com/#about">
+         href="/#about" aria-label="Open the link: /#about">
     
     
     
@@ -136,12 +140,12 @@ if (!doNotTrack) {
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
-        <a href="https://www.geoalchemist.com/#about">
+        <a href="/#about" aria-label="Read more about the author">
           <img class="sidebar-profile-picture" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg" alt="Author&#39;s picture" />
         </a>
         <h4 class="sidebar-profile-name">Wes Porter</h4>
         
-          <h5 class="sidebar-profile-bio">Exploring geospatial data through code.</h5>
+          <h5 class="sidebar-profile-bio">Building data pipelines and exploring geospatial data through code.</h5>
         
       </div>
     
@@ -149,7 +153,7 @@ if (!doNotTrack) {
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.geoalchemist.com/">
+      <a class="sidebar-button-link " href="/" title="Home">
     
       <i class="sidebar-button-icon fa fa-lg fa-home"></i>
       
@@ -159,7 +163,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.geoalchemist.com/categories">
+      <a class="sidebar-button-link " href="/categories" title="Categories">
     
       <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
       
@@ -169,7 +173,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.geoalchemist.com/tags">
+      <a class="sidebar-button-link " href="/tags" title="Tags">
     
       <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
       
@@ -179,7 +183,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.geoalchemist.com/archives">
+      <a class="sidebar-button-link " href="/archives" title="Archives">
     
       <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
       
@@ -189,7 +193,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.geoalchemist.com/#about">
+      <a class="sidebar-button-link " href="/#about" title="About">
     
       <i class="sidebar-button-icon fa fa-lg fa-question"></i>
       
@@ -203,7 +207,7 @@ if (!doNotTrack) {
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://twitter.com/Wes_Port" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://twitter.com/Wes_Port" target="_blank" rel="noopener" title="Twitter">
     
       <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
       
@@ -213,7 +217,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/wessport" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://github.com/wessport" target="_blank" rel="noopener" title="GitHub">
     
       <i class="sidebar-button-icon fa fa-lg fa-github"></i>
       
@@ -223,7 +227,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.linkedin.com/in/wes-porter-10250488/" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/wes-porter-10250488/" target="_blank" rel="noopener" title="LinkedIn">
     
       <i class="sidebar-button-icon fa fa-linkedin-square"></i>
       
@@ -233,7 +237,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.geoalchemist.com/2017/10/map-gallery/">
+      <a class="sidebar-button-link " href="/2017/10/map-gallery/" title="Map Gallery">
     
       <i class="sidebar-button-icon fa fa-lg fa-map"></i>
       
@@ -247,7 +251,7 @@ if (!doNotTrack) {
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.geoalchemist.com/index.xml">
+      <a class="sidebar-button-link " href="/index.xml" title="RSS">
     
       <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
       
@@ -269,14 +273,14 @@ if (!doNotTrack) {
     
       <div class="post-header main-content-wrap text-center">
   
-    <h1 class="post-title" itemprop="headline">
+    <h1 class="post-title">
       The Five Normal Forms
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-01-28T00:00:00Z">
+      <time datetime="2018-01-28T00:00:00Z">
         
   January 28, 2018
 
@@ -287,7 +291,7 @@ if (!doNotTrack) {
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.geoalchemist.com/categories/database">Database</a>
+      <a class="category-link" href="/categories/database">Database</a>
     
   
 
@@ -302,10 +306,10 @@ if (!doNotTrack) {
         class="hasCover
                hasCoverMetaIn
                ">
-        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+        <article class="post" id="top">
           
           
-          <div class="post-content markdown" itemprop="articleBody">
+          <div class="post-content markdown">
             <div class="main-content-wrap">
               <p><em>Simple rules for improving the integrity of your data tables through Normalization.</em></p>
 <hr>
@@ -321,7 +325,7 @@ if (!doNotTrack) {
 <p>A data table is in first normal form (1NF) when:</p>
 <h5 id="a-table-consists-of-cells-where-each-cell-contains-1-and-only-1-value">A table consists of cells where each cell contains 1 and only 1 value</h5>
 <p>This means you cannot have multiple values stored in a single cell like in the example table below.</p>
-<!-- raw HTML omitted -->
+<!--Table1-->
 
 
  
@@ -342,7 +346,7 @@ if (!doNotTrack) {
 
 <div class="figure center fig-100" >
   
-    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517091714/Table1_blhf5c.png" title="Table 1" data-fancybox-group="">
+    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517091714/Table1_blhf5c.png" title="Table 1" data-fancybox="">
   
     <img class="fig-img" src="https://res.cloudinary.com/wessport/image/upload/v1517091714/Table1_blhf5c.png"  alt="Table 1">
   
@@ -374,8 +378,8 @@ if (!doNotTrack) {
   <p><strong>Partial dependencies</strong> exist when a part of the primary key can be used to determine the value of a non-key attribute.</p>
 </div>
 <p>For instance in the example table below a partial dependency exists between <code>Coffee_ID</code> and <code>Coffee_Name</code>.
-<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<br></p>
+<!--Table2-->
 
 
  
@@ -396,7 +400,7 @@ if (!doNotTrack) {
 
 <div class="figure center fig-100" >
   
-    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517091921/Table2_ldxmwq.png" title="Table 2" data-fancybox-group="">
+    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517091921/Table2_ldxmwq.png" title="Table 2" data-fancybox="">
   
     <img class="fig-img" src="https://res.cloudinary.com/wessport/image/upload/v1517091921/Table2_ldxmwq.png"  alt="Table 2">
   
@@ -413,8 +417,8 @@ if (!doNotTrack) {
 <div class="alert warning ">
   <p>It&rsquo;s important that you leave a copy of the determinant behind as a foreign key - otherwise you lose the relationship between the two tables.</p>
 </div>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<br>
+<!--Table3-->
 
 
  
@@ -435,7 +439,7 @@ if (!doNotTrack) {
 
 <div class="figure center fig-100" >
   
-    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table3_jkysab.png" title="Table 3" data-fancybox-group="">
+    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table3_jkysab.png" title="Table 3" data-fancybox="">
   
     <img class="fig-img" src="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table3_jkysab.png"  alt="Table 3">
   
@@ -446,7 +450,7 @@ if (!doNotTrack) {
   
 </div>
 
-<!-- raw HTML omitted -->
+<!--Table4-->
 
 
  
@@ -467,7 +471,7 @@ if (!doNotTrack) {
 
 <div class="figure center fig-100" >
   
-    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table4_sr10pg.png" title="Table 4" data-fancybox-group="">
+    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table4_sr10pg.png" title="Table 4" data-fancybox="">
   
     <img class="fig-img" src="https://res.cloudinary.com/wessport/image/upload/v1517092035/Table4_sr10pg.png"  alt="Table 4">
   
@@ -478,13 +482,15 @@ if (!doNotTrack) {
   
 </div>
 
-<!-- raw HTML omitted -->
+<br>
+If your table doesn't have a composite key, then technically it's already in 2NF by default as long as it's already in 1NF. *You can't have a partial dependency if your primary key doesn't have multiple parts.*
 <hr>
 <h2 id="3rd-normal-form">3rd Normal Form</h2>
 <p>For a table to be in third normal form (3NF), transitive dependencies must not exist.</p>
 <p>Transitive dependencies occur when a single non-key attribute determines another non-key attribute. Sets of attributes that can determine another single attribute do not count. Just like before, transitive dependencies create redundancy issues.</p>
 <p>For example in the table below a transitive dependency exists between <code>Roaster_ID</code> and <code>Roaster_Name</code>.</p>
-<!-- raw HTML omitted -->
+<br>
+<!--Table5-->
 
 
  
@@ -505,7 +511,40 @@ if (!doNotTrack) {
 
 <div class="figure center fig-100" >
   
-    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table6_v6hnxm.png" title="Table 6" data-fancybox-group="">
+    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table5_q5weug.png" title="Table 5" data-fancybox="">
+  
+    <img class="fig-img" src="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table5_q5weug.png"  alt="Table 5">
+  
+    </a>
+  
+   
+    <span class="caption">Table 5</span>
+  
+</div>
+
+<br>
+To fix any existing transitive dependencies, we can use the same strategy we employed to put our tables into 2NF. Copy the determinants into a new table. Then cut the dependents into the new table you just created.
+
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+<div class="figure center fig-100" >
+  
+    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table6_v6hnxm.png" title="Table 6" data-fancybox="">
   
     <img class="fig-img" src="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table6_v6hnxm.png"  alt="Table 6">
   
@@ -536,7 +575,7 @@ if (!doNotTrack) {
 
 <div class="figure center fig-100" >
   
-    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table7_qptxlg.png" title="Table 7" data-fancybox-group="">
+    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table7_qptxlg.png" title="Table 7" data-fancybox="">
   
     <img class="fig-img" src="https://res.cloudinary.com/wessport/image/upload/v1517092390/Table7_qptxlg.png"  alt="Table 7">
   
@@ -547,7 +586,7 @@ if (!doNotTrack) {
   
 </div>
 
-<!-- raw HTML omitted --></p>
+<br></p>
 <h5 id="boyce-codd-normal-form-35-nf">Boyce Codd Normal Form (3.5 NF)</h5>
 <p>Boyce Codd Normal Form (BCNF) is at first glance a reverse of the Second Normal Form. You&rsquo;re essentially removing dependencies in the opposite direction now.</p>
 <p>A table is in BCNF when there are no non-key attributes that determine part of a composite-key attribute. In a composite key, every partial-key attribute can only depend on a superkey.</p>
@@ -588,7 +627,7 @@ if (!doNotTrack) {
 
 <div class="figure center fig-100" >
   
-    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/c_scale,w_350/v1517156729/5NormalForms_color_sb5c2i.png" data-fancybox-group="">
+    <a class="fancybox" href="https://res.cloudinary.com/wessport/image/upload/c_scale,w_350/v1517156729/5NormalForms_color_sb5c2i.png" data-fancybox="">
   
     <img class="fig-img" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_350/v1517156729/5NormalForms_color_sb5c2i.png" >
   
@@ -603,6 +642,8 @@ if (!doNotTrack) {
 <p>3rd NF is typically what I shoot for. After 3rd NF, the effort invested is a lot greater than the return. The power of the Normal Forms is that they are applicable even if your data lives outside a database - say in a Shapefile attribute table or Excel spreadsheet.</p>
 <p>Eliminating redundancy may not always be possible, but controlling it is key to protecting the integrity of your data.</p>
               
+
+
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
@@ -613,225 +654,195 @@ if (!doNotTrack) {
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/database/">Database</a>
+  <a class="tag tag--primary tag--small" href="/tags/database/">Database</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/normalization/">Normalization</a>
+  <a class="tag tag--primary tag--small" href="/tags/normalization/">Normalization</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/normal-forms/">Normal forms</a>
+  <a class="tag tag--primary tag--small" href="/tags/normal-forms/">Normal forms</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.geoalchemist.com/tags/design/">Design</a>
+  <a class="tag tag--primary tag--small" href="/tags/design/">Design</a>
 
                   </div>
                 
               
             
-            <div class="post-actions-wrap">
-  
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/" data-tooltip="Measuring Crop Growth in R">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.geoalchemist.com/2018/01/what-makes-a-graduate-program-valuable/" data-tooltip="What Makes a Graduate Program Valuable?">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
-      
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
-              <i class="fa fa-facebook-official"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        
-      
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
       
         <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/measuring-crop-growth-in-r/" data-tooltip="Measuring Crop Growth in R" aria-label="NEXT: Measuring Crop Growth in R">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2018/01/what-makes-a-graduate-program-valuable/" data-tooltip="What Makes a Graduate Program Valuable?" aria-label="PREVIOUS: What Makes a Graduate Program Valuable?">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
         </li>
       
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/2018/01/the-five-normal-forms/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fa-facebook-official" aria-hidden="true"></i>
         </a>
       </li>
-    </ul>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://localhost:1313/2018/01/the-five-normal-forms/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
   
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
 </div>
 
+
             
-              
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-              
-            
+  
+
+
           </div>
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 Wes Porter. All Rights Reserved
+    &copy; 2025 Wes Porter. All Rights Reserved
   </span>
 </footer>
 
       </div>
       <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        <div class="post-actions-wrap">
-  
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/" data-tooltip="Measuring Crop Growth in R">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.geoalchemist.com/2018/01/what-makes-a-graduate-program-valuable/" data-tooltip="What Makes a Graduate Program Valuable?">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
-      
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
         
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
-              <i class="fa fa-facebook-official"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.geoalchemist.com/2018/01/the-five-normal-forms/">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        
-      
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
       
         <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2018/02/measuring-crop-growth-in-r/" data-tooltip="Measuring Crop Growth in R" aria-label="NEXT: Measuring Crop Growth in R">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="/2018/01/what-makes-a-graduate-program-valuable/" data-tooltip="What Makes a Graduate Program Valuable?" aria-label="PREVIOUS: What Makes a Graduate Program Valuable?">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
         </li>
       
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/2018/01/the-five-normal-forms/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fa-facebook-official" aria-hidden="true"></i>
         </a>
       </li>
-    </ul>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://localhost:1313/2018/01/the-five-normal-forms/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
   
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
 </div>
 
+
       </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.geoalchemist.com%2F2018%2F01%2Fthe-five-normal-forms%2F">
-          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2F2018%2F01%2Fthe-five-normal-forms%2F" aria-label="Share on Facebook">
+          <i class="fa-facebook-official" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwww.geoalchemist.com%2F2018%2F01%2Fthe-five-normal-forms%2F">
-          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
-        </a>
-      </li>
-    
-      <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.geoalchemist.com%2F2018%2F01%2Fthe-five-normal-forms%2F">
-          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3A%2F%2Flocalhost%3A1313%2F2018%2F01%2Fthe-five-normal-forms%2F" aria-label="Share on Twitter">
+          <i class="fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
   </ul>
 </div>
 <div id="share-options-mask" class="share-options-mask"></div>
+
+
     </div>
     
     <div id="about">
   <div id="about-card">
     <div id="about-btn-close">
-      <i class="fa fa-remove"></i>
+      <i class="fa fa-times"></i>
     </div>
     
       <img id="about-card-picture" src="https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg" alt="Author&#39;s picture" />
     
     <h4 id="about-card-name">Wes Porter</h4>
     
-      <div id="about-card-bio">Exploring geospatial data through code.</div>
+      <div id="about-card-bio">Building data pipelines and exploring geospatial data through code.</div>
     
     
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        Sr. Location Data Analyst
+        Senior Location Data Analyst
       </div>
     
     
       <div id="about-card-location">
-        <i class="fa fa-map-marker"></i>
+        <i class="fa fa-map-marker-alt"></i>
         <br/>
-        Knoxville
+        Nashville
       </div>
     
   </div>
@@ -846,55 +857,14 @@ if (!doNotTrack) {
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
-
-
-<script src="https://www.geoalchemist.com/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script lang="javascript">
-window.onload = updateMinWidth;
-window.onresize = updateMinWidth;
-document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
-function updateMinWidth() {
-  var sidebar = document.getElementById("sidebar");
-  var main = document.getElementById("main");
-  main.style.minWidth = "";
-  var w1 = getComputedStyle(main).getPropertyValue("min-width");
-  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
-  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
-  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
-}
-</script>
+<script src="http://localhost:1313/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
 
 
-  
-    
-      <script>
-        var disqus_config = function () {
-          this.page.url = 'https:\/\/www.geoalchemist.com\/2018\/01\/the-five-normal-forms\/';
-          
-            this.page.identifier = '\/2018\/01\/the-five-normal-forms\/'
-          
-        };
-        (function() {
-          
-          
-          if (window.location.hostname == "localhost") {
-            return;
-          }
-          var d = document, s = d.createElement('script');
-          var disqus_shortname = 'www-geoalchemist-com';
-          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-    
-  
 
 
 
