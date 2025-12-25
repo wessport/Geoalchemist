@@ -2,41 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Geoalchemist</title>
-    <link>https://www.geoalchemist.com/categories/r/</link>
+    <link>http://localhost:1313/categories/r/</link>
     <description>Recent content in R on Geoalchemist</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Census Explorer</title>
-      <link>https://www.geoalchemist.com/2018/09/census-explorer/</link>
+      <link>http://localhost:1313/2018/09/census-explorer/</link>
       <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/2018/09/census-explorer/</guid>
+      <guid>http://localhost:1313/2018/09/census-explorer/</guid>
       <description>&lt;p&gt;&lt;em&gt;This past summer I developed an interactive web map allowing users to visualize census data.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Measuring Crop Growth in R</title>
-      <link>https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/</link>
+      <link>http://localhost:1313/2018/02/measuring-crop-growth-in-r/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/</guid>
-      <description>
-&lt;script src=&#34;https://www.geoalchemist.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;&lt;i&gt;An Example of how to use R to Generate Crop Growth Curves&lt;/i&gt; </description>
+      <guid>http://localhost:1313/2018/02/measuring-crop-growth-in-r/</guid>
+      <description>&lt;script src=&#34;http://localhost:1313/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;p&gt;&lt;i&gt;An Example of how to use R to Generate Crop Growth Curves&lt;/i&gt;</description>
     </item>
-    
     <item>
       <title>Blog Launch</title>
-      <link>https://www.geoalchemist.com/2017/11/blog-launch/</link>
+      <link>http://localhost:1313/2017/11/blog-launch/</link>
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/2017/11/blog-launch/</guid>
+      <guid>http://localhost:1313/2017/11/blog-launch/</guid>
       <description>&lt;p&gt;&lt;em&gt;After much toil, I&amp;rsquo;m finally launching a website to share my misadventures in GIS and programming.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

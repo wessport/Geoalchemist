@@ -2,201 +2,201 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.geoalchemist.com/tags/alltheplaces/</loc>
+    <loc>http://localhost:1313/tags/alltheplaces/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2022/06/optimizing-geometric-search-grids/</loc>
+    <loc>http://localhost:1313/2022/06/optimizing-geometric-search-grids/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/oss/</loc>
+    <loc>http://localhost:1313/tags/oss/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/post/</loc>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/python/</loc>
+    <loc>http://localhost:1313/categories/python/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/python/</loc>
+    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/qgis/</loc>
+    <loc>http://localhost:1313/tags/qgis/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/tech-blogging/</loc>
+    <loc>http://localhost:1313/categories/tech-blogging/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/tech-blogging/</loc>
+    <loc>http://localhost:1313/tags/tech-blogging/</loc>
     <lastmod>2022-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/category1/</loc>
+    <loc>http://localhost:1313/categories/category1/</loc>
     <lastmod>2020-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/category2/</loc>
+    <loc>http://localhost:1313/categories/category2/</loc>
     <lastmod>2020-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/drafts/</loc>
+    <loc>http://localhost:1313/drafts/</loc>
     <lastmod>2020-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2020/11/new-content/</loc>
+    <loc>http://localhost:1313/2020/11/new-content/</loc>
     <lastmod>2020-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/tag1/</loc>
+    <loc>http://localhost:1313/tags/tag1/</loc>
     <lastmod>2020-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/tag2/</loc>
+    <loc>http://localhost:1313/tags/tag2/</loc>
     <lastmod>2020-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/tag3/</loc>
+    <loc>http://localhost:1313/tags/tag3/</loc>
     <lastmod>2020-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/drafts/template/</loc>
+    <loc>http://localhost:1313/drafts/template/</loc>
     <lastmod>2020-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2018/09/census-explorer/</loc>
+    <loc>http://localhost:1313/2018/09/census-explorer/</loc>
     <lastmod>2018-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/gis/</loc>
+    <loc>http://localhost:1313/categories/gis/</loc>
     <lastmod>2018-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/gis/</loc>
+    <loc>http://localhost:1313/tags/gis/</loc>
     <lastmod>2018-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/leaflet/</loc>
+    <loc>http://localhost:1313/tags/leaflet/</loc>
     <lastmod>2018-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/r/</loc>
+    <loc>http://localhost:1313/categories/r/</loc>
     <lastmod>2018-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/r/</loc>
+    <loc>http://localhost:1313/tags/r/</loc>
     <lastmod>2018-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/shiny/</loc>
+    <loc>http://localhost:1313/tags/shiny/</loc>
     <lastmod>2018-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/numpy/</loc>
+    <loc>http://localhost:1313/tags/numpy/</loc>
     <lastmod>2018-02-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2018/02/saving-time-in-python/</loc>
+    <loc>http://localhost:1313/2018/02/saving-time-in-python/</loc>
     <lastmod>2018-02-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/tips/</loc>
+    <loc>http://localhost:1313/tags/tips/</loc>
     <lastmod>2018-02-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/vectorization/</loc>
+    <loc>http://localhost:1313/tags/vectorization/</loc>
     <lastmod>2018-02-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/</loc>
+    <loc>http://localhost:1313/2018/02/measuring-crop-growth-in-r/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/ndvi/</loc>
+    <loc>http://localhost:1313/tags/ndvi/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/phenology-curve/</loc>
+    <loc>http://localhost:1313/tags/phenology-curve/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/remote-sensing/</loc>
+    <loc>http://localhost:1313/categories/remote-sensing/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/remote-sensing/</loc>
+    <loc>http://localhost:1313/tags/remote-sensing/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/rstats/</loc>
+    <loc>http://localhost:1313/tags/rstats/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/database/</loc>
+    <loc>http://localhost:1313/categories/database/</loc>
     <lastmod>2018-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/database/</loc>
+    <loc>http://localhost:1313/tags/database/</loc>
     <lastmod>2018-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/design/</loc>
+    <loc>http://localhost:1313/tags/design/</loc>
     <lastmod>2018-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/normal-forms/</loc>
+    <loc>http://localhost:1313/tags/normal-forms/</loc>
     <lastmod>2018-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/normalization/</loc>
+    <loc>http://localhost:1313/tags/normalization/</loc>
     <lastmod>2018-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2018/01/the-five-normal-forms/</loc>
+    <loc>http://localhost:1313/2018/01/the-five-normal-forms/</loc>
     <lastmod>2018-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/grad-school-cost/</loc>
+    <loc>http://localhost:1313/tags/grad-school-cost/</loc>
     <lastmod>2018-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/grad-school-search/</loc>
+    <loc>http://localhost:1313/tags/grad-school-search/</loc>
     <lastmod>2018-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/grad-school-tips/</loc>
+    <loc>http://localhost:1313/tags/grad-school-tips/</loc>
     <lastmod>2018-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/graduate-school/</loc>
+    <loc>http://localhost:1313/categories/graduate-school/</loc>
     <lastmod>2018-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/graduate-school/</loc>
+    <loc>http://localhost:1313/tags/graduate-school/</loc>
     <lastmod>2018-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2018/01/what-makes-a-graduate-program-valuable/</loc>
+    <loc>http://localhost:1313/2018/01/what-makes-a-graduate-program-valuable/</loc>
     <lastmod>2018-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/jazz/</loc>
+    <loc>http://localhost:1313/tags/jazz/</loc>
     <lastmod>2018-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2018/01/music-for-coding/</loc>
+    <loc>http://localhost:1313/2018/01/music-for-coding/</loc>
     <lastmod>2018-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/playlist/</loc>
+    <loc>http://localhost:1313/categories/playlist/</loc>
     <lastmod>2018-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/playlist/</loc>
+    <loc>http://localhost:1313/tags/playlist/</loc>
     <lastmod>2018-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/sql/</loc>
+    <loc>http://localhost:1313/tags/sql/</loc>
     <lastmod>2017-12-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/sql-basics/</loc>
+    <loc>http://localhost:1313/tags/sql-basics/</loc>
     <lastmod>2017-12-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2017/12/sql-basics-the-where-clause/</loc>
+    <loc>http://localhost:1313/2017/12/sql-basics-the-where-clause/</loc>
     <lastmod>2017-12-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2017/12/sql-basics-the-select-statement/</loc>
+    <loc>http://localhost:1313/2017/12/sql-basics-the-select-statement/</loc>
     <lastmod>2017-12-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2017/11/blog-launch/</loc>
+    <loc>http://localhost:1313/2017/11/blog-launch/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/blogdown/</loc>
+    <loc>http://localhost:1313/tags/blogdown/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/drafts/gis_courses/</loc>
+    <loc>http://localhost:1313/drafts/gis_courses/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/hugo/</loc>
+    <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/tranquilpeak/</loc>
+    <loc>http://localhost:1313/tags/tranquilpeak/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/categories/web-development/</loc>
+    <loc>http://localhost:1313/categories/web-development/</loc>
     <lastmod>2017-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/tags/map-gallery/</loc>
+    <loc>http://localhost:1313/2017/10/map-gallery/</loc>
     <lastmod>2017-10-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/2017/10/map-gallery/</loc>
+    <loc>http://localhost:1313/tags/map-gallery/</loc>
     <lastmod>2017-10-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.geoalchemist.com/archives/</loc>
+    <loc>http://localhost:1313/archives/</loc>
   </url>
 </urlset>

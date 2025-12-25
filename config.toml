@@ -19,10 +19,17 @@ defaultContentLanguage = "en-us"
 title = "Geoalchemist"
 theme = "tranquilpeak"
 disqusShortname = "www-geoalchemist-com"
-googleAnalytics = "UA-111699620-1"
-paginate = 7
+# Google Analytics - commented out until GA4 migration
+# googleAnalytics = "G-XXXXXXXXXX"
+[pagination]
+  pagerSize = 7
 canonifyurls = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", "\\.Rhistory"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [permalinks]
   post = "/:year/:month/:slug/"
@@ -32,17 +39,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   category = "categories"
   archive = "archives"
 
-[author]
+[params.author]
   name = "Wes Porter"
-  bio = "Exploring geospatial data through code."
-  job = "Sr. Location Data Analyst"
-  location = "Knoxville"
-  # Profile picture
+  bio = "Building data pipelines and exploring geospatial data through code."
+  job = "Senior Location Data Analyst"
+  location = "Nashville"
   picture = "https://res.cloudinary.com/wessport/image/upload/c_scale,w_400/v1508186128/me_ggnccn.jpg"
-  # Your Twitter username without the @. E.g : thibaudlepretre
   twitter = "Wes_Port"
-  # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
-  # googlePlus = "+ThibaudLepretre"
 
 
 # Menu Configuration
@@ -213,10 +216,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
     icon = "fa-twitter"
     url = "https://twitter.com/intent/tweet?text=%s"
 
-  [[params.sharingOptions]]
-    name = "Google+"
-    icon = "fa-google-plus"
-    url = "https://plus.google.com/share?url=%s"
+
 
   [params.header.rightLink]
     class = ""

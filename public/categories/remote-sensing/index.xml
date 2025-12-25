@@ -2,23 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Remote Sensing on Geoalchemist</title>
-    <link>https://www.geoalchemist.com/categories/remote-sensing/</link>
+    <link>http://localhost:1313/categories/remote-sensing/</link>
     <description>Recent content in Remote Sensing on Geoalchemist</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.geoalchemist.com/categories/remote-sensing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/remote-sensing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Measuring Crop Growth in R</title>
-      <link>https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/</link>
+      <link>http://localhost:1313/2018/02/measuring-crop-growth-in-r/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.geoalchemist.com/2018/02/measuring-crop-growth-in-r/</guid>
-      <description>
-&lt;script src=&#34;https://www.geoalchemist.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;&lt;i&gt;An Example of how to use R to Generate Crop Growth Curves&lt;/i&gt; </description>
+      <guid>http://localhost:1313/2018/02/measuring-crop-growth-in-r/</guid>
+      <description>&lt;script src=&#34;http://localhost:1313/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;p&gt;&lt;i&gt;An Example of how to use R to Generate Crop Growth Curves&lt;/i&gt;</description>
     </item>
-    
   </channel>
 </rss>
