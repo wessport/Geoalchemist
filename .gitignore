@@ -1,5 +1,7 @@
+# Hugo build output
+public/
+.hugo_build.lock
 
+# R artifacts (legacy)
 .Rproj.user*
 .Rhistory
-.Rhistory
-.Rproj.user
