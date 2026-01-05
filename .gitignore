@@ -1,5 +1,6 @@
-
 .Rproj.user*
 .Rhistory
-.Rhistory
 .Rproj.user
+
+# Reference files
+blog_post_geoalchemist_version.md
