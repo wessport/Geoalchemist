@@ -2,6 +2,9 @@
 public/
 .hugo_build.lock
 
+# IDE
+.idea/
+
 # R artifacts (legacy)
 .Rproj.user*
 .Rhistory
