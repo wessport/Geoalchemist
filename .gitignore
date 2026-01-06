@@ -5,3 +5,6 @@ public/
 # R artifacts (legacy)
 .Rproj.user*
 .Rhistory
+
+# Reference files
+blog_post_geoalchemist_version.md
