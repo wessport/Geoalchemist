@@ -17,12 +17,29 @@ hugo server
 hugo
 ```
 
+## Git Configuration
+
+**Author info for this repo:**
+- Name: `wessport`
+- Email: `wesporter92@gmail.com`
+
+When committing, always use:
+```bash
+GIT_AUTHOR_NAME="wessport" GIT_AUTHOR_EMAIL="wesporter92@gmail.com" \
+GIT_COMMITTER_NAME="wessport" GIT_COMMITTER_EMAIL="wesporter92@gmail.com" \
+git commit --no-verify -m "message"
+```
+
+**IMPORTANT:** Do NOT include any AI assistant trailers or co-author lines in commits:
+- No `Co-authored-by: Amp` or similar
+- No `Amp-Thread-ID` or similar thread references
+- No mentions of `ampcode.com` or `ampcode-com`
+
 ## Workflow
 
 - Use feature branches for major changes (e.g., `site-revival-2025`)
 - Test that `hugo` builds successfully before committing
 - Direct commits to `main` acceptable for minor fixes
-- **Do not include Amp co-author trailers in commits** (no `Co-authored-by: Amp` or `Amp-Thread-ID`)
 
 ## Content
 
