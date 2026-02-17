@@ -33,6 +33,8 @@ tags:
 
 {{< youtube i48gRGkBZEE >}}
 
+**[Try the live demo →](https://ai-loc-extraction-demo.onrender.com)**
+
 *How I replaced a vendor moderation task with an LLM-powered pipeline, cutting costs by 99.4%.*
 
 <!--more-->
