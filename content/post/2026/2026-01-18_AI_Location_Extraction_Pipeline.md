@@ -31,6 +31,8 @@ tags:
 - llm
 ---
 
+{{< youtube i48gRGkBZEE >}}
+
 *How I replaced a vendor moderation task with an LLM-powered pipeline, cutting costs by 99.4%.*
 
 <!--more-->
