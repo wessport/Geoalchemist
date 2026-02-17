@@ -28,7 +28,7 @@ tags:
 - developer-tools
 ---
 
-*How I built a Streamlit App from Scratch using Amp AI agents.*
+*Building a Streamlit App from Scratch using Amp.*
 
 <!--more-->
 
@@ -144,9 +144,13 @@ After making changes, I have the AI agent run `streamlit run` in a separate tmux
 
 ---
 
-# Closing Thoughts #
+# Closing Thoughts on AI Development #
 
 AI is a powerful tool **_if used in the right context_**. 
+
+I think this quote from Geoffrey Huntley sums it up:
+
+> _In my view, LLMs are essentially mirrors. They mirror the skill of the operator._
 
 It unlocks the ability to create efficiency wins quickly - but its only as good as the user's domain knowledge. Without that, it has the poential to have the opposite effect.
 
