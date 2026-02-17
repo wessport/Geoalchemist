@@ -44,21 +44,21 @@ tags:
 
 # Background #
 
-As part of my day-to-day, I help maintain a location database at Indeed that powers how job postings and searches resolve to geographic locations. 
+As part of my day-to-day, I help maintain and curate a location database at Indeed that powers how job postings and searches resolve to geographic locations.
 
-When someone searches for jobs in "Nashville, TN" or "Nashville, Davidson County, TN" our database acts as an atlas, helping determine what location that search maps to.
+When someone searches for jobs in "Nashville, TN" or "Nashville, Davidson County, TN" our database acts as a global atlas, helping determine what location that search maps to. Think Google Maps, but for jobs!
 
-Sounds simple enough, right?
+At first, this might sound fairly straight forward.
 
-The challenge is that location data is **_messy_**. There are countless variations of how people type locations (unstructured, non-normalized data), and our database/geocoder has to handle all of them gracefully.
+Real world location data is **_messy_** though - and full of nuance. There are countless variations of how people type locations (unstructured, non-normalized data), and our database/geocoder has to handle all of them gracefully.
 
 Before any changes go to production, we run Regression Reports to catch potential problems. These reports compare how location queries resolve in our current production environment versus a QA environment with proposed changes.
 
-# The Problem #
+# Predicting Change #
 
 Enter the regression report.
 
-A regression report shows **all** changes between environments—every location query that would resolve differently after an update. For a typical database change, we're looking at **_*thousands_** of rows to review.
+A regression report shows **all** changes between environments - every location query that would resolve differently after an update. For a typical database change, we're looking at **_*thousands_** of rows to review.
 
 ![A witty gif](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDMyejAyZW5lcGF6cjNlY294eDJld2Fha2o5b3VhYzYya3o4ZHdjbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IxLeSDtUaZRmSiyCTf/giphy.gif)
 
@@ -74,7 +74,7 @@ I thought there had to be a better way.
 
 # Enter Amp #
 
-I'd been experimenting with [Amp by Sourcegraph](https://ampcode.com/)—an AI coding agent—for various tasks. What caught my attention was Amp's ability to work with structured workflows and follow detailed instructions consistently.
+I'd been experimenting with [Amp by Sourcegraph](https://ampcode.com/), an AI coding agent for various tasks. What caught my attention was Amp's ability to work with structured workflows and follow detailed instructions consistently.
 
 So I asked myself: could I teach an AI agent to understand Indeed-specific regression reports the way a location analyst does?
 
@@ -107,15 +107,15 @@ I created two key documents that Amp references:
 First, I wrote `AI_Rules_for_Interpreting_Regression_Reports.md`—a reference document explaining key concepts:
 
 - What a "changeset" is (Prod vs QA row pairs)
-- Location types (COUNTRY, ADMIN1-4, CITY, ZIPCODE, POSTAL_PLACE, etc.)
+- Location types (COUNTRY, ADMIN, CITY, ZIPCODE, etc.)
 - What constitutes a positive vs negative change
-- Common terminology (LocDB, Canonical, Alias, etc.)
+- Common terminology (Canonical, Alias, etc.)
 
 This gives the agent the same foundational knowledge a new analyst would need.
 
 ### Output Standards ###
 
-Second, I created `AGENT.md`—a detailed specification for how reports should be generated:
+Second, I created `AGENT.md` with a detailed specification for how reports should be generated:
 
 ```markdown
 ## HTML Report Structure
@@ -143,7 +143,7 @@ One memorable example:
 
 Sounds alarming, right? 
 
-Except those COUNTY records were legacy data from before our team existed—not actual counties, but a mixed bag of random geographic entities. Removing them was intentional cleanup, not a catastrophe.
+*Except those COUNTY records were legacy data from before our team existed — not actual counties, but a mixed bag of random geographic entities. Removing them was intentional cleanup, not a catastrophe.
 
 I added explicit guidance to the AGENT.md:
 
@@ -157,13 +157,13 @@ I added explicit guidance to the AGENT.md:
   "resolution changes," "fallback behavior," "type transitions"
 ```
 
-This reflects a key lesson: **the AI is only as good as the context you provide.** It didn't know that COUNTY types were legacy junk. Once I gave it the proper context, the outputs became much more useful.
+This reflected a key lesson: **the AI is only as good as the context you provide.** It didn't know that COUNTY types were legacy junk. Once I gave it the proper context, the outputs became much more useful.
 
 # Results #
 
 We've gone from a process that took **at least a full business day** to one that takes **seconds** to generate an initial summary.
 
-We still review the reports—this tool doesn't replace human judgment. But **it surfaces the most important issues immediately**, letting analysts focus their time on changes that actually need investigation.
+We still review the reports. This tool doesn't replace human judgment. But **it surfaces the most important issues to us immediately**, letting analysts focus their time on changes that actually need investigation.
 
 Some quick math on time savings:
 

@@ -30,7 +30,7 @@ tags:
 - developer-tools
 ---
 
-*How Cursor's browser feature closes the feedback loop for AI-assisted UI development.*
+*Exploring Cursor's browser feature to close the feedback loop for AI-assisted UI development.*
 
 <!--more-->
 
