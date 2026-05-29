@@ -35,6 +35,17 @@ git commit --no-verify -m "message"
 - No `Amp-Thread-ID` or similar thread references
 - No mentions of `ampcode.com` or `ampcode-com`
 
+Before pushing any branch, verify new commits do not contain forbidden AI metadata:
+```bash
+git log origin/$(git branch --show-current)..HEAD --format=%B | \
+  grep -E 'Co-authored-by: Amp|Amp-Thread-ID|ampcode' && \
+  echo "ERROR: forbidden AI metadata found"
+```
+
+If forbidden metadata appears, rewrite the affected commit message before pushing. Do not rely on `git commit --amend` if the local environment is auto-inserting trailers; recreate the commit with an explicit clean message instead, then re-run the verification above.
+
+Pull request descriptions must also avoid AI assistant metadata and should not mention Amp, ampcode.com, thread IDs, or co-authoring by an AI assistant.
+
 ## Workflow
 
 - Use feature branches for major changes (e.g., `site-revival-2025`)
