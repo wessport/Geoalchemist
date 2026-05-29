@@ -11,3 +11,22 @@ public/
 
 # Reference files
 blog_post_geoalchemist_version.md
+
+# Environment variables (contains secrets)
+.env
+
+# Python virtual environment
+.venv/
+
+# macOS metadata
+.DS_Store
+
+# Local agent/tooling artifacts (not part of the Hugo site)
+.agents/
+utils/
+
+# Local source material and private notes
+Geoalchemist_photos/
+GEODATA-9134_epic_completion_update.md
+Self_Eval_Archive.md
+resume-forge-project-summary.md
