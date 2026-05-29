@@ -12,6 +12,9 @@ public/
 # Reference files
 blog_post_geoalchemist_version.md
 
+# Local unpublished drafts
+_drafts/
+
 # Environment variables (contains secrets)
 .env
 
