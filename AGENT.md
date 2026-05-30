@@ -51,6 +51,7 @@ Pull request descriptions must also avoid AI assistant metadata and should not m
 - Use feature branches for major changes (e.g., `site-revival-2025`)
 - Test that `hugo` builds successfully before committing
 - Direct commits to `main` acceptable for minor fixes
+- Do not merge pull requests without explicit user approval. It is okay to open, update, review, and summarize PRs, but stop before merge and ask for confirmation unless the user has clearly said to merge that specific PR.
 
 ## Content
 
