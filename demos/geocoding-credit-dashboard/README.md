@@ -17,6 +17,7 @@ python app.py
 Render free tier deployment:
 
 - Runtime: Python 3
+- Python version: set by the repo-root `.python-version`
 - Build command: `pip install -r requirements.txt`
 - Start command: `gunicorn app:server`
 - Root directory: `demos/geocoding-credit-dashboard`
