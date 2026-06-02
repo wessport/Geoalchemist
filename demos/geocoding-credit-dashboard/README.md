@@ -1,9 +1,9 @@
- Geocoding Credit Dashboard Demo
-=================================
+Geocoding Credit Dashboard
+==========================
 
-Public Dash/Plotly demo for a geocoding credit usage dashboard.
+Dash/Plotly example for a geocoding credit usage dashboard.
 
-The app uses generated synthetic data only. It does not connect to internal data sources, include real vendor pricing, or expose operational metrics.
+The app uses generated sample data only. It does not connect to live data sources, include real pricing, or expose operational metrics.
 
 Local development:
 

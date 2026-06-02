@@ -20,6 +20,8 @@ _drafts/
 
 # Python virtual environment
 .venv/
+__pycache__/
+*.pyc
 
 # macOS metadata
 .DS_Store
