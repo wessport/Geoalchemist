@@ -30,7 +30,11 @@ tags:
 - cost-monitoring
 ---
 
-**[View the dashboard →](https://geocoding-credit-dashboard-demo.onrender.com)**
+**[Try the live demo →](https://geocoding-credit-dashboard-demo.onrender.com)**
+
+*Dash/Plotly dashboard for monitoring geocoding credit usage in real time.*
+
+<!--more-->
 
 Lately - have had fun creating dashboards in via Dash/Plotly to help us monitor our geocoding credit usage in real time. The dashboard has already helped us track down a few unusual patterns in Japan that we are targeting for cost savings. 
 
