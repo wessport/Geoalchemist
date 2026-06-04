@@ -5,7 +5,7 @@ date: 2026-06-01
 
 autoThumbnailImage: false
 thumbnailImagePosition: "left"
-thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1780429571/blog/2026/geocoding-credit-dashboard-cover.jpg
+thumbnailImage: https://res.cloudinary.com/wessport/image/upload/v1780535731/blog/2026/noun-dashboard.png
 coverImage: https://res.cloudinary.com/wessport/image/upload/v1780429571/blog/2026/geocoding-credit-dashboard-cover.jpg
 metaAlignment: center
 coverMeta: in
