@@ -1,0 +1,308 @@
+/* Commute Vendor Analysis Dashboard — Light theme
+   Styled to match jobseeker-feedback-dash light theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-input: #f3f4f6;
+    --border-color: #e5e7eb;
+    --border-color-hover: #d1d5db;
+    --text-primary: #111827;
+    --text-secondary: #374151;
+    --text-muted: #6b7280;
+    --accent-teal: #00BFC4;
+    --accent-blue: #619CFF;
+    --accent-orange: #F8766D;
+    --accent-pink: #E76BF3;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Main container */
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 40px;
+}
+
+/* Header */
+.dashboard-header {
+    text-align: center;
+    padding: 48px 0 32px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 0 0 12px;
+    color: var(--text-primary);
+}
+
+.dashboard-header p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Controls bar */
+.controls-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px 24px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.control-group label {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Dash dropdown overrides */
+.Select-control {
+    background-color: var(--bg-input) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--radius-md) !important;
+    font-family: inherit !important;
+    font-size: 0.875rem !important;
+}
+
+.Select-menu-outer {
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--radius-md) !important;
+    background-color: var(--bg-secondary) !important;
+    font-size: 0.875rem !important;
+}
+
+/* Section cards */
+.section-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    margin-bottom: 32px;
+}
+
+.section-card:hover {
+    border-color: var(--border-color-hover);
+}
+
+.section-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Methodology */
+.methodology-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    margin-bottom: 32px;
+}
+
+.methodology-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 12px;
+}
+
+.methodology-card p,
+.methodology-card li {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+.methodology-card strong {
+    color: var(--text-primary);
+}
+
+/* Stat cards row */
+.stat-cards-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 180px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    text-align: center;
+}
+
+.stat-card:hover {
+    border-color: var(--border-color-hover);
+}
+
+.stat-card .label {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.stat-card .value {
+    color: var(--text-primary);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.stat-card .value.accent-teal { color: var(--accent-teal); }
+.stat-card .value.accent-blue { color: var(--accent-blue); }
+.stat-card .value.accent-orange { color: var(--accent-orange); }
+
+/* Charts */
+.charts-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.chart-card {
+    min-width: 0;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.dash-graph,
+.js-plotly-plot,
+.plot-container,
+.svg-container {
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+.chart-card:hover {
+    border-color: var(--border-color-hover);
+}
+
+.chart-title {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.chart-full {
+    grid-column: 1 / -1;
+}
+
+.city-list-card {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+    padding: 16px 20px;
+}
+
+.city-list-card h4 {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.city-list-card ul {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Tables */
+.table-container {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+
+.table-container h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+}
+
+@media (max-width: 1000px) {
+    .dashboard-container {
+        padding: 24px 20px;
+    }
+
+    .charts-row {
+        grid-template-columns: 1fr;
+    }
+
+    .section-card,
+    .methodology-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard-container {
+        padding: 16px 12px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 1.75rem;
+    }
+}
