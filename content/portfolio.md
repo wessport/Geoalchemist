@@ -26,7 +26,7 @@ For the longer story, see [About me](/about/).
 
 <div class="portfolio-card">
   <h3>Carmen: places database editor</h3>
-  <img src="/images/portfolio/carmen.svg" alt="Carmen: inspect a place on the map, then edit it with a change preview.">
+  <img class="portfolio-shot" src="/images/portfolio/carmen.png" alt="Carmen place detail view with an interactive map">
   <p>A validated, transactional web app that replaced hand-written SQL for creating, editing, and deactivating point-of-interest records.</p>
   <p class="portfolio-tags"><span>Python</span><span>Flask</span><span>MySQL</span><span>Leaflet</span></p>
 </div>
@@ -54,7 +54,7 @@ For the longer story, see [About me](/about/).
 
 <div class="portfolio-card">
   <h3>Location labeling studio</h3>
-  <img src="/images/portfolio/labeling-studio.svg" alt="Labeling studio: review the model's extracted address, then highlight the correct one.">
+  <img class="portfolio-shot" src="/images/portfolio/labeling-studio.jpg" alt="Location labeling studio queue: the model's extracted address next to the job description">
   <p>Human review of model-extracted street addresses: a shared queue, highlight-to-correct labeling, immutable revisions, and snapshots that feed retraining.</p>
   <p class="portfolio-tags"><span>Python</span><span>Flask</span><span>Trino</span></p>
 </div>

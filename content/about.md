@@ -11,7 +11,9 @@ coverImage: /images/about/map-banner.jpg
 coverMeta: in
 ---
 
-Hi I'm Wes Porter, an analytics engineer, geospatial dev, and past-time photographer currently based in Nashville, Tennessee (but you might find me at a coffeeshop in NYC, Austin, or Chicago depending on the time of year). 
+<style>.post-header-cover { height: 220px !important; padding: 30px 0 !important; }</style>
+
+Hi I'm **Wes Porter**, an analytics engineer, geospatial dev, and past-time photographer currently based in Nashville, Tennessee (but you might find me at a coffeeshop in NYC, Austin, or Chicago depending on the time of year). 
 
 # Helping Jobseekers at Indeed
 
