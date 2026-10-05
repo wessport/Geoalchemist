@@ -30,9 +30,9 @@ I enjoy the type of work that requires creative thinking, a bit of resourcefulne
 
 This usually involves finding a painstaking or complex task and turning it into a system the team can run, test, measure, and maintain.
 
-One recent example: an [AI pipeline that replaced a manual vendor review task]({{< ref "post/2026/2026-01-18_AI_Location_Extraction_Pipeline.md" >}}). It cut about $90K a year in vendor spend and raised our throughput from roughly 120 to more than 4,200 jobs per day at about 95% accuracy.
+One recent example: an [AI pipeline that replaced a manual vendor review task]({{< ref "post/2026/2026-01-18_AI_Location_Extraction_Pipeline.md" >}}). It cut about **$90K a year in vendor spend** and raised our throughput from roughly 120 to more than 4,200 jobs per day at about **95% accuracy**.
 
-For quick summaries of recent projects, see my [portfolio](/portfolio/).
+For quick summaries of recent projects, **see my [portfolio](/portfolio/)**.
 
 # How I approach my work
 
@@ -65,7 +65,7 @@ For quick summaries of recent projects, see my [portfolio](/portfolio/).
 
 At an Indeed hackathon I presented GeoAmenities, a map-based job search prototype that scored each job by the transit stops and routes nearby, to the person who is now Indeed's CEO.
 
-{{< image classes="fancybox fig-50" src="/images/about/hackathon-demo-1.jpg" title="Demoing GeoAmenities at the hackathon" group="hackathon" >}}
+{{< image classes="fancybox fig-50" src="/images/about/hackathon-demo-1.jpg" title="Demoing GeoAmenities at the hackathon to our CEO" group="hackathon" >}}
 {{< image classes="fancybox fig-50 clear" src="/images/about/hackathon-demo-2.jpg" title="Talking through the project" group="hackathon" >}}
 
 {{< image classes="fancybox center fig-100" src="/images/about/geoamenities-map.jpg" title="GeoAmenities: jobs in Austin colored by transit score" group="hackathon" >}}
@@ -79,5 +79,7 @@ At an Indeed hackathon I presented GeoAmenities, a map-based job search prototyp
 - **2025–2026:** Production AI: LLM extraction, feedback classification, labeling workflows, and documenting how teams can make repositories clear to AI agents.
 
 # Elsewhere
+
+<!-- Contact: add your email here, e.g. [Email](mailto:you@example.com) · -->
 
 [GitHub](https://github.com/wessport) · [LinkedIn](https://www.linkedin.com/in/wes-porter-10250488/)
