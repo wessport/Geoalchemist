@@ -80,6 +80,4 @@ At an Indeed hackathon I presented GeoAmenities, a map-based job search prototyp
 
 # Elsewhere
 
-<!-- Contact: add your email here, e.g. [Email](mailto:you@example.com) · -->
-
-[GitHub](https://github.com/wessport) · [LinkedIn](https://www.linkedin.com/in/wes-porter-10250488/)
+[Email](mailto:wesporter92@gmail.com) · [GitHub](https://github.com/wessport) · [LinkedIn](https://www.linkedin.com/in/wes-porter-10250488/)

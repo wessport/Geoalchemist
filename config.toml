@@ -19,8 +19,8 @@ defaultContentLanguage = "en-us"
 title = "Geoalchemist"
 theme = "tranquilpeak"
 # Analytics: paste your GA4 Measurement ID (G-...) below and uncomment both lines.
-# [services.googleAnalytics]
-#   ID = "G-XXXXXXXXXX"
+[services.googleAnalytics]
+  ID = "G-P2E4MNPFGY"
 
 [pagination]
   pagerSize = 7
@@ -94,13 +94,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\"></i>"
   url = "https://github.com/wessport"
 
-# Contact: uncomment and add your email to show it in the sidebar.
-# [[menu.links]]
-#   weight = 4
-#   identifier = "email"
-#   name = "Email"
-#   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-envelope\"></i>"
-#   url = "mailto:you@example.com"
+[[menu.links]]
+  weight = 6
+  identifier = "email"
+  name = "Email"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-envelope\"></i>"
+  url = "mailto:wesporter92@gmail.com"
 
 [[menu.links]]
   weight = 3
