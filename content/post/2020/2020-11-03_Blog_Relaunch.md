@@ -1,4 +1,5 @@
 ---
+hiddenFromHome: true
 title: "New Content"
 author: "Wes"
 date: 2020-11-03

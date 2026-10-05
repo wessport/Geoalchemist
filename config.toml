@@ -18,9 +18,10 @@ languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "Geoalchemist"
 theme = "tranquilpeak"
-disqusShortname = "www-geoalchemist-com"
-# Google Analytics - commented out until GA4 migration
-# googleAnalytics = "G-XXXXXXXXXX"
+# Analytics: paste your GA4 Measurement ID (G-...) below and uncomment both lines.
+# [services.googleAnalytics]
+#   ID = "G-XXXXXXXXXX"
+
 [pagination]
   pagerSize = 7
 canonifyurls = true
@@ -93,6 +94,14 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\"></i>"
   url = "https://github.com/wessport"
 
+# Contact: uncomment and add your email to show it in the sidebar.
+# [[menu.links]]
+#   weight = 4
+#   identifier = "email"
+#   name = "Email"
+#   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-envelope\"></i>"
+#   url = "mailto:you@example.com"
+
 [[menu.links]]
   weight = 3
   identifier = "linkedin"
@@ -142,7 +151,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "Wes Porter - Misadventures in GIS and programming."
+  description = "Wes Porter - Analytics engineer working with location data, GIS, and Python."
 
   # Customization
   # Define the behavior of the sidebar
@@ -213,26 +222,25 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   # If you wanna add a sharing option, read user documentation :
   # Tranquilpeak configuration > Theme configuration > sharing-options
   [[params.sharingOptions]]
-    name = "Facebook"
-    icon = "fa-facebook-official"
-    url = "https://www.facebook.com/sharer/sharer.php?u=%s"
-
-  [[params.sharingOptions]]
-    name = "Twitter"
-    icon = "fa-twitter"
-    url = "https://twitter.com/intent/tweet?text=%s"
+    name = "LinkedIn"
+    icon = "fab fa-linkedin"
+    url = "https://www.linkedin.com/sharing/share-offsite/?url=%s"
 
 
 
   [params.header.rightLink]
     class = ""
     icon = ""
-    url = "/#about"
+    url = "/about/"
 
   # Customize link of author avatar in sidebar
-  # [params.sidebar.profile]
-  #   url = "/#about"
+  [params.sidebar.profile]
+    url = "/about/"
 
   # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
   # [params.footer]
   #   copyright = "<a href=\"https://github.com/kakawait\">kakawait</a>"
+
+# Comments are off: Disqus disabled.
+[privacy.disqus]
+  disable = true
