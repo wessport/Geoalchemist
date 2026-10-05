@@ -78,6 +78,10 @@ At an Indeed hackathon I presented GeoAmenities, a map-based job search prototyp
 - **2024–2025:** Owning team systems: self-service regression workflows, dashboards, repository maintenance, and retiring legacy applications.
 - **2025–2026:** Production AI: LLM extraction, feedback classification, labeling workflows, and documenting how teams can make repositories clear to AI agents.
 
-# Elsewhere
-
-[Email](mailto:wesporter92@gmail.com) · [GitHub](https://github.com/wessport) · [LinkedIn](https://www.linkedin.com/in/wes-porter-10250488/)
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 2em; margin-top: 1.75em;">
+  <div>
+    <h1 id="elsewhere" style="margin-top: 0;">Elsewhere</h1>
+    <p><a href="mailto:wesporter92@gmail.com">Email</a> · <a href="https://github.com/wessport">GitHub</a> · <a href="https://www.linkedin.com/in/wes-porter-10250488/">LinkedIn</a></p>
+  </div>
+  <img src="/images/brand/skull-globe-blue.svg" alt="Geoalchemist skull-and-globe mark" width="88" height="88" style="flex: none; margin: 13px 0 0;">
+</div>

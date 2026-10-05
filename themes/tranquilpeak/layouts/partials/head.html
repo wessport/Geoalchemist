@@ -29,7 +29,9 @@
     {{ partial "meta.html" . }}
     <title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
 
-    <link rel="icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}/favicon.png{{ end }}">
+    <link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
+    <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
     {{ with .OutputFormats.Get "RSS" }}
       <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ .RelPermalink }}">
     {{ end }}
