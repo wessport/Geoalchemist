@@ -207,6 +207,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   # they have to be referred from static root. Example
   # [[params.customCSS]]
   #   href = "css/mystyle.css"
+  [[params.customCSS]]
+    href = "css/custom-fonts.css"
 
   # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
   # they have to be referred from static root. Example
