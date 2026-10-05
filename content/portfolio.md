@@ -9,7 +9,7 @@ comments: false
 metaAlignment: center
 ---
 
-A few projects I've built on the Location Data team at Indeed. Where I've written a longer post, the title links to it. The images are illustrative diagrams, not screenshots of internal tools or data.
+A few projects I've built on the Location Data team at Indeed. Where I've written a longer post, the title links to it.
 
 For the longer story, see [About me](/about/).
 
@@ -18,6 +18,7 @@ For the longer story, see [About me](/about/).
   .portfolio-card h3 { margin: 0 0 12px; }
   .portfolio-card img { width: 100%; height: auto; display: block; margin: 0 0 12px; }
   .portfolio-card p { margin: 0 0 10px; }
+  .portfolio-card img.portfolio-shot { border: 2px solid #E1E5EA; border-radius: 12px; }
   .portfolio-tags span { display: inline-block; font-size: 0.75em; letter-spacing: 0.04em; text-transform: uppercase; color: #4A5260; background: #EEF1F5; border-radius: 4px; padding: 2px 8px; margin: 0 6px 6px 0; }
 </style>
 
@@ -25,7 +26,7 @@ For the longer story, see [About me](/about/).
 
 <div class="portfolio-card">
   <h3>Carmen: places database editor</h3>
-  <img src="/images/portfolio/carmen.svg" alt="Search for a place, then edit it with a change preview, duplicate check, single transaction, and audit trail.">
+  <img src="/images/portfolio/carmen.svg" alt="Carmen: inspect a place on the map, then edit it with a change preview.">
   <p>A validated, transactional web app that replaced hand-written SQL for creating, editing, and deactivating point-of-interest records.</p>
   <p class="portfolio-tags"><span>Python</span><span>Flask</span><span>MySQL</span><span>Leaflet</span></p>
 </div>
@@ -39,7 +40,7 @@ For the longer story, see [About me](/about/).
 
 <div class="portfolio-card">
   <h3><a href="{{< ref "post/2026/2026-06-01_Geocoding_Credit_Dashboard.md" >}}">Geocoding credit &amp; volume dashboard</a></h3>
-  <img src="/images/portfolio/geocoding-dashboard.svg" alt="Request logs by stream feed a dashboard of spend, cache hit rate, market share, and a 30-day projection.">
+  <img class="portfolio-shot" src="https://res.cloudinary.com/wessport/image/upload/v1780430945/blog/2026/geocoding-credit-dashboard-screenshot.png" alt="Geocoding credit dashboard demo with sample data">
   <p>Makes geocoding and autocomplete spend, cache behavior, and market usage visible, with a 30-day burn projection. <a href="https://geocoding-credit-dashboard-demo.onrender.com">Live demo</a> (sample data).</p>
   <p class="portfolio-tags"><span>Plotly Dash</span><span>Python</span><span>SQL</span></p>
 </div>
@@ -53,7 +54,7 @@ For the longer story, see [About me](/about/).
 
 <div class="portfolio-card">
   <h3>Location labeling studio</h3>
-  <img src="/images/portfolio/labeling-studio.svg" alt="A model highlights an address in a job description, then a reviewer confirms or corrects it.">
+  <img src="/images/portfolio/labeling-studio.svg" alt="Labeling studio: review the model's extracted address, then highlight the correct one.">
   <p>Human review of model-extracted street addresses: a shared queue, highlight-to-correct labeling, immutable revisions, and snapshots that feed retraining.</p>
   <p class="portfolio-tags"><span>Python</span><span>Flask</span><span>Trino</span></p>
 </div>
