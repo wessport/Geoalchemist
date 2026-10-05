@@ -58,7 +58,9 @@
   {{ end }}
 {{ end }}
 
-{{ if .Scratch.Get "gravatarEmail" }}
+{{ if or .Params.coverImage .Params.thumbnailImage .Params.gallery }}
+  {{/* Page images below take precedence for link previews */}}
+{{ else if .Scratch.Get "gravatarEmail" }}
   <meta property="og:image" content="https://www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
 {{ else if .Site.Params.author.picture }}

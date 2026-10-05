@@ -18,9 +18,10 @@ languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "Geoalchemist"
 theme = "tranquilpeak"
-disqusShortname = "www-geoalchemist-com"
-# Google Analytics - commented out until GA4 migration
-# googleAnalytics = "G-XXXXXXXXXX"
+# Analytics: paste your GA4 Measurement ID (G-...) below and uncomment both lines.
+[services.googleAnalytics]
+  ID = "G-P2E4MNPFGY"
+
 [pagination]
   pagerSize = 7
 canonifyurls = true
@@ -55,53 +56,67 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
   url = "/"
 [[menu.main]]
-  weight = 2
+  weight = 3
   identifier = "categories"
   name = "Categories"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
   url = "/categories"
 [[menu.main]]
-  weight = 3
+  weight = 4
   identifier = "tags"
   name = "Tags"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tags\"></i>"
   url = "/tags"
 [[menu.main]]
-  weight = 4
+  weight = 5
   identifier = "archives"
   name = "Archives"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
   url = "/archives"
 [[menu.main]]
-  weight = 5
-  identifier = "about"
-  name = "About"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
-  url = "/#about"
+  weight = 2
+  identifier = "portfolio"
+  name = "Portfolio"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-briefcase\"></i>"
+  url = "/portfolio/"
 
 [[menu.links]]
   weight = 1
+  identifier = "about"
+  name = "About"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
+  url = "/about/"
+
+[[menu.links]]
+  weight = 2
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\"></i>"
   url = "https://github.com/wessport"
 
 [[menu.links]]
-  weight = 2
+  weight = 6
+  identifier = "email"
+  name = "Email"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-envelope\"></i>"
+  url = "mailto:wesporter92@gmail.com"
+
+[[menu.links]]
+  weight = 3
   identifier = "linkedin"
   name = "LinkedIn"
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-linkedin\"></i>"
   url = "https://www.linkedin.com/in/wes-porter-10250488/"
 
 [[menu.links]]
-  weight = 3
+  weight = 4
   identifier = "maps"
   name = "Map Gallery"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-map\"></i>"
   url = "/2017/10/map-gallery/"
 
 [[menu.links]]
-  weight = 4
+  weight = 5
   identifier = "photography"
   name = "Photography"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-camera\"></i>"
@@ -135,7 +150,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "Wes Porter - Misadventures in GIS and programming."
+  description = "Wes Porter - Analytics engineer working with location data, GIS, and Python."
 
   # Customization
   # Define the behavior of the sidebar
@@ -191,6 +206,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   # they have to be referred from static root. Example
   # [[params.customCSS]]
   #   href = "css/mystyle.css"
+  [[params.customCSS]]
+    href = "css/custom-fonts.css"
 
   # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
   # they have to be referred from static root. Example
@@ -206,26 +223,25 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "\\.DS_Store", 
   # If you wanna add a sharing option, read user documentation :
   # Tranquilpeak configuration > Theme configuration > sharing-options
   [[params.sharingOptions]]
-    name = "Facebook"
-    icon = "fa-facebook-official"
-    url = "https://www.facebook.com/sharer/sharer.php?u=%s"
-
-  [[params.sharingOptions]]
-    name = "Twitter"
-    icon = "fa-twitter"
-    url = "https://twitter.com/intent/tweet?text=%s"
+    name = "LinkedIn"
+    icon = "fab fa-linkedin"
+    url = "https://www.linkedin.com/sharing/share-offsite/?url=%s"
 
 
 
   [params.header.rightLink]
     class = ""
     icon = ""
-    url = "/#about"
+    url = "/about/"
 
   # Customize link of author avatar in sidebar
-  # [params.sidebar.profile]
-  #   url = "/#about"
+  [params.sidebar.profile]
+    url = "/about/"
 
   # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
   # [params.footer]
   #   copyright = "<a href=\"https://github.com/kakawait\">kakawait</a>"
+
+# Comments are off: Disqus disabled.
+[privacy.disqus]
+  disable = true

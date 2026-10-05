@@ -1,0 +1,12 @@
+/* Site font: Inter replaces the theme's Merriweather (body) and Open Sans (UI/headings). */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&display=swap");
+
+html, body, h1, h2, h3, h4, h5, h6, #sidebar, .caption,
+.image-gallery .image-gallery-metabar,
+.post .post-meta, .post .post-content,
+.post-header-cover .post-header .post-meta,
+.postShorten .postShorten-meta, .postShorten .postShorten-readingtime,
+.postShorten .postShorten-excerpt_link, .postShorten .postShorten-excerpt,
+.postShorten .postShorten-content, .font-merryweather {
+  font-family: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}

@@ -1,4 +1,5 @@
 ---
+hiddenFromHome: true
 title: "What Makes a Graduate Program Valuable?"
 date: 2018-01-16
 autoThumbnailImage: true

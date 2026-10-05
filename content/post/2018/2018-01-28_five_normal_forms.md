@@ -1,4 +1,5 @@
 ---
+hiddenFromHome: true
 title: "The Five Normal Forms"
 date: 2018-01-28
 autoThumbnailImage: true

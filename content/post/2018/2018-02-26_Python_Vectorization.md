@@ -1,4 +1,5 @@
 ---
+hiddenFromHome: true
 title: "Saving Time in Python"
 author: "Wes"
 date: 2018-02-26

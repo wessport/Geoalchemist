@@ -1,4 +1,5 @@
 ---
+hiddenFromHome: true
 title: "Blog Launch"
 author: "Wes"
 date: 2017-11-03

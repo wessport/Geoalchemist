@@ -1,4 +1,5 @@
 ---
+hiddenFromHome: true
 title: "SQL Basics: The SELECT Statement"
 date: 2017-12-15
 autoThumbnailImage: true
