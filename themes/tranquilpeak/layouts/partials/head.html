@@ -24,6 +24,9 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
+    {{- if site.Config.Services.GoogleAnalytics.ID }}
+    {{ partial "google-analytics.html" . }}
+    {{- end }}
     {{ partial "head_start.html" . }}
     {{ partial "schema.html" . }}
     {{ partial "meta.html" . }}
@@ -58,8 +61,5 @@
       {{ end }}
     {{ end }}
 
-    {{- if site.Config.Services.GoogleAnalytics.ID }}
-      {{- partial "google-analytics.html" . }}
-    {{- end }}
     {{ partial "head_end.html" . }}
   </head>
