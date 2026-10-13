@@ -26,10 +26,17 @@ For the longer story, see [About me](/about/).
 <div class="portfolio-grid">
 
 <div class="portfolio-card">
-  <h3>Carmen: places database editor</h3>
-  <img class="portfolio-shot" src="/images/portfolio/carmen-place-detail.png" alt="Carmen place detail view with an interactive map">
-  <p>A validated, transactional web app that replaced hand-written SQL for creating, editing, and deactivating point-of-interest records.</p>
-  <p class="portfolio-tags"><span>Python</span><span>Flask</span><span>MySQL</span><span>Leaflet</span></p>
+  <h3>AllThePlaces updater: refreshing store locations</h3>
+  <img class="portfolio-shot" src="/images/portfolio/atp-changes-map.gif" alt="Map of the US lower 48 showing the places added, updated and closed by each release">
+  <p>A weekly pipeline that refreshes our places database from AllThePlaces' open-source store-locator scrapers, with record matching, guarded changesets and analyst review. Three releases so far: about 161K new, 93K updated and 2K closed places.</p>
+  <p class="portfolio-tags"><span>Python</span><span>pandas</span><span>recordlinkage</span><span>MySQL</span><span>Redis</span></p>
+</div>
+
+<div class="portfolio-card">
+  <h3><a href="{{< ref "post/2026/2026-10-12_Walk_Time_Grid.md" >}}">Toho: walk times to the nearest stations</a></h3>
+  <img class="portfolio-shot" src="/blog/2026/toho-catchments-shibuya.gif" alt="Toho map of Tokyo switching to station catchments, then zooming to Shibuya Scramble Crossing">
+  <p>An H3 hexagon grid of walk times to the 3 nearest train stations in Japan, routed on OpenStreetMap data, so a station walk time is a millisecond lookup instead of a paid routing API call.</p>
+  <p class="portfolio-tags"><span>Python</span><span>H3</span><span>OpenStreetMap</span><span>pandana</span><span>DuckDB</span><span>deck.gl</span></p>
 </div>
 
 <div class="portfolio-card">
@@ -37,6 +44,13 @@ For the longer story, see [About me](/about/).
   <img src="/images/portfolio/ai-location-pipeline.svg" alt="Daily pipeline: sample job postings, extract locations with an LLM, classify, match with a geocoder, and publish results for precision and recall tracking.">
   <p>An LLM pipeline that replaced a manual vendor review task: ~$90K/yr saved, 120 → 4,200+ jobs/day, ~95% accuracy.</p>
   <p class="portfolio-tags"><span>Python</span><span>GPT</span><span>TF-IDF</span><span>Scheduled jobs</span><span>APIs</span></p>
+</div>
+
+<div class="portfolio-card">
+  <h3>Carmen: places database editor</h3>
+  <img class="portfolio-shot" src="/images/portfolio/carmen-place-detail.png" alt="Carmen place detail view with an interactive map">
+  <p>A validated, transactional web app that replaced hand-written SQL for creating, editing, and deactivating point-of-interest records.</p>
+  <p class="portfolio-tags"><span>Python</span><span>Flask</span><span>MySQL</span><span>Leaflet</span></p>
 </div>
 
 <div class="portfolio-card">
