@@ -20,7 +20,7 @@ Hi I'm **Wes Porter**, an analytics engineer, geospatial dev, and past-time phot
 Professionally I've been on Indeed's Location Data team since 2018.
 
 In my current role I 
-* build and maintain production data pipelines (think data engineering specific to location data)
+* build and maintain production data pipelines (think data engineering specific to location data), now including Airflow 3 DAGs
 * create internal apps to optimize the team's workflows (Flask apps to make updating databases easier, interactive maps, etc)
 * develope Python libraries
 * design and launch dashboards (KPI monitoring and stakeholder comms)
@@ -44,7 +44,7 @@ For quick summaries of recent projects, **see my [portfolio](/portfolio/)**.
 
 # Selected work
 
-**Production data and AI pipelines.** I design and run scheduled pipelines that ingest data, apply rules or models, validate results, and publish reusable outputs. The AI location extraction pipeline combines GPT-4o-mini with rules and a TF-IDF classifier, and publishes results the team uses to track precision and recall.
+**Production data and AI pipelines.** I design and run scheduled pipelines that ingest data, apply rules or models, validate results, and publish reusable outputs. The AI location extraction pipeline combines GPT-4o-mini with rules and a TF-IDF classifier, and publishes results the team uses to track precision and recall. I was also an early adopter of the company's new Airflow 3 platform: I [moved our weekly AllThePlaces updater onto it]({{< ref "post/2026/2026-10-22_Airflow_ATP_Updater.md" >}}) in about a week, then wrote up the gotchas as a paved path for other teams.
 
 **Internal applications and self-service tools.** I build tools that let analysts do complex work without hand-written SQL or one-off setup: a validated editor for our places database, a [Streamlit app for location database updates and SQL validation]({{< ref "post/2025/2025-12-28_LocDB_Tools_Validation_and_SQL.md" >}}), self-service regression testing, and dashboards such as the [geocoding credit dashboard]({{< ref "post/2026/2026-06-01_Geocoding_Credit_Dashboard.md" >}}).
 
@@ -72,7 +72,7 @@ At an Indeed hackathon I presented GeoAmenities, a map-based job search prototyp
 
 # Career arc
 
-- **2025–2026:** Production AI: LLM extraction, feedback classification, labeling workflows, and documenting how teams can make repositories clear to AI agents.
+- **2025–2026:** Production AI and orchestration: LLM extraction, feedback classification, labeling workflows, early adoption of Airflow 3 for scheduled pipelines, and documenting how teams can make repositories clear to AI agents.
 - **2024–2025:** Owning team systems: self-service regression workflows, dashboards, repository maintenance, and retiring legacy applications.
 - **2022–2023:** Data engineering: large transit datasets, a Python ETL pipeline, and moving applications and databases to AWS with Terraform.
 - **2021:** Measurement and automation: coverage dashboards, safe SQL generation, and helping colleagues with difficult data problems.

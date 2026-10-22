@@ -26,10 +26,10 @@ For the longer story, see [About me](/about/).
 <div class="portfolio-grid">
 
 <div class="portfolio-card">
-  <h3>AllThePlaces updater: refreshing store locations</h3>
-  <img class="portfolio-shot" src="/images/portfolio/atp-changes-map.gif" alt="Map of the US lower 48 showing the places added, updated and closed by each release">
-  <p>A weekly pipeline that refreshes our places database from AllThePlaces' open-source store-locator scrapers, with record matching, guarded changesets and analyst review. Three releases so far: about 161K new, 93K updated and 2K closed places.</p>
-  <p class="portfolio-tags"><span>Python</span><span>pandas</span><span>recordlinkage</span><span>MySQL</span><span>Redis</span></p>
+  <h3><a href="{{< ref "post/2026/2026-10-22_Airflow_ATP_Updater.md" >}}">AllThePlaces updater on Airflow</a></h3>
+  <img class="portfolio-shot" src="/blog/2026/airflow-atp-dag.png" alt="The weekly AllThePlaces updater DAG in Airflow 3, with its Thursday schedule and recent successful runs">
+  <p>A weekly Airflow 3 DAG that refreshes our places database from AllThePlaces' open-source store-locator scrapers. It reads production through a read-only replica, matches records, and publishes guarded SQL and a review dashboard for analyst sign-off. As an early adopter of the company's new Airflow platform, I moved the job off my VM in about a week and wrote up the gotchas as a paved path for other teams. Three releases so far: about 161K new, 93K updated and 2K closed places.</p>
+  <p class="portfolio-tags"><span>Airflow 3</span><span>Kubernetes</span><span>Python</span><span>recordlinkage</span><span>MySQL</span><span>S3</span></p>
 </div>
 
 <div class="portfolio-card">

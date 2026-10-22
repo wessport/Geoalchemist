@@ -1,0 +1,4 @@
+/* Give centered post images room to breathe; the theme sets only a 2px margin. */
+.post-content .figure.center {
+  margin: 1.5em auto;
+}
