@@ -73,6 +73,6 @@ Most of that week went into gotchas given I was one of the first to fully adopt 
 - **Set `start_date` close to today.** Even with `catchup=False`, unpausing a DAG runs the most recent slot it missed.
 - **Pin only what you add to the base image.** The image ships Python 3.13 and my libraries asked for 3.14, and pip was happy to downgrade a few base packages to make things fit.
 
-The best part is that none of this workflow lives in my head anymore (or on my VM). Anyone on the team can see the run history, read the logs and rerun it, and the gotchas are written up so the next team has a paved path.
+Getting Airflow setup was a fun challenge. The best part was clearing the future hurdles I know other teams would have encountered and the workflow itself doesn't live in my head anymore (or on my VM). Anyone on the team can see the run history, read the logs and rerun it, and the gotchas are all written up so the next team has a paved path.
 
 Built with Apache Airflow 3 on Kubernetes, Python, S3, and Posit.
