@@ -2,3 +2,50 @@
 .post-content .figure.center {
   margin: 1.5em auto;
 }
+
+/* Skull-and-globe mark above the footer on the homepage. */
+.home-mark {
+  display: block;
+  width: 56px;
+  margin: 10px auto -55px;
+}
+
+/* The sidebar is transparent over the full-page #cover photo. A light tint
+   and a text shadow keep the white sidebar text readable over the sky. */
+#cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 26, 35, 0.12);
+}
+
+#sidebar {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* On wide screens, fit the portrait cover photo to the 500px sidebar so the
+   whole scene shows instead of only its top-left corner. */
+@media only screen and (min-width: 1280px) {
+  #cover {
+    width: 500px;
+    background-position: center;
+  }
+}
+
+/* Photo beside the intro on the about page. */
+.post-content img.about-photo {
+  float: right;
+  width: 38%;
+  max-width: 300px;
+  margin: 0.3em 0 1em 1.5em;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .post-content img.about-photo {
+    float: none;
+    display: block;
+    width: 70%;
+    margin: 0 auto 1.5em;
+  }
+}
